@@ -713,3 +713,87 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.243) - this node is a cross-community bridge._
 - **What connects `/prep-comite`, `/rascunho-email`, `/resumo-hangout` to the rest of the system?**
   _25 weakly-connected nodes found - possible documentation gaps or missing edges._
+
+---
+
+# Merge on 2026-09-09
+
+# Graph Report - bedrock-learn-1788959326  (2026-09-09)
+
+## Corpus Check
+- Corpus is ~427 words - fits in a single context window. You may not need a graph.
+
+## Summary
+- 20 nodes · 27 edges · 4 communities
+- Extraction: 78% EXTRACTED · 22% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.75)
+- Token cost: 0 input · 65,042 output
+
+## Community Hubs (Navigation)
+- Model & Data Governance
+- Agent Reasoning & Memory
+- Applications & Tools Layer
+- Observability, Security & Discoverability
+
+## God Nodes (most connected - your core abstractions)
+1. `Agents Layer` - 8 edges
+2. `Cross-Layer Concerns` - 7 edges
+3. `Three Core Service Categories` - 5 edges
+4. `Agentic AI Architecture in the Enterprise` - 4 edges
+5. `Knowledge Bases Component` - 4 edges
+6. `Applications Layer` - 3 edges
+7. `Model Access Component` - 3 edges
+8. `Tools Component` - 3 edges
+9. `Generative AI End-User Applications` - 2 edges
+10. `Non-GenAI Applications` - 2 edges
+
+## Surprising Connections (you probably didn't know these)
+- `Generative AI End-User Applications` --conceptually_related_to--> `Agents Layer`  [INFERRED]
+  enterprise-architecture.md → enterprise-architecture.md  _Bridges community 2 → community 1_
+- `Model Access Component` --conceptually_related_to--> `Cross-Layer Concerns`  [INFERRED]
+  enterprise-architecture.md → enterprise-architecture.md  _Bridges community 0 → community 3_
+- `Tools Component` --conceptually_related_to--> `Cross-Layer Concerns`  [INFERRED]
+  enterprise-architecture.md → enterprise-architecture.md  _Bridges community 2 → community 3_
+- `Agentic AI Architecture in the Enterprise` --references--> `Three Core Service Categories`  [EXTRACTED]
+  enterprise-architecture.md → enterprise-architecture.md  _Bridges community 2 → community 0_
+- `Agents Layer` --references--> `Discoverability`  [EXTRACTED]
+  enterprise-architecture.md → enterprise-architecture.md  _Bridges community 1 → community 3_
+
+## Hyperedges (group relationships)
+- **Three Core Service Categories (Model Access, Tools, Knowledge Bases)** — tmp_bedrock_learn_1788959326_enterprise_architecture_model_access_component, tmp_bedrock_learn_1788959326_enterprise_architecture_tools_component, tmp_bedrock_learn_1788959326_enterprise_architecture_knowledge_bases_component [EXTRACTED 1.00]
+- **Cross-Layer Concerns (Observability, Security, Discoverability)** — tmp_bedrock_learn_1788959326_enterprise_architecture_cross_layer_concerns, tmp_bedrock_learn_1788959326_enterprise_architecture_observability, tmp_bedrock_learn_1788959326_enterprise_architecture_security, tmp_bedrock_learn_1788959326_enterprise_architecture_discoverability [EXTRACTED 1.00]
+
+## Communities (4 total, 0 thin omitted)
+
+### Community 0 - "Model & Data Governance"
+Cohesion: 0.40
+Nodes (6): Guardrails (Safety Measures), Knowledge Bases Component, Model Access Component, Retrieval-Augmented Generation (RAG), Role-Based Access Control (RBAC), Three Core Service Categories
+
+### Community 1 - "Agent Reasoning & Memory"
+Cohesion: 0.40
+Nodes (5): Agent-to-Agent Communication and Orchestration, Agents Layer, Large Language Model (LLM), Long-Term Memory (Agent Insights), Short-Term Memory (Agent Conversations)
+
+### Community 2 - "Applications & Tools Layer"
+Cohesion: 0.40
+Nodes (5): Applications Layer, Generative AI End-User Applications, Non-GenAI Applications, Agentic AI Architecture in the Enterprise, Tools Component
+
+### Community 3 - "Observability, Security & Discoverability"
+Cohesion: 0.50
+Nodes (4): Cross-Layer Concerns, Discoverability, Observability, Security
+
+## Knowledge Gaps
+- **7 isolated node(s):** `Retrieval-Augmented Generation (RAG)`, `Agent-to-Agent Communication and Orchestration`, `Short-Term Memory (Agent Conversations)`, `Long-Term Memory (Agent Insights)`, `Observability` (+2 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 7 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+
+## Suggested Questions
+_Questions this graph is uniquely positioned to answer:_
+
+- **Why does `Agents Layer` connect `Agent Reasoning & Memory` to `Model & Data Governance`, `Applications & Tools Layer`, `Observability, Security & Discoverability`?**
+  _High betweenness centrality (0.457) - this node is a cross-community bridge._
+- **Why does `Cross-Layer Concerns` connect `Observability, Security & Discoverability` to `Model & Data Governance`, `Applications & Tools Layer`?**
+  _High betweenness centrality (0.318) - this node is a cross-community bridge._
+- **Why does `Three Core Service Categories` connect `Model & Data Governance` to `Agent Reasoning & Memory`, `Applications & Tools Layer`?**
+  _High betweenness centrality (0.285) - this node is a cross-community bridge._
+- **Are the 3 inferred relationships involving `Cross-Layer Concerns` (e.g. with `Knowledge Bases Component` and `Model Access Component`) actually correct?**
+  _`Cross-Layer Concerns` has 3 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `Retrieval-Augmented Generation (RAG)`, `Agent-to-Agent Communication and Orchestration`, `Short-Term Memory (Agent Conversations)` to the rest of the system?**
+  _7 weakly-connected nodes found - possible documentation gaps or missing edges._

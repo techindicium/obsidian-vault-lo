@@ -8,7 +8,7 @@ sources:
   - url: "https://docs.google.com/presentation/d/1TBAMg5BpdXgbZ2pfnHboCW9WP2IpAc5cpZfWw5IaNEs/edit"
     type: "gdoc"
     synced_at: "2026-09-03"
-updated_at: "2026-09-03"
+updated_at: "2026-09-09"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/product]
 graphify_node_id: "claude_cowork_workshop_portobank_governanca_conexao"
@@ -39,6 +39,7 @@ A governance model for every AI-to-system integration, built on three rules: (1)
 
 - [[ai-connectors]] — the integrations this governance model applies to
 - [[model-context-protocol]] — the underlying connection standard
+- [[agentic-ai-enterprise-architecture]] — applies this same least-privilege model via RBAC on that architecture's knowledge bases component
 
 ---
 

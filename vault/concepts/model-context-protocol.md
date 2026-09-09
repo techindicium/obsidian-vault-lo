@@ -8,7 +8,7 @@ sources:
   - url: "https://docs.google.com/presentation/d/1TBAMg5BpdXgbZ2pfnHboCW9WP2IpAc5cpZfWw5IaNEs/edit"
     type: "gdoc"
     synced_at: "2026-09-03"
-updated_at: "2026-09-03"
+updated_at: "2026-09-09"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/product]
 graphify_node_id: "claude_cowork_workshop_portobank_mcp"
@@ -40,6 +40,7 @@ MCP is an open protocol for building [[ai-connectors]] — secure links between 
 - [[ai-connectors]] — the integrations built on top of MCP
 - [[ai-plugins]] — bundles that combine Connectors (via MCP) with Skills
 - [[connection-governance]] — the control model applied to every MCP-based connection
+- [[agentic-ai-enterprise-architecture]] — the kind of standard that architecture's tools component implements for secure tool discovery and execution
 
 ---
 
