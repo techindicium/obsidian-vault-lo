@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Indicium AI — Análise de Integração</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff; --bg2: #f5f6fb; --bg3: #eef0f8;
+      --blue: #3a58ee; --blue2: #2540cc; --blue-light: #eef1fd;
+      --atlantic: #699bfb; --lavender: #dedaf4; --teal: #aae2e5;
+      --text: #0d0e1c; --text2: #3d3f5c; --text3: #7b7e9e;
+      --border: #e2e4f0;
+      --shadow-sm: 0 1px 4px rgba(58,88,238,0.06);
+      --shadow:    0 2px 12px rgba(58,88,238,0.10);
+      --shadow-lg: 0 8px 32px rgba(58,88,238,0.14);
+      --radius-sm: 6px; --radius: 12px; --radius-lg: 20px; --radius-full: 999px;
+      --ease: cubic-bezier(0.4,0,0.2,1); --duration: 200ms;
+      --green: #16a34a; --green-light: #dcfce7;
+      --amber: #d97706; --amber-light: #fef3c7;
+      --red: #dc2626; --red-light: #fee2e2;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg2);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+
+    .page { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+    /* ── Header ── */
+    .header {
+      background: linear-gradient(135deg, #0d0e1c 0%, #1a1d3a 60%, #2540cc 100%);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 3rem;
+      margin-bottom: 2rem;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute; right: -60px; top: -60px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(58,88,238,0.3) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .header-tag {
+      display: inline-flex; align-items: center;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-full);
+      padding: 0.25rem 0.875rem;
+      font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.8);
+      margin-bottom: 1rem;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .header p  { color: rgba(255,255,255,0.65); font-size: 0.9375rem; max-width: 520px; }
+    .header-meta { margin-top: 1.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .header-meta-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8125rem; color: rgba(255,255,255,0.6);
+    }
+    .header-meta-item strong { color: rgba(255,255,255,0.9); }
+
+    /* ── Section titles ── */
+    .section { margin-bottom: 2rem; }
+    .section-title { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+    .section-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--blue); color: #fff;
+      font-size: 0.75rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .section-title h2 { font-size: 1.125rem; font-weight: 600; }
+    .section-title p  { font-size: 0.8125rem; color: var(--text3); margin-top: 0.1rem; }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem;
+      transition: box-shadow var(--duration) var(--ease), transform var(--duration) var(--ease);
+    }
+    .card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+
+    /* ── Insight banner ── */
+    .insight-banner {
+      background: var(--blue-light);
+      border: 1px solid rgba(58,88,238,0.2);
+      border-left: 4px solid var(--blue);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .insight-banner p { font-size: 0.9375rem; color: var(--text2); line-height: 1.6; }
+    .insight-banner strong { color: var(--blue2); }
+
+    /* ── Seção 1: Obelisco ── */
+    .obelisco-wrap { display: flex; gap: 2rem; align-items: center; }
+
+    .obelisco-shape {
+      flex: 0 0 auto;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .obelisco-cap {
+      /* pequena ponta no topo */
+      width: 60px; height: 14px;
+      background: var(--blue2);
+      border-radius: 6px 6px 0 0;
+      opacity: 0.7;
+    }
+    .obelisco-layer {
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      color: #fff;
+      font-size: 0.75rem; font-weight: 600;
+      transition: filter var(--duration) var(--ease);
+      cursor: default;
+    }
+    .obelisco-layer:hover { filter: brightness(1.1); }
+    .layer-top { width: 160px; height: 68px; background: var(--blue2); }
+    .layer-mid { width: 196px; height: 68px; background: var(--blue); }
+    .layer-bot { width: 232px; height: 76px; background: var(--atlantic); border-radius: 0 0 10px 10px; }
+    .layer-label { padding: 0 0.5rem; line-height: 1.3; }
+
+    .obelisco-legend { flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+    .legend-row {
+      display: flex; align-items: flex-start; gap: 0.875rem;
+      padding: 0.875rem 1rem;
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: background var(--duration) var(--ease), border-color var(--duration) var(--ease);
+    }
+    .legend-row:hover { background: var(--blue-light); border-color: rgba(58,88,238,0.2); }
+    .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; margin-top: 3px; }
+    .dot-top { background: var(--blue2); }
+    .dot-mid { background: var(--blue); }
+    .dot-bot { background: var(--atlantic); }
+    .legend-row h4 { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.2rem; }
+    .legend-row p  { font-size: 0.8125rem; color: var(--text3); }
+    .badge-sm { display: inline-flex; padding: 0.15rem 0.5rem; border-radius: var(--radius-full); font-size: 0.6875rem; font-weight: 600; }
+    .badge-mesh { background: var(--lavender); color: var(--blue2); }
+    .badge-ind  { background: rgba(170,226,229,0.4); color: #1e6a6d; }
+    .badge-gap  { background: var(--amber-light); color: var(--amber); }
+
+    /* ── Seção 2: GEM Flow ── */
+    .gem-flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .gem-phase { padding: 1.25rem 1rem; position: relative; cursor: default; }
+    .gem-phase + .gem-phase { border-left: 1px solid rgba(255,255,255,0.5); }
+
+    /* seta entre fases: elemento HTML, não pseudo-element */
+    .gem-arrow {
+      position: absolute; right: -14px; top: 50%;
+      transform: translateY(-50%);
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 700; color: var(--text3);
+      z-index: 3;
+      flex-shrink: 0;
+    }
+    .gem-phase:last-child .gem-arrow { display: none; }
+
+    .gem-phase h4 { font-size: 0.8125rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text); }
+    .gem-phase p  { font-size: 0.75rem; color: var(--text2); line-height: 1.4; }
+    .gem-owner    { margin-top: 0.75rem; font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .gem-time     { font-size: 0.6875rem; color: var(--text3); margin-top: 0.2rem; }
+
+    .phase-1 { background: #f0f0ff; } .phase-1 .gem-owner { color: var(--blue2); }
+    .phase-2 { background: var(--blue-light); } .phase-2 .gem-owner { color: var(--blue2); }
+    .phase-3 { background: rgba(170,226,229,0.2); } .phase-3 .gem-owner { color: #1e6a6d; }
+    .phase-4 { background: var(--green-light); }  .phase-4 .gem-owner { color: var(--green); }
+
+    /* ── Seção 3: Conflitos ── */
+    .conflict-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--duration) var(--ease), transform var(--duration) var(--ease);
+    }
+    .conflict-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+    .conflict-header {
+      padding: 1rem 1.25rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .conflict-icon {
+      width: 36px; height: 36px; border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .conflict-header h3 { font-size: 0.9375rem; font-weight: 600; }
+    .conflict-header p  { font-size: 0.75rem; color: var(--text3); margin-top: 0.1rem; }
+    .conflict-body { padding: 1.25rem; }
+
+    /* vs-row: 2 colunas lado a lado com divider central visível */
+    .vs-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0; margin-bottom: 1rem;
+      border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden;
+    }
+    .vs-side { padding: 1rem; font-size: 0.8125rem; line-height: 1.5; }
+    .vs-side + .vs-side { border-left: 2px solid var(--bg3); }
+    .vs-br { background: rgba(170,226,229,0.15); }
+    .vs-uk { background: rgba(222,218,244,0.25); }
+    .vs-label {
+      font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.05em; margin-bottom: 0.4rem;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .vs-br .vs-label { color: #1e6a6d; }
+    .vs-uk .vs-label { color: var(--blue2); }
+
+    .vs-divider-label {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.6875rem; font-weight: 700; color: var(--text3);
+      background: var(--bg3); padding: 0.25rem 0.5rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      letter-spacing: 0.04em;
+      grid-column: 1 / -1;
+    }
+
+    .solution-box {
+      background: var(--bg2); border: 1px dashed var(--blue);
+      border-radius: var(--radius-sm);
+      padding: 0.875rem 1rem;
+      font-size: 0.8125rem; color: var(--text2); line-height: 1.5;
+    }
+    .solution-title {
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.04em; color: var(--blue2);
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── Seção 4: Career Tracks ── */
+    .career-destination {
+      background: linear-gradient(135deg, var(--blue2), var(--blue));
+      border-radius: var(--radius) var(--radius) 0 0;
+      padding: 1.25rem 1.5rem;
+      color: #fff;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .career-destination h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.15rem; }
+    .career-destination p  { font-size: 0.8125rem; color: rgba(255,255,255,0.7); }
+    .career-dest-badge {
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+      border-radius: var(--radius-full); padding: 0.35rem 1rem;
+      font-size: 0.75rem; font-weight: 600; white-space: nowrap;
+    }
+
+    .career-arrows-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      background: var(--bg3); border-left: 1px solid var(--border); border-right: 1px solid var(--border);
+    }
+    .career-arrow-col {
+      display: flex; align-items: center; justify-content: center;
+      padding: 0.5rem; gap: 0.4rem;
+      font-size: 0.6875rem; font-weight: 600; color: var(--text3);
+    }
+    .career-arrow-col + .career-arrow-col { border-left: 1px solid var(--border); }
+    .arrow-up { font-size: 1rem; }
+
+    .career-tracks-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--border); border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius); overflow: hidden;
+    }
+    .ct-col { background: var(--bg); }
+    .ct-col + .ct-col { border-left: 1px solid var(--border); }
+    .ct-header {
+      padding: 0.875rem 1.25rem;
+      font-size: 0.8125rem; font-weight: 700;
+      border-bottom: 1px solid var(--border);
+    }
+    .ct-header-br { background: rgba(170,226,229,0.2); color: #1e6a6d; }
+    .ct-header-uk { background: var(--lavender); color: var(--blue2); }
+    .ct-level {
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8125rem; color: var(--text2);
+      border-bottom: 1px solid var(--bg3);
+      display: flex; align-items: center; gap: 0.625rem;
+    }
+    .ct-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); flex-shrink: 0; }
+    .ct-near-partner {
+      background: var(--blue-light); font-weight: 600; color: var(--blue2);
+      border-bottom: 1px solid rgba(58,88,238,0.15);
+    }
+    .ct-near-partner .ct-dot { background: var(--blue); }
+    .ct-feeder {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.75rem; color: var(--text3);
+      background: var(--bg2); border-top: 1px dashed var(--border);
+      line-height: 1.4;
+    }
+    .career-rule {
+      padding: 0.875rem 1.25rem;
+      background: var(--blue-light); border: 1px solid rgba(58,88,238,0.15);
+      border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+      font-size: 0.8125rem; color: var(--text2);
+    }
+
+    /* ── Seção 5: Prioridades ── */
+    .priority-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .priority-item {
+      display: grid; grid-template-columns: 32px 1fr;
+      gap: 1rem; align-items: start;
+      padding: 1rem 1.25rem;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--duration) var(--ease), transform var(--duration) var(--ease);
+    }
+    .priority-item:hover { box-shadow: var(--shadow); transform: translateX(4px); }
+    .priority-num {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--blue); color: #fff;
+      font-size: 0.875rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .priority-num.p-urgent { background: var(--red); }
+    .priority-content h4 { font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .priority-content p  { font-size: 0.8125rem; color: var(--text3); line-height: 1.4; }
+    .priority-tag {
+      display: inline-flex; padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-full);
+      font-size: 0.6875rem; font-weight: 600; margin-right: 0.4rem;
+    }
+    .tag-urgent { background: var(--red-light); color: var(--red); }
+    .tag-high   { background: var(--amber-light); color: var(--amber); }
+    .tag-mid    { background: var(--blue-light); color: var(--blue2); }
+    .tag-par    { background: var(--bg3); color: var(--text2); }
+    .priority-output {
+      margin-top: 0.5rem;
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.75rem; color: var(--text3);
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 0.25rem 0.625rem;
+    }
+
+    /* ── Callout ── */
+    .callout {
+      display: flex; gap: 0.75rem; align-items: flex-start;
+      padding: 0.875rem 1rem;
+      background: var(--amber-light); border: 1px solid rgba(217,119,6,0.25);
+      border-radius: var(--radius-sm); margin-top: 1rem;
+    }
+    .callout p { font-size: 0.8125rem; color: #78350f; line-height: 1.4; }
+    .callout strong { color: #92400e; }
+
+    /* ── Risk banner ── */
+    .risk-banner {
+      background: linear-gradient(135deg, #0d0e1c 0%, #1a1d3a 100%);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      color: #fff;
+      display: flex; gap: 1.5rem; align-items: flex-start;
+    }
+    .risk-icon { font-size: 2rem; flex-shrink: 0; }
+    .risk-body h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .risk-body p  { font-size: 0.875rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+    .risk-body strong { color: rgba(255,255,255,0.9); }
+
+    .footer {
+      text-align: center; font-size: 0.75rem; color: var(--text3);
+      padding-top: 1.5rem; border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 700px) {
+      .obelisco-wrap { flex-direction: column; align-items: center; }
+      .gem-flow { grid-template-columns: 1fr; }
+      .gem-arrow { display: none; }
+      .career-destination { flex-direction: column; gap: 0.5rem; }
+      .career-tracks-grid, .career-arrows-row, .vs-row { grid-template-columns: 1fr; }
+      .ct-col + .ct-col { border-left: none; border-top: 1px solid var(--border); }
+      .risk-banner { flex-direction: column; gap: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── HEADER ── -->
+  <div class="header">
+    <div class="header-tag">Análise Estratégica · Q1 2026</div>
+    <h1>One Indicium AI</h1>
+    <p>Como integrar Indicium Tech + Mesh-AI em uma consultoria global unificada, AI-native — sem criar dois silos dentro de uma mesma empresa.</p>
+    <div class="header-meta">
+      <div class="header-meta-item">🌎 <span><strong>Américas</strong> · ~475 pessoas</span></div>
+      <div class="header-meta-item">🇬🇧 <span><strong>Europa</strong> · ~135 pessoas</span></div>
+      <div class="header-meta-item">🔗 <span><strong>Fusão:</strong> 70% estabilizada</span></div>
+      <div class="header-meta-item">⚡ <span><strong>End state:</strong> McKinsey/Accenture AI-native</span></div>
+    </div>
+  </div>
+
+  <!-- ── 1. DIAGNÓSTICO ── -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-num">1</div>
+      <div>
+        <h2>Diagnóstico Central</h2>
+        <p>O problema não é cultural — é de narrativa interna</p>
+      </div>
+    </div>
+
+    <div class="insight-banner">
+      <p>A Indicium e a Mesh-AI estão interpretando suas diferenças como <strong>conflito de modelos</strong>, quando na realidade construíram acidentalmente as <strong>duas metades de um modelo que o mercado está pagando caro para ter</strong> — e que nenhuma Big Four consegue entregar com a mesma combinação de velocidade + profundidade.</p>
+    </div>
+
+    <div class="card">
+      <div class="obelisco-wrap">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
+          <div style="font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text3);margin-bottom:0.25rem;">Modelo Obelisco</div>
+          <div class="obelisco-shape">
+            <div class="obelisco-cap"></div>
+            <div class="obelisco-layer layer-top"><span class="layer-label">Líderes<br>de Cliente</span></div>
+            <div class="obelisco-layer layer-mid"><span class="layer-label">Arquitetos de Engajamento</span></div>
+            <div class="obelisco-layer layer-bot"><span class="layer-label">Facilitadores de IA — Execução</span></div>
+          </div>
+          <div style="font-size:0.6875rem;color:var(--text3);margin-top:0.25rem;text-align:center;">Substitui a pirâmide hierárquica</div>
+        </div>
+
+        <div class="obelisco-legend">
+          <div class="legend-row">
+            <div class="legend-dot dot-top"></div>
+            <div>
+              <h4>Líderes de Cliente</h4>
+              <p>Relacionamento C-level, confiança executiva, visão estratégica &nbsp;<span class="badge-sm badge-mesh">Mesh-AI DNA</span></p>
+            </div>
+          </div>
+          <div class="legend-row">
+            <div class="legend-dot dot-mid"></div>
+            <div>
+              <h4>Arquitetos de Engajamento</h4>
+              <p>Traduzem outputs de IA em decisões de negócio &nbsp;<span class="badge-sm badge-gap">⚠ Gap atual — híbrido</span></p>
+            </div>
+          </div>
+          <div class="legend-row">
+            <div class="legend-dot dot-bot"></div>
+            <div>
+              <h4>Facilitadores de IA</h4>
+              <p>Operam pipelines, entregam em produção, escalam &nbsp;<span class="badge-sm badge-ind">Indicium DNA</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2. GEM ── -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-num">2</div>
+      <div>
+        <h2>Global Engagement Model (GEM)</h2>
+        <p>Um único fluxo de entrega — da venda à produção — independente da região</p>
+      </div>
+    </div>
+
+    <div class="card" style="padding:1.25rem;">
+      <div class="gem-flow">
+        <div class="gem-phase phase-1">
+          <h4>Discovery &amp; Strategy</h4>
+          <p>Diagnóstico de maturidade, definição de roadmap, governança ética</p>
+          <div class="gem-owner">Mesh-AI DNA</div>
+          <div class="gem-time">Semanas</div>
+          <div class="gem-arrow">→</div>
+        </div>
+        <div class="gem-phase phase-2">
+          <h4>Architecture Design</h4>
+          <p>Arquitetura cloud, seleção de stack, design de segurança e compliance</p>
+          <div class="gem-owner">Híbrido</div>
+          <div class="gem-time">Semanas</div>
+          <div class="gem-arrow">→</div>
+        </div>
+        <div class="gem-phase phase-3">
+          <h4>Build &amp; Deploy</h4>
+          <p>Squads de execução, pipelines em produção, modelos de IA</p>
+          <div class="gem-owner">Indicium DNA</div>
+          <div class="gem-time">Meses</div>
+          <div class="gem-arrow">→</div>
+        </div>
+        <div class="gem-phase phase-4">
+          <h4>Operate &amp; Optimize</h4>
+          <p>Monitoramento, evolução de modelos, expansão de uso</p>
+          <div class="gem-owner">Indicium DNA</div>
+          <div class="gem-time">Contínuo</div>
+          <div class="gem-arrow"></div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <span>⚠️</span>
+        <p><strong>Gap no PMO atual:</strong> Os 4 workstreams ativos (Brand, Tech Stack, Culture, Sales Ops) não endereçam como a entrega funciona de ponta a ponta. O GEM precisa ser um <strong>5º workstream</strong> — o mais crítico.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 3. CONFLITOS ── -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-num">3</div>
+      <div>
+        <h2>Os Três Conflitos</h2>
+        <p>Diagnóstico e solução para cada friction point</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1rem;">
+
+      <!-- Conflito 1 -->
+      <div class="conflict-card">
+        <div class="conflict-header">
+          <div class="conflict-icon" style="background:var(--blue-light);">⚙️</div>
+          <div>
+            <h3>Conflito 1 — Metodologia de Entrega</h3>
+            <p>Squads de Execução (BR) vs. Consultoria de Advisory (UK)</p>
+          </div>
+        </div>
+        <div class="conflict-body">
+          <div class="vs-row">
+            <div class="vs-side vs-br">
+              <div class="vs-label">🇧🇷 Indicium</div>
+              Entrega rápida, iteração constante, sprint-based, code-first
+            </div>
+            <div class="vs-side vs-uk">
+              <div class="vs-label">🇬🇧 Mesh-AI</div>
+              Governança extensa, documentação, pré-venda longo, advisory-first
+            </div>
+            <div class="vs-divider-label">→ na realidade, são etapas sequenciais do mesmo engajamento</div>
+          </div>
+          <div class="solution-box">
+            <div class="solution-title">→ Solução</div>
+            O GEM define ownership claro por fase. Ninguém precisa mudar quem é — precisam entender <strong>onde entram no fluxo</strong>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Conflito 2 -->
+      <div class="conflict-card">
+        <div class="conflict-header">
+          <div class="conflict-icon" style="background:var(--amber-light);">🪟</div>
+          <div>
+            <h3>Conflito 2 — Teto de Vidro vs. Comoditização</h3>
+            <p>Dois medos espelhados que paralisam a integração de pessoas</p>
+          </div>
+        </div>
+        <div class="conflict-body">
+          <div class="vs-row">
+            <div class="vs-side vs-br">
+              <div class="vs-label">🇧🇷 Medo BR</div>
+              "As posições de estratégia e board ficarão restritas a Londres/NY. O Brasil vira fábrica de código barato."
+            </div>
+            <div class="vs-side vs-uk">
+              <div class="vs-label">🇬🇧 Medo UK</div>
+              "O trabalho sênior de arquitetura será transferido ao hub brasileiro, desvalorizando nosso expertise."
+            </div>
+            <div class="vs-divider-label">↔ medos espelhados — a solução resolve os dois ao mesmo tempo</div>
+          </div>
+          <div class="solution-box">
+            <div class="solution-title">→ Solução: Framework de carreira com duas trilhas convergentes</div>
+            <strong>Technical Architect</strong> (BR → global) e <strong>Strategic Advisor</strong> (UK → global) chegam ao mesmo nível de Principal/Partner. O Delivery Center se reposiciona de "low cost" para <strong>"AI-powered execution engine"</strong>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Conflito 3 -->
+      <div class="conflict-card">
+        <div class="conflict-header">
+          <div class="conflict-icon" style="background:var(--green-light);">🌐</div>
+          <div>
+            <h3>Conflito 3 — Ownership de Contas Globais</h3>
+            <p>A regra atual cria incentivos errados para clientes cross-região</p>
+          </div>
+        </div>
+        <div class="conflict-body">
+          <div class="vs-row">
+            <div class="vs-side vs-br">
+              <div class="vs-label">Regra atual</div>
+              "Where the contract is signed, the ownership resides" — ninguém tem incentivo de puxar o outro lado.
+            </div>
+            <div class="vs-side vs-uk">
+              <div class="vs-label">Resultado</div>
+              Clientes globais recebem dois "Indicium AI" diferentes. Disputas de alocação viram conflito de VPs.
+            </div>
+            <div class="vs-divider-label">→ sem um papel neutro, a conta global fica sem dono real</div>
+          </div>
+          <div class="solution-box">
+            <div class="solution-title">→ Solução: Global Account Executive (GAE)</div>
+            Papel P&amp;L-neutro para contas cross-região. KPI único: expansão e NPS da conta global. Receita fica nas regiões de entrega. GAE conecta board europeu com time americano.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── 4. CAREER TRACKS ── -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-num">4</div>
+      <div>
+        <h2>Framework de Carreira Unificado</h2>
+        <p>Duas trilhas distintas, um único destino — elimina o teto de vidro estruturalmente</p>
+      </div>
+    </div>
+
+    <!-- Destino compartilhado no topo -->
+    <div class="career-destination">
+      <div>
+        <h3>🏆 Partner / Principal</h3>
+        <p>Destino unificado de ambas as trilhas — lideram engajamentos globais independente de onde moram</p>
+      </div>
+      <div class="career-dest-badge">Mesmo nível. Mesmo peso.</div>
+    </div>
+
+    <!-- Setas indicando os dois caminhos -->
+    <div class="career-arrows-row">
+      <div class="career-arrow-col">
+        <span class="arrow-up">↑</span> Trilha Técnica
+      </div>
+      <div class="career-arrow-col">
+        <span class="arrow-up">↑</span> Trilha Estratégica
+      </div>
+    </div>
+
+    <!-- As duas trilhas -->
+    <div class="career-tracks-grid">
+      <div class="ct-col">
+        <div class="ct-header ct-header-br">🇧🇷 Technical Architect</div>
+        <div class="ct-level ct-near-partner"><div class="ct-dot"></div> Principal Architect</div>
+        <div class="ct-level"><div class="ct-dot"></div> Tech Lead</div>
+        <div class="ct-level"><div class="ct-dot"></div> Senior Engineer</div>
+        <div class="ct-level"><div class="ct-dot"></div> Pleno / Mid Engineer</div>
+        <div class="ct-level"><div class="ct-dot"></div> Júnior</div>
+        <div class="ct-feeder">⬆ Alimentado pelo Programa Lighthouse — programa pré-carreira que forma os Júniors</div>
+      </div>
+      <div class="ct-col">
+        <div class="ct-header ct-header-uk">🇬🇧 Strategic Advisor</div>
+        <div class="ct-level ct-near-partner"><div class="ct-dot"></div> Principal Advisor</div>
+        <div class="ct-level"><div class="ct-dot"></div> Managing Director</div>
+        <div class="ct-level"><div class="ct-dot"></div> Senior Consultant</div>
+        <div class="ct-level"><div class="ct-dot"></div> Consultant</div>
+        <div class="ct-level"><div class="ct-dot"></div> Associate Consultant</div>
+        <div class="ct-feeder">⬆ Recrutamento sênior pontual por projeto ou entrada júnior de pós-graduação</div>
+      </div>
+    </div>
+
+    <div class="career-rule">
+      ✅ <strong>Regra chave:</strong> Principals de <em>qualquer trilha</em> podem liderar engajamentos globais, independente de onde moram. O caminho muda — o destino é o mesmo.
+    </div>
+  </div>
+
+  <!-- ── 5. PRIORIDADES ── -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-num">5</div>
+      <div>
+        <h2>Prioridades de Execução</h2>
+        <p>O que fazer agora — em ordem de impacto na integração</p>
+      </div>
+    </div>
+
+    <div class="priority-list">
+      <div class="priority-item">
+        <div class="priority-num">1</div>
+        <div class="priority-content">
+          <h4>Adicionar 5º workstream ao PMO: Global Delivery Model</h4>
+          <p><span class="priority-tag tag-urgent">Imediato · 4–6 semanas</span> Criar o GEM com representantes dos dois lados. Output: documento de 1-2 páginas que qualquer vendedor em qualquer região consegue explicar para um cliente.</p>
+          <div class="priority-output">📄 Documento GEM</div>
+        </div>
+      </div>
+      <div class="priority-item">
+        <div class="priority-num">2</div>
+        <div class="priority-content">
+          <h4>Unificar framework de carreira com as duas trilhas</h4>
+          <p><span class="priority-tag tag-high">Curto prazo · 2–3 meses</span> Precisa acontecer antes de qualquer expansão de headcount — novas contratações adotam o modelo antigo se o novo não existir.</p>
+          <div class="priority-output">📋 Career Ladder global</div>
+        </div>
+      </div>
+      <div class="priority-item">
+        <div class="priority-num">3</div>
+        <div class="priority-content">
+          <h4>Definir os primeiros 3–5 contas candidatas ao modelo GAE</h4>
+          <p><span class="priority-tag tag-mid">Médio prazo · 3–6 meses</span> Selecionar contas com overlap orgânico e formalizar o que já acontece. Testar antes de escalar.</p>
+          <div class="priority-output">🧪 Piloto GAE</div>
+        </div>
+      </div>
+      <div class="priority-item">
+        <div class="priority-num p-urgent">!</div>
+        <div class="priority-content">
+          <h4>Unificação de ERP / CRM / HR</h4>
+          <p><span class="priority-tag tag-par">Paralelo · urgente</span> Sem visão única de P&amp;L e pipeline, conflitos de alocação continuam sendo resolvidos no WhatsApp entre VPs. Bloqueia todas as outras decisões estratégicas.</p>
+          <div class="priority-output">🏗 Infraestrutura crítica</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RISCO FINAL ── -->
+  <div class="section">
+    <div class="risk-banner">
+      <div class="risk-icon">⚡</div>
+      <div class="risk-body">
+        <h3>O Risco Que Ninguém Está Vendo</h3>
+        <p>O mercado está fugindo do "<strong>workslop</strong>" — entregas de qualidade medíocre geradas por IA sem revisão estratégica real. A Indicium AI tem o antídoto perfeito: o <strong>Programa Lighthouse</strong> forma profissionais que trabalham <em>com</em> IA; a Mesh-AI tem o sênior que faz a revisão estratégica. Mas esse antídoto só funciona se os dois lados estiverem no mesmo engajamento. Se continuarem como silos, a Indicium entrega código rápido sem profundidade, a Mesh-AI entrega decks bonitos sem implementação — e os dois viram exatamente o problema que o mercado tenta fugir das Big Four. <strong>A fusão não é só uma oportunidade de crescimento. É uma necessidade competitiva de sobrevivência para os dois lados.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Indicium AI · Análise Estratégica de Integração · Q1 2026
+  </div>
+
+</div>
+</body>
+</html>

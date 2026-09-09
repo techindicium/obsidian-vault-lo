@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EX Account Health — Mockup Exploratório</title>
+<style>
+  :root {
+    /* Indicium AI brand palette */
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-sunken: #f2f0fb;
+    --border: #dcdaee;
+    --ink: #1c1d2f;
+    --ink-muted: #5c5d75;
+    --ink-faint: #8d8ea6;
+    --accent: #3a58ee;
+    --accent-ink: #ffffff;
+    --accent-tint: #e8ecfd;
+    --support: #699bfb;
+    --support-tint: #dedaf4;
+    --good: #2e9e6d;
+    --good-tint: #e3f4ec;
+    --warn: #c98a1e;
+    --warn-tint: #faf1de;
+    --bad: #c94f4f;
+    --bad-tint: #fbe9e8;
+    --hypo: #699bfb;
+    --hypo-tint: #dedaf4;
+    --shadow: 0 1px 2px rgba(28, 29, 47, 0.06), 0 6px 20px -8px rgba(28, 29, 47, 0.16);
+    --radius: 10px;
+    --sans: 'Inter', Arial, Helvetica, sans-serif;
+    --mono: 'Roboto Mono', 'Courier New', Courier, monospace;
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #1c1d2f;
+    --surface: #24263c;
+    --surface-sunken: #17182a;
+    --border: #34364f;
+    --ink: #ffffff;
+    --ink-muted: #b7b9cf;
+    --ink-faint: #82859e;
+    --accent: #699bfb;
+    --accent-ink: #0d162f;
+    --accent-tint: #223257;
+    --support: #3a58ee;
+    --support-tint: #262a4d;
+    --good: #4bb98a;
+    --good-tint: #16281f;
+    --warn: #dba64a;
+    --warn-tint: #2c2416;
+    --bad: #e07373;
+    --bad-tint: #2c1a1a;
+    --hypo: #b0a8e8;
+    --hypo-tint: #322c52;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 24px -8px rgba(0, 0, 0, 0.5);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1c1d2f;
+      --surface: #24263c;
+      --surface-sunken: #17182a;
+      --border: #34364f;
+      --ink: #ffffff;
+      --ink-muted: #b7b9cf;
+      --ink-faint: #82859e;
+      --accent: #699bfb;
+      --accent-ink: #0d162f;
+      --accent-tint: #223257;
+      --support: #3a58ee;
+      --support-tint: #262a4d;
+      --good: #4bb98a;
+      --good-tint: #16281f;
+      --warn: #dba64a;
+      --warn-tint: #2c2416;
+      --bad: #e07373;
+      --bad-tint: #2c1a1a;
+      --hypo: #b0a8e8;
+      --hypo-tint: #322c52;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 24px -8px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 12px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { text-wrap: balance; margin: 0; }
+  .tabular { font-variant-numeric: tabular-nums; font-family: var(--mono); }
+
+  /* brand rule: Roboto Mono for short accents — chips, tags, labels, never body copy */
+  .bignum .label, .section-label, .tier-pill, .closing-badge,
+  .id-meta .field .l, .overall-status .l, .fin-tile .l, .stage-pill, .compact-label,
+  .card-head .num, .sync-status {
+    font-family: var(--mono);
+  }
+
+  /* ---- shell ---- */
+  .shell { max-width: 1120px; margin: 0 auto; padding: 28px 24px 80px; }
+
+  .banner {
+    background: var(--hypo-tint);
+    border: 1px solid var(--hypo);
+    color: var(--ink);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    font-size: 12.5px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 22px;
+  }
+  .banner strong { color: var(--accent); }
+  .banner .dot { color: var(--support); font-size: 16px; line-height: 1; margin-top: 1px; }
+
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+  }
+  .masthead h1 { font-size: 24px; font-weight: 400; letter-spacing: -0.01em; }
+  .masthead .sub { color: var(--ink-muted); font-size: 12px; margin-top: 2px; }
+  .sync-status {
+    display: flex; align-items: center; gap: 5px; font-size: 10.5px; color: var(--ink-faint);
+    white-space: nowrap; margin-top: 3px;
+  }
+  .sync-status .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--good); flex: none; }
+
+  /* ---- legend ---- */
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin: 18px 0 30px;
+  }
+  .legend .tag { cursor: default; }
+
+  .tag {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-family: var(--mono);
+    font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 3px 8px; border-radius: 20px; border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .tag-confirmado { color: var(--good); background: var(--good-tint); }
+  .tag-hipotese { color: var(--warn); background: var(--warn-tint); }
+  .tag-revisao { color: var(--ink); background: var(--hypo-tint); }
+  .tag-revisao::before { background: var(--hypo); }
+  .tag-backlog { color: var(--ink-faint); background: var(--surface-sunken); }
+  .tag-fora { color: var(--ink-faint); background: var(--surface-sunken); text-decoration: line-through; }
+
+  /* ---- pure-css tabs ---- */
+  .tabs input[type="radio"], .filter-checkbox { display: none; }
+  .tabnav { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+  .tabnav label {
+    padding: 10px 4px; margin-right: 22px; font-size: 13px; font-weight: 600;
+    color: var(--ink-muted); cursor: pointer; border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  #tab-portfolio:checked ~ .tabnav label[for="tab-portfolio"],
+  #tab-detail:checked ~ .tabnav label[for="tab-detail"] {
+    color: var(--ink); border-bottom-color: var(--accent);
+  }
+  .view { display: none; }
+  #tab-portfolio:checked ~ .views #view-portfolio,
+  #tab-detail:checked ~ .views #view-detail { display: block; }
+
+  /* ---- bignumbers ---- */
+  .bignum-row {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px;
+    margin-bottom: 24px;
+  }
+  .bignum {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 16px 16px 14px; box-shadow: var(--shadow);
+  }
+  .bignum .label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); font-weight: 700; }
+  .bignum .value { font-size: 26px; font-weight: 700; margin-top: 6px; letter-spacing: -0.02em; }
+  .bignum .value.accent { color: var(--accent); }
+  .bignum .delta { font-size: 11.5px; color: var(--ink-muted); margin-top: 3px; }
+  .bignum .delta.up { color: var(--good); }
+  .bignum .delta.down { color: var(--bad); }
+
+  /* ---- filter bar (checkbox-as-button) ---- */
+  .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+  .toggle-btn {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+    padding: 7px 12px; border-radius: 20px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--ink-muted); cursor: pointer;
+  }
+  #filter-attention:checked ~ .filter-bar label[for="filter-attention"],
+  #filter-closing:checked ~ .filter-bar label[for="filter-closing"] {
+    background: var(--accent); border-color: var(--accent); color: var(--accent-ink);
+  }
+  .filter-select-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+  .filter-select-bar .field { display: flex; flex-direction: column; gap: 3px; }
+  .filter-select-bar .field .l { font-size: 10px; text-transform: uppercase; color: var(--ink-faint); letter-spacing: 0.05em; font-weight: 700; }
+  .filter-select-bar select {
+    font: inherit; font-size: 12.5px; padding: 6px 10px; border-radius: 7px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--ink); min-width: 160px;
+  }
+
+  /* ---- account grid (portfolio) ---- */
+  .section-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em;
+    color: var(--ink-faint); margin: 28px 0 10px;
+  }
+  .account-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .account-card {
+    display: block;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 14px; box-shadow: var(--shadow); position: relative; cursor: pointer;
+  }
+  .account-card:hover { border-color: var(--accent); }
+  #filter-attention:checked ~ .account-grid .account-card:not([data-attention="true"]) { display: none; }
+  #filter-closing:checked ~ .account-grid .account-card:not([data-closing="true"]) { display: none; }
+  .account-card .row1 { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .account-card .name { font-weight: 700; font-size: 14px; }
+  .account-card .meta { color: var(--ink-muted); font-size: 11.5px; margin-top: 2px; }
+  .rag-chip { width: 10px; height: 10px; border-radius: 50%; flex: none; margin-top: 3px; }
+  .rag-green { background: var(--good); }
+  .rag-amber { background: var(--warn); }
+  .rag-red { background: var(--bad); }
+  .account-card .stats { display: flex; gap: 16px; margin-top: 12px; }
+  .account-card .stat .n { font-size: 15px; font-weight: 700; }
+  .account-card .stat .l { font-size: 10px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.04em; }
+  .tier-pill {
+    font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 4px;
+    background: var(--accent-tint); color: var(--accent);
+  }
+  .closing-badge {
+    display: inline-flex; align-items: center; gap: 4px; margin-top: 10px; font-size: 10.5px; font-weight: 700;
+    color: var(--accent); background: var(--accent-tint); padding: 2px 7px; border-radius: 10px;
+  }
+
+  /* ---- detail view ---- */
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 18px 20px; box-shadow: var(--shadow); margin-bottom: 14px;
+  }
+  .card-head {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px;
+  }
+  .card-head .num { color: var(--ink-faint); font-size: 11px; margin-right: 8px; }
+  .card-head h3 { font-size: 13.5px; font-weight: 700; display: inline; }
+  .card.dim { opacity: 0.55; }
+  .card.dim .card-head h3 { color: var(--ink-muted); }
+
+  .account-header {
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;
+  }
+  .account-header h2 { font-size: 20px; font-weight: 700; }
+  .account-header .id-meta { display: flex; gap: 18px; margin-top: 8px; flex-wrap: wrap; }
+  .id-meta .field .l { font-size: 10px; text-transform: uppercase; color: var(--ink-faint); letter-spacing: 0.05em; }
+  .id-meta .field .v { font-size: 13px; font-weight: 600; margin-top: 2px; }
+  .overall-status { text-align: right; }
+  .overall-status .l { font-size: 10px; text-transform: uppercase; color: var(--ink-faint); letter-spacing: 0.05em; }
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 4px;
+    font-weight: 700; font-size: 13px; padding: 4px 10px; border-radius: 20px;
+  }
+  .status-pill.green { background: var(--good-tint); color: var(--good); }
+  .status-pill.amber { background: var(--warn-tint); color: var(--warn); }
+  .status-pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+  .rag-blocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .rag-blocks.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .rag-block {
+    border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px;
+    background: var(--surface-sunken);
+  }
+  .rag-block .l { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-muted); }
+  .rag-block .dotline { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+  .rag-block .v { font-size: 12px; font-weight: 700; }
+  .rag-block .link { display: block; margin-top: 6px; font-size: 10.5px; color: var(--accent); text-decoration: none; }
+  .rag-block .link:hover { text-decoration: underline; }
+  .rag-block .note { font-size: 10.5px; color: var(--ink-faint); font-style: italic; margin-top: 6px; }
+
+  .rag-history { margin-top: 8px; }
+  .rag-history summary {
+    list-style: none; cursor: pointer; font-size: 10.5px; color: var(--accent); font-weight: 600;
+  }
+  .rag-history summary::-webkit-details-marker { display: none; }
+  .rag-history summary::before { content: "\25B6\00A0"; font-size: 8px; }
+  .rag-history[open] summary::before { content: "\25BC\00A0"; }
+  .history-strip {
+    position: relative; display: flex; justify-content: space-between;
+    margin-top: 10px; padding: 0 2px;
+  }
+  .history-strip::before {
+    content: ""; position: absolute; left: 6px; right: 6px; top: 4px; height: 1px; background: var(--border); z-index: 0;
+  }
+  .history-point { display: flex; flex-direction: column; align-items: center; gap: 4px; position: relative; z-index: 1; }
+  .history-point .dot { width: 9px; height: 9px; border-radius: 50%; display: block; }
+  .history-point .m { font-size: 9px; color: var(--ink-faint); font-family: var(--mono); }
+  .history-note { font-size: 10px; color: var(--ink-faint); font-style: italic; margin: 8px 0 0; }
+
+  .fin-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+  .fin-tile { background: var(--surface-sunken); border-radius: 8px; padding: 12px; }
+  .fin-tile .l { font-size: 10px; text-transform: uppercase; color: var(--ink-faint); letter-spacing: 0.05em; font-weight: 700; }
+  .fin-tile .v { font-size: 20px; font-weight: 700; margin-top: 4px; }
+  .fin-tile .note { font-size: 10px; color: var(--ink-faint); font-style: italic; margin-top: 4px; }
+  .fin-tile.highlight { background: var(--accent-tint); }
+  .fin-tile.highlight .v { color: var(--accent); }
+
+  .consumption {
+    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border);
+  }
+  .consumption .head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .consumption .l { font-size: 10px; text-transform: uppercase; color: var(--ink-faint); letter-spacing: 0.05em; font-weight: 700; font-family: var(--mono); }
+  .consumption .figures { font-size: 12px; color: var(--ink-muted); }
+  .consumption .figures b { color: var(--ink); font-variant-numeric: tabular-nums; font-family: var(--mono); }
+  .consumption-bar { height: 8px; border-radius: 5px; background: var(--surface-sunken); overflow: hidden; }
+  .consumption-bar span { display: block; height: 100%; background: var(--accent); }
+  .consumption .pct { font-size: 11px; color: var(--accent); font-weight: 700; margin-top: 5px; font-family: var(--mono); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  thead th {
+    text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--ink-faint); font-weight: 700; padding: 0 8px 8px; border-bottom: 1px solid var(--border);
+    font-family: var(--mono);
+  }
+  tbody td { padding: 9px 8px; border-bottom: 1px solid var(--border); }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody td.empty { color: var(--ink-faint); }
+  .contact-cell .name { font-weight: 600; }
+  .contact-cell .role { display: block; font-size: 10.5px; color: var(--ink-faint); margin-top: 1px; }
+  .stage-pill {
+    font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 12px;
+    background: var(--accent-tint); color: var(--accent);
+  }
+  .scroll-x { overflow-x: auto; }
+
+  /* ---- collapsible squad & contacts (compact) ---- */
+  details.collapsible { padding: 0; }
+  details.collapsible summary {
+    list-style: none; cursor: pointer; padding: 14px 20px; margin-bottom: 0;
+  }
+  details.collapsible summary::-webkit-details-marker { display: none; }
+  details.collapsible .chevron {
+    font-size: 10px; color: var(--ink-faint); transition: transform 0.15s ease; margin-left: 4px;
+  }
+  details.collapsible[open] .chevron { transform: rotate(90deg); }
+  details.collapsible .collapse-body {
+    padding: 0 20px 16px; display: flex; gap: 24px; flex-wrap: wrap;
+  }
+  .compact-group { flex: 1; min-width: 200px; }
+  .compact-label {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint);
+    font-weight: 700; margin-bottom: 6px;
+  }
+  .compact-row {
+    display: flex; justify-content: space-between; gap: 10px; font-size: 12px;
+    padding: 5px 0; border-bottom: 1px solid var(--border);
+  }
+  .compact-row:last-child { border-bottom: none; }
+  .compact-row .who { font-weight: 600; color: var(--ink); }
+  .compact-row .what { color: var(--ink-muted); text-align: right; }
+
+  .narrative p { margin: 0 0 8px; color: var(--ink); font-size: 13px; }
+  .narrative p:last-child { margin-bottom: 0; }
+  .narrative .attribution { font-size: 11px; color: var(--ink-faint); margin-top: 10px; }
+  .narrative-recap { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .recap-chip {
+    flex: 1; min-width: 200px; border-radius: 8px; padding: 8px 10px; font-size: 11.5px;
+    background: var(--surface-sunken); border-left: 3px solid var(--hypo);
+  }
+  .recap-chip.risk { border-left-color: var(--bad); }
+  .recap-chip b { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); margin-bottom: 3px; }
+
+  .insight-list { display: flex; flex-direction: column; gap: 8px; }
+  .insight {
+    display: flex; gap: 10px; padding: 10px 12px; border-radius: 8px; background: var(--surface-sunken);
+    border-left: 3px solid var(--hypo);
+  }
+  .insight.risk { border-left-color: var(--bad); }
+  .insight .icon { font-size: 15px; flex: none; }
+  .insight .body b { font-size: 12.5px; }
+  .insight .body p { margin: 3px 0 0; font-size: 12px; color: var(--ink-muted); }
+  .insight .cat-tag {
+    display: inline-block; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 1px 6px; border-radius: 8px; background: var(--bad-tint); color: var(--bad); margin-bottom: 4px;
+    font-family: var(--mono);
+  }
+  .insight.low-priority { opacity: 0.6; border-left-color: var(--ink-faint); }
+  .insight.low-priority .cat-tag { background: var(--surface-sunken); color: var(--ink-faint); border: 1px solid var(--border); }
+
+  .signoff-box {
+    margin-top: 12px; border: 1px dashed var(--border); border-radius: 8px; padding: 10px 12px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+  .signoff-box .comment-mock {
+    flex: 1; min-width: 180px; height: 34px; border-radius: 6px; background: var(--surface-sunken);
+    display: flex; align-items: center; padding: 0 10px; font-size: 11.5px; color: var(--ink-faint); font-style: italic;
+  }
+  .signoff-box .sign {
+    font-size: 11px; color: var(--ink-muted); white-space: nowrap; display: flex; align-items: center; gap: 5px;
+  }
+
+  .footer-sources {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+    font-size: 11px; color: var(--ink-faint);
+  }
+  .footer-sources .src { display: flex; gap: 10px; flex-wrap: wrap; }
+  .footer-sources code { font-family: var(--mono); background: var(--surface-sunken); padding: 1px 5px; border-radius: 4px; }
+
+  a:focus-visible, label:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 2px;
+  }
+
+  @media (max-width: 900px) {
+    .fin-row { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .account-grid, .rag-blocks { grid-template-columns: repeat(2, 1fr); }
+    .fin-row { grid-template-columns: repeat(2, 1fr); }
+    details.collapsible .collapse-body { flex-direction: column; gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell tabs">
+
+  <div class="banner">
+    <span class="dot">&#9679;</span>
+    <div>
+      <strong>Mockup exploratório — foco em conteúdo, não em estética.</strong>
+      Este wireframe existe para validar <em>o que aparece</em> no relatório antes de discutir aparência.
+      Cada bloco carrega uma etiqueta de status (confirmado / hipótese / em revisão / backlog) para deixar claro
+      o que já foi validado pelo PP/stakeholders e o que ainda é decisão de produto nossa. Nomes de clientes, pessoas e valores são fictícios.
+    </div>
+  </div>
+
+  <div class="masthead">
+    <div>
+      <h1>EX Account Health</h1>
+      <div class="sub">Ferramenta de apoio pessoal ao CD &mdash; carteira própria, atualização periódica</div>
+    </div>
+    <div class="sync-status"><span class="dot"></span>Painel atualizado em 13/08/2026 &middot; 09:14</div>
+  </div>
+
+  <div class="legend">
+    <span class="tag tag-confirmado">confirmado</span>
+    <span class="tag tag-hipotese">hipótese</span>
+    <span class="tag tag-revisao">em revisão</span>
+    <span class="tag tag-backlog">backlog</span>
+  </div>
+
+  <input type="radio" name="view" id="tab-portfolio" checked>
+  <input type="radio" name="view" id="tab-detail">
+
+  <nav class="tabnav">
+    <label for="tab-portfolio">Visão Portfólio</label>
+    <label for="tab-detail">Visão Detalhe da Conta</label>
+  </nav>
+
+  <div class="views">
+
+    <!-- ============ VIEW 1: PORTFOLIO ============ -->
+    <section id="view-portfolio" class="view">
+
+      <div class="bignum-row">
+        <div class="bignum">
+          <div class="label">Contas ativas</div>
+          <div class="value tabular">14</div>
+          <div class="delta">carteira própria</div>
+        </div>
+        <div class="bignum">
+          <div class="label">Pipeline aberto (total)</div>
+          <div class="value tabular">R$ &mdash;</div>
+          <div class="delta">ilustrativo &middot; sem valor real</div>
+        </div>
+        <div class="bignum">
+          <div class="label">Propostas prestes a fechar</div>
+          <div class="value tabular accent">5</div>
+          <div class="delta up">&#9650; 2 na semana</div>
+        </div>
+        <div class="bignum">
+          <div class="label">Valor das propostas prestes a fechar</div>
+          <div class="value tabular accent">R$ &mdash;</div>
+          <div class="delta">ilustrativo &middot; sem valor real</div>
+        </div>
+        <div class="bignum">
+          <div class="label">Total de propostas fechadas</div>
+          <div class="value tabular">R$ &mdash;</div>
+          <div class="delta">acumulado no ano &middot; ilustrativo</div>
+        </div>
+      </div>
+
+      <div class="section-label">Contas &middot; visão rápida <span class="tag tag-hipotese" style="margin-left:6px;">hipótese de layout</span></div>
+
+      <input type="checkbox" id="filter-attention" class="filter-checkbox">
+      <input type="checkbox" id="filter-closing" class="filter-checkbox">
+      <div class="filter-bar">
+        <label for="filter-attention" class="toggle-btn">&#9888; Só contas em atenção</label>
+        <label for="filter-closing" class="toggle-btn">&#8987; Só propostas prestes a fechar</label>
+      </div>
+
+      <div class="account-grid">
+
+        <label for="tab-detail" class="account-card" data-attention="true" data-closing="true">
+          <div class="row1">
+            <div>
+              <div class="name">Cliente Nimbus</div>
+              <div class="meta">Varejo &middot; AE Marina T.</div>
+            </div>
+            <span class="rag-chip rag-red" title="Overall: Red"></span>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="n tabular">2</div><div class="l">fechando</div></div>
+            <div class="stat"><div class="n tabular">R$ &mdash;</div><div class="l">pipeline</div></div>
+            <div class="stat"><span class="tier-pill">Tier A</span></div>
+          </div>
+          <div class="closing-badge">&#8987; 2 propostas prestes a fechar</div>
+        </label>
+
+        <label for="tab-detail" class="account-card" data-attention="true" data-closing="false">
+          <div class="row1">
+            <div>
+              <div class="name">Grupo Altavia</div>
+              <div class="meta">Indústria &middot; AE Rafael S.</div>
+            </div>
+            <span class="rag-chip rag-amber" title="Overall: Amber"></span>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="n tabular">0</div><div class="l">fechando</div></div>
+            <div class="stat"><div class="n tabular">R$ &mdash;</div><div class="l">pipeline</div></div>
+            <div class="stat"><span class="tier-pill">Tier B</span></div>
+          </div>
+        </label>
+
+        <label for="tab-detail" class="account-card" data-attention="false" data-closing="true">
+          <div class="row1">
+            <div>
+              <div class="name">Cerrado Log</div>
+              <div class="meta">Logística &middot; AE Marina T.</div>
+            </div>
+            <span class="rag-chip rag-green" title="Overall: Green"></span>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="n tabular">1</div><div class="l">fechando</div></div>
+            <div class="stat"><div class="n tabular">R$ &mdash;</div><div class="l">pipeline</div></div>
+            <div class="stat"><span class="tier-pill">Tier A</span></div>
+          </div>
+          <div class="closing-badge">&#8987; 1 proposta prestes a fechar</div>
+        </label>
+
+        <label for="tab-detail" class="account-card" data-attention="false" data-closing="false">
+          <div class="row1">
+            <div>
+              <div class="name">Fintra Pagamentos</div>
+              <div class="meta">Fintech &middot; AE Diego A.</div>
+            </div>
+            <span class="rag-chip rag-green" title="Overall: Green"></span>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="n tabular">0</div><div class="l">fechando</div></div>
+            <div class="stat"><div class="n tabular">R$ &mdash;</div><div class="l">pipeline</div></div>
+            <div class="stat"><span class="tier-pill">Tier C</span></div>
+          </div>
+        </label>
+
+        <label for="tab-detail" class="account-card" data-attention="false" data-closing="false">
+          <div class="row1">
+            <div>
+              <div class="name">Bioverde Agro</div>
+              <div class="meta">Agro &middot; AE Rafael S.</div>
+            </div>
+            <span class="rag-chip rag-green" title="Overall: Green"></span>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="n tabular">0</div><div class="l">fechando</div></div>
+            <div class="stat"><div class="n tabular">R$ &mdash;</div><div class="l">pipeline</div></div>
+            <div class="stat"><span class="tier-pill">Tier B</span></div>
+          </div>
+        </label>
+
+        <label for="tab-detail" class="account-card" data-attention="true" data-closing="true">
+          <div class="row1">
+            <div>
+              <div class="name">Malbec Varejo</div>
+              <div class="meta">Varejo &middot; AE Diego A.</div>
+            </div>
+            <span class="rag-chip rag-amber" title="Overall: Amber"></span>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="n tabular">2</div><div class="l">fechando</div></div>
+            <div class="stat"><div class="n tabular">R$ &mdash;</div><div class="l">pipeline</div></div>
+            <div class="stat"><span class="tier-pill">Tier A</span></div>
+          </div>
+          <div class="closing-badge">&#8987; 2 propostas prestes a fechar</div>
+        </label>
+
+      </div>
+      <p style="font-size:11.5px; color:var(--ink-faint); margin-top:14px;">
+        &#9679; Clique em qualquer card para abrir o detalhamento daquela conta (aqui, todos apontam para a mesma conta de exemplo &mdash; num produto real cada card levaria à sua própria conta).
+        Os dois botões acima filtram o grid: "em atenção" (amber/red) e "prestes a fechar" já funcionam neste mockup.
+      </p>
+    </section>
+
+    <!-- ============ VIEW 2: ACCOUNT DETAIL ============ -->
+    <section id="view-detail" class="view">
+
+      <div class="filter-select-bar">
+        <div class="field">
+          <div class="l">Contas</div>
+          <select>
+            <option>Todas as contas (14)</option>
+            <option selected>Cliente Nimbus</option>
+            <option>Grupo Altavia</option>
+            <option>Cerrado Log</option>
+          </select>
+        </div>
+        <div class="field">
+          <div class="l">Saúde da conta</div>
+          <select>
+            <option selected>Todas</option>
+            <option>Green</option>
+            <option>Amber</option>
+            <option>Red</option>
+          </select>
+        </div>
+        <div class="field">
+          <div class="l">Propostas em fechamento</div>
+          <select>
+            <option selected>Todas</option>
+            <option>Com proposta prestes a fechar</option>
+            <option>Sem proposta em fechamento</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="account-header">
+          <div>
+            <h2>Cliente Nimbus <span class="tag tag-confirmado" style="margin-left:8px; vertical-align:middle;">confirmado</span></h2>
+            <div class="id-meta">
+              <div class="field"><div class="l">CD</div><div class="v">Pedro Portela</div></div>
+              <div class="field"><div class="l">AE</div><div class="v">Marina T.</div></div>
+              <div class="field"><div class="l">Tier</div><div class="v">A</div></div>
+              <div class="field"><div class="l">Indústria</div><div class="v">Varejo</div></div>
+            </div>
+          </div>
+          <div class="overall-status">
+            <div class="l">Status geral</div>
+            <div class="status-pill amber">Amber</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02. RAG blocks -->
+      <div class="card">
+        <div class="card-head"><span class="num">02</span><h3>Status RAG &mdash; overall + 4 blocos</h3><span class="tag tag-confirmado" style="margin-left:auto;">confirmado</span></div>
+        <div class="rag-blocks cols-4">
+          <div class="rag-block">
+            <div class="l">Profitability &mdash; RAG</div>
+            <div class="dotline"><span class="rag-chip rag-amber"></span><span class="v">Amber</span></div>
+            <a class="link" href="#">ver no Delivery Dashboard &rarr;</a>
+            <details class="rag-history">
+              <summary>ver detalhes ao longo do tempo</summary>
+              <div class="history-strip">
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">mar</span></div>
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">abr</span></div>
+                <div class="history-point"><span class="dot rag-amber"></span><span class="m">mai</span></div>
+                <div class="history-point"><span class="dot rag-amber"></span><span class="m">jun</span></div>
+                <div class="history-point"><span class="dot rag-amber"></span><span class="m">jul</span></div>
+                <div class="history-point"><span class="dot rag-amber"></span><span class="m">ago</span></div>
+              </div>
+              <p class="history-note">ilustrativo &mdash; depende do Delivery Dashboard expor histórico de RAG (dúvida em aberto)</p>
+            </details>
+          </div>
+          <div class="rag-block">
+            <div class="l">Delivery Health &mdash; RAG</div>
+            <div class="dotline"><span class="rag-chip rag-green"></span><span class="v">Green</span></div>
+            <a class="link" href="#">ver no Delivery Dashboard &rarr;</a>
+            <details class="rag-history">
+              <summary>ver detalhes ao longo do tempo</summary>
+              <div class="history-strip">
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">mar</span></div>
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">abr</span></div>
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">mai</span></div>
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">jun</span></div>
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">jul</span></div>
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">ago</span></div>
+              </div>
+              <p class="history-note">ilustrativo &mdash; depende do Delivery Dashboard expor histórico de RAG (dúvida em aberto)</p>
+            </details>
+          </div>
+          <div class="rag-block">
+            <div class="l">Growth &mdash; RAG</div>
+            <div class="dotline"><span class="rag-chip rag-amber"></span><span class="v">Amber</span></div>
+            <a class="link" href="#">ver no Delivery Dashboard &rarr;</a>
+            <details class="rag-history">
+              <summary>ver detalhes ao longo do tempo</summary>
+              <div class="history-strip">
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">mar</span></div>
+                <div class="history-point"><span class="dot rag-amber"></span><span class="m">abr</span></div>
+                <div class="history-point"><span class="dot rag-amber"></span><span class="m">mai</span></div>
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">jun</span></div>
+                <div class="history-point"><span class="dot rag-amber"></span><span class="m">jul</span></div>
+                <div class="history-point"><span class="dot rag-amber"></span><span class="m">ago</span></div>
+              </div>
+              <p class="history-note">ilustrativo &mdash; depende do Delivery Dashboard expor histórico de RAG (dúvida em aberto)</p>
+            </details>
+          </div>
+          <div class="rag-block">
+            <div class="l">Risks &mdash; RAG</div>
+            <div class="dotline"><span class="rag-chip rag-red"></span><span class="v">Red</span></div>
+            <a class="link" href="#">ver no Delivery Dashboard &rarr;</a>
+            <details class="rag-history">
+              <summary>ver detalhes ao longo do tempo</summary>
+              <div class="history-strip">
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">mar</span></div>
+                <div class="history-point"><span class="dot rag-green"></span><span class="m">abr</span></div>
+                <div class="history-point"><span class="dot rag-amber"></span><span class="m">mai</span></div>
+                <div class="history-point"><span class="dot rag-amber"></span><span class="m">jun</span></div>
+                <div class="history-point"><span class="dot rag-red"></span><span class="m">jul</span></div>
+                <div class="history-point"><span class="dot rag-red"></span><span class="m">ago</span></div>
+              </div>
+              <p class="history-note">ilustrativo &mdash; depende do Delivery Dashboard expor histórico de RAG (dúvida em aberto)</p>
+            </details>
+          </div>
+        </div>
+        <p style="font-size:11px; color:var(--ink-faint); margin:10px 0 0;">Os 4 blocos e os critérios Green/Amber/Red seguem o Delivery Scorecard (e-mail do Fernando, 11/08) &mdash; preenchimento mensal do CD, não RAG à parte.</p>
+      </div>
+
+      <!-- 03. Financial summary (moved right after RAG) -->
+      <div class="card">
+        <div class="card-head"><span class="num">03</span><h3>Resumo financeiro</h3><span class="tag tag-hipotese" style="margin-left:auto;">hipótese</span></div>
+        <div class="fin-row">
+          <div class="fin-tile">
+            <div class="l">Propostas em aberto</div>
+            <div class="v tabular">3</div>
+          </div>
+          <div class="fin-tile">
+            <div class="l">Pipeline aberto</div>
+            <div class="v tabular">R$ &mdash;</div>
+          </div>
+          <div class="fin-tile">
+            <div class="l">Pipeline fechado (ano)</div>
+            <div class="v tabular">R$ &mdash;</div>
+          </div>
+          <div class="fin-tile highlight">
+            <div class="l">Propostas prestes a fechar</div>
+            <div class="v tabular">2</div>
+          </div>
+        </div>
+        <div class="consumption">
+          <div class="head">
+            <span class="l">Consumo do contrato</span>
+            <span class="pct">62%</span>
+          </div>
+          <div class="consumption-bar"><span style="width:62%"></span></div>
+          <div class="figures" style="margin-top:6px;">Faturado <b>R$ &mdash;</b> de <b>R$ &mdash;</b> (valor total do contrato) &mdash; ilustrativo, sem valor real</div>
+        </div>
+      </div>
+
+      <!-- 04. Ritmo -->
+      <div class="card dim">
+        <div class="card-head"><span class="num">04</span><h3>Ritmo &middot; aderência ao plano de conta</h3><span class="tag tag-backlog" style="margin-left:auto;">backlog</span></div>
+        <p style="font-size:12px; color:var(--ink-faint); margin:0;">Rebaixado a nice-to-have em 11/08 &mdash; PP questionou se é papel do CD ou do Comercial. Não desenhado em detalhe.</p>
+      </div>
+
+      <!-- 05. Pipeline table -->
+      <div class="card">
+        <div class="card-head"><span class="num">05</span><h3>Detalhe do pipeline comercial</h3><span class="tag tag-hipotese" style="margin-left:auto;">hipótese</span></div>
+        <div class="scroll-x">
+          <table>
+            <thead>
+              <tr><th>Proposta</th><th>Contato do cliente</th><th>Estágio</th><th>Probabilidade</th><th>Previsão</th><th>Data de fechamento</th><th>Valor</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Expansão &mdash; módulo analytics</td>
+                <td class="contact-cell"><span class="name">Camila R.</span><span class="role">Gerência de Dados</span></td>
+                <td><span class="stage-pill">Negociação</span></td>
+                <td class="tabular">70%</td>
+                <td class="tabular">set/26</td>
+                <td class="tabular empty">&mdash;</td>
+                <td class="tabular">R$ &mdash;</td>
+              </tr>
+              <tr>
+                <td>Renovação anual</td>
+                <td class="contact-cell"><span class="name">Bruno M.</span><span class="role">Diretoria de Operações</span></td>
+                <td><span class="stage-pill">Fechado</span></td>
+                <td class="tabular">100%</td>
+                <td class="tabular">&mdash;</td>
+                <td class="tabular">12/07/26</td>
+                <td class="tabular">R$ &mdash;</td>
+              </tr>
+              <tr>
+                <td>Novo squad &mdash; dados</td>
+                <td class="contact-cell"><span class="name">Camila R.</span><span class="role">Gerência de Dados</span></td>
+                <td><span class="stage-pill">Descoberta</span></td>
+                <td class="tabular">20%</td>
+                <td class="tabular">dez/26</td>
+                <td class="tabular empty">&mdash;</td>
+                <td class="tabular">R$ &mdash;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:11px; color:var(--ink-faint); margin:10px 0 0;">"Contato do cliente" é o stakeholder do lado do cliente para aquela proposta específica &mdash; diferente da squad interna alocada (bloco 09). Contas grandes têm grupos de stakeholder diferentes por assunto (ex.: treinamento vs. Data Science). Depende do preenchimento no CRM.</p>
+      </div>
+
+      <!-- 06. Narrative -->
+      <div class="card">
+        <div class="card-head"><span class="num">06</span><h3>Síntese narrativa do período</h3><span class="tag tag-hipotese" style="margin-left:auto;">hipótese de formato</span></div>
+        <div class="narrative">
+          <p>Reunião mensal de acompanhamento indicou satisfação com o time de delivery, mas preocupação recorrente do cliente com o prazo do módulo de analytics. Duas menções a possível expansão de escopo ainda não formalizadas em proposta.</p>
+          <div class="narrative-recap">
+            <div class="recap-chip">
+              <b>Oportunidades mencionadas</b>
+              Interesse em módulo de analytics adicional; sinal de dificuldade com plataforma própria do cliente.
+            </div>
+            <div class="recap-chip risk">
+              <b>Riscos mencionados</b>
+              Atraso pontual no cronograma do módulo de analytics.
+            </div>
+          </div>
+          <div class="attribution">Gerado a partir de transcrições Gemini &middot; período: jul/26</div>
+        </div>
+      </div>
+
+      <!-- 07. Opportunities -->
+      <div class="card">
+        <div class="card-head"><span class="num">07</span><h3>Oportunidades</h3><span class="tag tag-revisao" style="margin-left:auto;">em revisão</span></div>
+        <div class="insight-list">
+          <div class="insight">
+            <div class="icon">&#8599;</div>
+            <div class="body">
+              <b>Concorrente anunciou saída de categoria adjacente ao contrato do cliente</b>
+              <p>Cruzamento com contexto de mercado externo &mdash; direção nova (11/08), ainda não formalizada como item de produto.</p>
+            </div>
+          </div>
+          <div class="insight">
+            <div class="icon">&#128161;</div>
+            <div class="body">
+              <b>Sondagem sugerida com base em menção antiga do cliente</b>
+              <p>"O cliente mencionou 1 mês atrás dificuldades com a plataforma dele. Com base nas últimas decisões e recomendações, pode ser a hora de sondar melhor essa oportunidade com o cliente."</p>
+            </div>
+          </div>
+        </div>
+        <div class="signoff-box">
+          <div class="comment-mock">Comentário do CD sobre esta oportunidade&hellip;</div>
+          <div class="sign">&#9998; Assinado por: Pedro Portela</div>
+        </div>
+        <p style="font-size:11px; color:var(--ink-faint); margin:10px 0 0;">Direção anterior (detectar oportunidade só a partir de transcrição interna) foi recebida com ceticismo pelo PP &mdash; ver seção 7 do resumo.</p>
+      </div>
+
+      <!-- 08. Risks -->
+      <div class="card">
+        <div class="card-head"><span class="num">08</span><h3>Riscos / pontos de atenção</h3><span class="tag tag-revisao" style="margin-left:auto;">em revisão</span></div>
+        <div class="insight-list">
+          <div class="insight risk">
+            <span class="cat-tag">Rentabilidade</span>
+            <div class="icon">&#9888;</div>
+            <div class="body">
+              <b>Margem da conta pressionada por escopo adicional não cobrado</b>
+              <p>Sinalizado a partir do cruzamento pipeline x delivery &mdash; requer confirmação do CD.</p>
+            </div>
+          </div>
+          <div class="insight risk">
+            <span class="cat-tag">Equipe</span>
+            <div class="icon">&#9888;</div>
+            <div class="body">
+              <b>Sobrecarga do Tech Lead em duas contas simultâneas</b>
+              <p>Risco de continuidade de delivery se não houver reforço na squad.</p>
+            </div>
+          </div>
+          <div class="insight risk">
+            <span class="cat-tag">Liderança do cliente</span>
+            <div class="icon">&#9888;</div>
+            <div class="body">
+              <b>Rumor de mudança no sponsor executivo do lado do cliente</b>
+              <p>Ainda não confirmado &mdash; monitorar antes da renovação anual.</p>
+            </div>
+          </div>
+          <div class="insight risk low-priority">
+            <span class="cat-tag">Operacional</span>
+            <div class="icon">&#9888;</div>
+            <div class="body">
+              <b>Atraso pontual no módulo de analytics</b>
+              <p>Menor prioridade &mdash; questão de rotina do dia a dia, não de risco estrutural da conta.</p>
+            </div>
+          </div>
+        </div>
+        <div class="signoff-box">
+          <div class="comment-mock">Comentário do CD sobre estes riscos&hellip;</div>
+          <div class="sign">&#9998; Assinado por: Pedro Portela</div>
+        </div>
+        <p style="font-size:11px; color:var(--ink-faint); margin:10px 0 0;">Prioridade: rentabilidade, sobrecarga de equipe, impacto no crescimento e mudança de liderança do cliente vêm antes de questões operacionais do dia a dia.</p>
+      </div>
+
+      <!-- 09. Squad & key contacts (collapsible, compact, last content block) -->
+      <details class="card collapsible">
+        <summary class="card-head">
+          <span class="num">09</span><h3>Squad &amp; contatos-chave</h3>
+          <span class="tag tag-hipotese" style="margin-left:auto;">hipótese</span>
+          <span class="chevron">&#9656;</span>
+        </summary>
+        <div class="collapse-body">
+          <div class="compact-group">
+            <div class="compact-label">Squad alocada</div>
+            <div class="compact-row"><span class="who">Tech Lead</span><span class="what">desde jan/26</span></div>
+            <div class="compact-row"><span class="who">Consultor Sênior</span><span class="what">desde mar/26</span></div>
+            <div class="compact-row"><span class="who">Analista de Dados</span><span class="what">desde mai/26</span></div>
+          </div>
+          <div class="compact-group">
+            <div class="compact-label">Contatos-chave do cliente</div>
+            <div class="compact-row"><span class="who">Sponsor executivo</span><span class="what">Diretoria de Operações</span></div>
+            <div class="compact-row"><span class="who">Ponto focal técnico</span><span class="what">Gerência de Dados</span></div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 10. Footer -->
+      <div class="card" style="padding-top:14px; padding-bottom:14px;">
+        <div class="footer-sources">
+          <div class="src">
+            Fontes: <code>Salesforce</code><code>Delivery Dashboard</code><code>Planilha Account Planning</code>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</div>
+
+</body>
+</html>

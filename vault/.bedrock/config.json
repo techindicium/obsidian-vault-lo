@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "language": "en-US",
+  "preset": "product",
+  "domains": ["product", "design", "research", "analytics", "growth"],
+  "git": {
+    "strategy": "commit-push"
+  },
+  "initialized_at": "2026-08-31",
+  "initialized_by": "init@agent"
+}
