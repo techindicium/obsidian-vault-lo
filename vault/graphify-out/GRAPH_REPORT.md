@@ -797,3 +797,81 @@ _Questions this graph is uniquely positioned to answer:_
   _`Cross-Layer Concerns` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Retrieval-Augmented Generation (RAG)`, `Agent-to-Agent Communication and Orchestration`, `Short-Term Memory (Agent Conversations)` to the rest of the system?**
   _7 weakly-connected nodes found - possible documentation gaps or missing edges._
+
+---
+
+# Merge on 2026-09-10
+
+# Graph Report - bedrock-learn-1789041903  (2026-09-10)
+
+## Corpus Check
+- Corpus is ~1,735 words - fits in a single context window. You may not need a graph.
+
+## Summary
+- 24 nodes · 30 edges · 4 communities
+- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.78)
+- Token cost: 0 input · 61,115 output
+
+## Community Hubs (Navigation)
+- Continuous & Security Testing
+- Author & Industry Affiliations
+- Shift-Left Testing Fundamentals
+- Cost-of-Defect Research
+
+## God Nodes (most connected - your core abstractions)
+1. `Shift-Left Testing` - 9 edges
+2. `Arthur Hicken` - 6 edges
+3. `The Shift-Left Approach to Software Testing` - 4 edges
+4. `Coding Standards` - 4 edges
+5. `Service Virtualization` - 4 edges
+6. `Security Testing` - 4 edges
+7. `Capers Jones Cost-of-Defect Graph` - 3 edges
+8. `Static Code Analysis` - 3 edges
+9. `Unit Testing` - 3 edges
+10. `Software Testing Pyramid` - 2 edges
+
+## Surprising Connections (you probably didn't know these)
+- `The Shift-Left Approach to Software Testing` --references--> `Arthur Hicken`  [EXTRACTED]
+  shift-left-approach-software-testing.md → shift-left-approach-software-testing.md  _Bridges community 3 → community 1_
+- `The Shift-Left Approach to Software Testing` --conceptually_related_to--> `Shift-Left Testing`  [EXTRACTED]
+  shift-left-approach-software-testing.md → shift-left-approach-software-testing.md  _Bridges community 3 → community 2_
+- `Shift-Left Testing` --conceptually_related_to--> `Coding Standards`  [EXTRACTED]
+  shift-left-approach-software-testing.md → shift-left-approach-software-testing.md  _Bridges community 2 → community 0_
+
+## Hyperedges (group relationships)
+- **Core Shift-Left Development Practices** — shift_left_approach_software_testing_static_code_analysis, shift_left_approach_software_testing_unit_testing, shift_left_approach_software_testing_coding_standards, shift_left_approach_software_testing_service_virtualization [INFERRED 0.85]
+- **Testing Types Enabled by Service Virtualization** — shift_left_approach_software_testing_service_virtualization, shift_left_approach_software_testing_continuous_testing, shift_left_approach_software_testing_performance_testing, shift_left_approach_software_testing_security_testing [INFERRED 0.85]
+
+## Communities (4 total, 0 thin omitted)
+
+### Community 0 - "Continuous & Security Testing"
+Cohesion: 0.38
+Nodes (7): Coding Standards, Continuous Testing, GDPR, Performance Testing, Build Security In, Not Test It In (Secure by Design), Security Testing, Service Virtualization
+
+### Community 1 - "Author & Industry Affiliations"
+Cohesion: 0.33
+Nodes (6): Arthur Hicken, Cisco, Motorola, Parasoft, The Code Curmudgeon (blog), Vanguard
+
+### Community 2 - "Shift-Left Testing Fundamentals"
+Cohesion: 0.47
+Nodes (6): Avoid Overloading Developers With Testing Burden, Goal Is Fewer Bugs Introduced, Not Just More Bugs Found, Shift-Left Testing, Software Testing Pyramid, Static Code Analysis, Unit Testing
+
+### Community 3 - "Cost-of-Defect Research"
+Cohesion: 0.40
+Nodes (5): Capers Jones, Cost of Defect Remediation Escalates the Later It Is Found, Capers Jones Cost-of-Defect Graph, DevOps, The Shift-Left Approach to Software Testing
+
+## Knowledge Gaps
+- **8 isolated node(s):** `Capers Jones`, `Continuous Testing`, `Parasoft`, `The Code Curmudgeon (blog)`, `Cisco` (+3 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 10 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+
+## Suggested Questions
+_Questions this graph is uniquely positioned to answer:_
+
+- **Why does `Shift-Left Testing` connect `Shift-Left Testing Fundamentals` to `Continuous & Security Testing`, `Cost-of-Defect Research`?**
+  _High betweenness centrality (0.694) - this node is a cross-community bridge._
+- **Why does `The Shift-Left Approach to Software Testing` connect `Cost-of-Defect Research` to `Author & Industry Affiliations`, `Shift-Left Testing Fundamentals`?**
+  _High betweenness centrality (0.518) - this node is a cross-community bridge._
+- **Why does `Arthur Hicken` connect `Author & Industry Affiliations` to `Cost-of-Defect Research`?**
+  _High betweenness centrality (0.395) - this node is a cross-community bridge._
+- **What connects `Capers Jones`, `Continuous Testing`, `Parasoft` to the rest of the system?**
+  _8 weakly-connected nodes found - possible documentation gaps or missing edges._

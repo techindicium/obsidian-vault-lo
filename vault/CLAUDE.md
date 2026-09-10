@@ -23,9 +23,15 @@ This vault uses the following domain tags:
 - domain/research
 - domain/analytics
 - domain/growth
+- domain/engineering
 
 When creating entities, use `domain/<name>` tags from this list.
 New domains can be added as the vault grows.
+
+`domain/engineering` covers SDLC, security, and governance practice content (e.g., the
+"Advanced SDLC & Harness" course material: shift-left testing, AI risk/governance frameworks,
+SAMM, etc.) that doesn't fit the product-management domains above. Existing entities tagged
+under other domains (e.g., `domain/growth`) are not retroactively retagged.
 
 ## Quick Reference
 
