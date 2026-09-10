@@ -42,7 +42,7 @@ Lorena is taking a course on Advanced SDLC & Harness created and taught by [[dan
 | 4 | [OWASP GenAI Threats / LLM Top 10](https://genai.owasp.org/) | ✅ done | [[genai-top10-standard]], [[sensitive-information-disclosure]], [[ai-supply-chain-risk]], [[unbounded-consumption]], [[misinformation]], [[hidden-context-exposure]], [[vector-and-embedding-weaknesses]], [[improper-output-handling]], [[genai-top10-framework-mappings]]; updated [[prompt-injection]], [[excessive-agency]], [[data-poisoning]], [[mitre-atlas]], [[nist-ai-risk-management-framework]], [[ai-rmf-profile]] |
 | 5 | [ISO/IEC 42001](https://www.iso.org/standard/42001) | ⬜ pending | — |
 | 6 | [OWASP SAMM](https://owaspsamm.org/) | ⬜ pending | — |
-| 7 | [idev](https://github.com/techindicium/idev) | ⬜ pending | — |
+| 7 | [idev](https://github.com/techindicium/idev) | ❌ skipped (Lorena's request) | — |
 | 8 | [Claude Code Output Styles](https://code.claude.com/docs/en/output-styles) | ⬜ pending | — |
 | 9 | [Mattpocock skills](https://github.com/mattpocock/skills) | ⬜ pending | — |
 | 10 | [Theo — t3.gg (YouTube)](https://www.youtube.com/@t3dotgg) | ⬜ pending | — |
@@ -52,6 +52,7 @@ Lorena is taking a course on Advanced SDLC & Harness created and taught by [[dan
 | Date | Event |
 |---|---|
 | 2026-09-10 | Started the course reading list; ingested sources 1-4 (shift-left testing, NIST AI RMF, OWASP AISVS, OWASP GenAI LLM Top 10) via `/bedrock:learn`; paused at Lorena's request before continuing to source 5 |
+| 2026-09-10 | Created `person` entities for [[lorena-santos]] (learner) and [[daniel-avancini]] (course creator, Indicium co-founder & CDO) and linked them to this topic; Lorena confirmed continuing the list and asked to skip source 7 (idev) |
 
 ## Decisions
 
@@ -63,7 +64,7 @@ Lorena is taking a course on Advanced SDLC & Harness created and taught by [[dan
 
 - [ ] Ingest [ISO/IEC 42001](https://www.iso.org/standard/42001) — will likely enrich the existing [[iso-42001]] stub
 - [ ] Ingest [OWASP SAMM](https://owaspsamm.org/)
-- [ ] Ingest [idev](https://github.com/techindicium/idev)
+- [x] ~~Ingest idev~~ — skipped per Lorena's request
 - [ ] Ingest [Claude Code Output Styles docs](https://code.claude.com/docs/en/output-styles)
 - [ ] Ingest [Mattpocock skills repo](https://github.com/mattpocock/skills)
 - [ ] Ingest [Theo (t3.gg) YouTube channel](https://www.youtube.com/@t3dotgg)
