@@ -32,4 +32,4 @@ No internal squad recorded in this vault.
 
 ## Active Topics
 
-- [[2026-09-compliance-advanced-sdlc-harness-course]] — working through the reading list for Daniel Avancini's Advanced SDLC & Harness course, ingesting each source into the vault
+- [[2026-09-compliance-advanced-sdlc-harness-course]] — working through the reading list for [[daniel-avancini]]'s Advanced SDLC & Harness course, ingesting each source into the vault

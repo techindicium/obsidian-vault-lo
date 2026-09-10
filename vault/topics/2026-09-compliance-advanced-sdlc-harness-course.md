@@ -4,7 +4,7 @@ title: "Advanced SDLC & Harness Course (Daniel Avancini)"
 aliases: ["Advanced SDLC & Harness", "Daniel Avancini SDLC Course"]
 category: "compliance"
 status: "in-progress"
-people: ["[[lorena-santos]]"]
+people: ["[[lorena-santos]]", "[[daniel-avancini]]"]
 actors: []
 objective: "Read and ingest, one at a time, the full reading list from Daniel Avancini's Advanced SDLC & Harness course, turning each source into vault concepts (shift-left testing, AI governance frameworks, security verification standards) rather than just summarizing them."
 created_at: "2026-09-10"
@@ -23,13 +23,14 @@ tags: [type/topic, status/in-progress, category/compliance, domain/engineering]
 
 ## Context
 
-Lorena is taking a course on Advanced SDLC & Harness with Daniel Avancini. The course reading list spans shift-left testing practice, AI risk/governance frameworks (NIST AI RMF, ISO/IEC 42001), AI-specific security verification standards (OWASP AISVS, OWASP GenAI LLM Top 10), SDLC maturity measurement (OWASP SAMM), an internal reference repo (`techindicium/idev`), Claude Code output styles docs, a community skills repo (mattpocock/skills), and Theo (t3.gg)'s YouTube channel. Each source is ingested via `/bedrock:learn`, which runs it through graphify extraction and `/bedrock:preserve`, producing new or updated `concept` entities in `domain/engineering` rather than a single "course notes" dump — so the knowledge stays reusable and cross-linkable with the rest of the vault.
+Lorena is taking a course on Advanced SDLC & Harness created and taught by [[daniel-avancini]]. The course reading list spans shift-left testing practice, AI risk/governance frameworks (NIST AI RMF, ISO/IEC 42001), AI-specific security verification standards (OWASP AISVS, OWASP GenAI LLM Top 10), SDLC maturity measurement (OWASP SAMM), an internal reference repo (`techindicium/idev`), Claude Code output styles docs, a community skills repo (mattpocock/skills), and Theo (t3.gg)'s YouTube channel. Each source is ingested via `/bedrock:learn`, which runs it through graphify extraction and `/bedrock:preserve`, producing new or updated `concept` entities in `domain/engineering` rather than a single "course notes" dump — so the knowledge stays reusable and cross-linkable with the rest of the vault.
 
 ## People Involved
 
 | Person | Role |
 |---|---|
 | [[lorena-santos]] | learner / requester |
+| [[daniel-avancini]] | course creator / instructor (Indicium co-founder & Chief Data Officer) |
 
 ## Reading List & Progress
 
