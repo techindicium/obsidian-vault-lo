@@ -1101,3 +1101,97 @@ _Questions this graph is uniquely positioned to answer:_
   _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
 - **What is the exact relationship between `Memory, Embeddings & Vector Database Security` and `Model Context Protocol (MCP) Security`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
+
+---
+
+# Merge on 2026-09-10
+
+# Graph Report - bedrock-learn-genai-1789050000  (2026-09-10)
+
+## Corpus Check
+- Corpus is ~28,041 words - fits in a single context window. You may not need a graph.
+
+## Summary
+- 23 nodes · 145 edges · 4 communities
+- Extraction: 91% EXTRACTED · 8% INFERRED · 1% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.68)
+- Token cost: 0 input · 225,763 output
+
+## Community Hubs (Navigation)
+- Core Risks & Methodology
+- Supply Chain & Retrieval Poisoning
+- Output & Context Integrity
+- Framework Mappings
+
+## God Nodes (most connected - your core abstractions)
+1. `LLM01:2026 Prompt Injection` - 20 edges
+2. `LLM04:2026 Supply Chain` - 19 edges
+3. `LLM03:2026 Excessive Agency` - 18 edges
+4. `LLM02:2026 Sensitive Information Disclosure` - 17 edges
+5. `LLM08: Hidden Context Exposure` - 16 edges
+6. `LLM09: Vector and Embedding Weaknesses` - 16 edges
+7. `LLM07: Misinformation` - 15 edges
+8. `LLM05: Data and Model Poisoning` - 14 edges
+9. `LLM06: Unbounded Consumption` - 14 edges
+10. `LLM10: Improper Output Handling` - 13 edges
+
+## Surprising Connections (you probably didn't know these)
+- `LLM08: Hidden Context Exposure` --semantically_similar_to--> `LLM09: Vector and Embedding Weaknesses`  [INFERRED] [semantically similar]
+  GenAI-LLM-Top10/LLM08_HiddenContextExposure.md → GenAI-LLM-Top10/LLM09_VectorAndEmbeddingWeaknesses.md
+- `LLM01:2026 Prompt Injection` --semantically_similar_to--> `LLM04:2026 Supply Chain`  [INFERRED] [semantically similar]
+  GenAI-LLM-Top10/LLM01_PromptInjection.md → GenAI-LLM-Top10/LLM04_SupplyChain.md
+- `LLM07: Misinformation` --conceptually_related_to--> `LLM01:2026 Prompt Injection`  [INFERRED]
+  GenAI-LLM-Top10/LLM07_Misinformation.md → GenAI-LLM-Top10/LLM01_PromptInjection.md
+- `LLM02:2026 Sensitive Information Disclosure` --semantically_similar_to--> `LLM04:2026 Supply Chain`  [INFERRED] [semantically similar]
+  GenAI-LLM-Top10/LLM02_SensitiveInformationDisclosure.md → GenAI-LLM-Top10/LLM04_SupplyChain.md
+- `LLM09: Vector and Embedding Weaknesses` --shares_data_with--> `LLM02:2026 Sensitive Information Disclosure`  [INFERRED]
+  GenAI-LLM-Top10/LLM09_VectorAndEmbeddingWeaknesses.md → GenAI-LLM-Top10/LLM02_SensitiveInformationDisclosure.md
+
+## Hyperedges (group relationships)
+- **Lethal Trifecta: Untrusted Input + Private Data + External Action** — genai_top10_llm01_prompt_injection, genai_top10_llm02_sensitive_information_disclosure, genai_top10_llm03_excessive_agency [INFERRED 0.85]
+- **Agentic Tool-Chain Compromise via Injection, Agency, and Supply Chain** — genai_top10_llm01_prompt_injection, genai_top10_llm03_excessive_agency, genai_top10_llm04_supply_chain [INFERRED 0.85]
+- **Poisoned Model and Data Supply Chain** — genai_top10_llm05_data_model_poisoning, genai_top10_llm04_supply_chain, genai_top10_llm09_vector_and_embedding_weaknesses [INFERRED 0.75]
+- **Agentic Tool Abuse and Resource/Privilege Escalation** — genai_top10_llm06_unbounded_consumption, genai_top10_llm03_excessive_agency, genai_top10_llm10_improper_output_handling [INFERRED 0.65]
+- **Hidden Context Disclosure Amplifying Adjacent Risks** — genai_top10_llm08_hidden_context_exposure, genai_top10_llm01_prompt_injection, genai_top10_llm02_sensitive_information_disclosure, genai_top10_llm03_excessive_agency, genai_top10_llm10_improper_output_handling [EXTRACTED 1.00]
+- **All 10 LLM risks primary-mapped to MITRE ATLAS** — genai_top10_llm01_prompt_injection, genai_top10_llm02_sensitive_information_disclosure, genai_top10_llm03_excessive_agency, genai_top10_llm04_supply_chain, genai_top10_llm05_data_model_poisoning, genai_top10_llm06_unbounded_consumption, genai_top10_llm07_misinformation, genai_top10_llm08_hidden_context_exposure, genai_top10_llm09_vector_and_embedding_weaknesses, genai_top10_llm10_improper_output_handling, genai_top10_mitre_atlas_ref [INFERRED 0.85]
+- **LLM risks with primary OWASP AIVSS scoring relevance** — genai_top10_llm01_prompt_injection, genai_top10_llm03_excessive_agency, genai_top10_llm07_misinformation, genai_top10_owasp_aivss_ref [INFERRED 0.85]
+- **LLM risks with only supporting (not primary) MITRE ATT&CK mapping** — genai_top10_llm05_data_model_poisoning, genai_top10_llm07_misinformation, genai_top10_llm08_hidden_context_exposure, genai_top10_llm09_vector_and_embedding_weaknesses, genai_top10_mitre_attack_ref [INFERRED 0.75]
+
+## Communities (4 total, 0 thin omitted)
+
+### Community 0 - "Core Risks & Methodology"
+Cohesion: 0.82
+Nodes (8): OWASP Top 10 for LLM Applications and Generative AI (2026), OWASP GenAI Data Security 2026 (DSGAI), LLM01:2026 Prompt Injection, LLM02:2026 Sensitive Information Disclosure, LLM03:2026 Excessive Agency, LLM04:2026 Supply Chain, 2026 Evidence-Weighted Ranking Methodology, MITRE ATT&CK
+
+### Community 1 - "Supply Chain & Retrieval Poisoning"
+Cohesion: 0.73
+Nodes (6): OWASP AISVS Mapping, OWASP Top 10 for Agentic Applications (ASI) 2026, LLM05: Data and Model Poisoning, LLM06: Unbounded Consumption, LLM09: Vector and Embedding Weaknesses, MITRE CWE (Common Weakness Enumeration)
+
+### Community 2 - "Output & Context Integrity"
+Cohesion: 0.80
+Nodes (6): CSA AI Controls Matrix (AICM), LLM07: Misinformation, LLM08: Hidden Context Exposure, LLM10: Improper Output Handling, MITRE ATLAS, NIST AI 600-1 (Generative AI Profile)
+
+### Community 3 - "Framework Mappings"
+Cohesion: 0.67
+Nodes (3): Appendix A: Related Framework Mappings, NIST AI RMF (AI 100-1), OWASP AIVSS (AI Vulnerability Scoring System)
+
+## Ambiguous Edges - Review These
+- `LLM07: Misinformation` → `LLM08: Hidden Context Exposure`  [AMBIGUOUS]
+  GenAI-LLM-Top10/LLM07_Misinformation.md · relation: conceptually_related_to
+
+## Suggested Questions
+_Questions this graph is uniquely positioned to answer:_
+
+- **What is the exact relationship between `LLM07: Misinformation` and `LLM08: Hidden Context Exposure`?**
+  _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
+- **Why does `LLM01:2026 Prompt Injection` connect `Core Risks & Methodology` to `Supply Chain & Retrieval Poisoning`, `Output & Context Integrity`, `Framework Mappings`?**
+  _High betweenness centrality (0.068) - this node is a cross-community bridge._
+- **Why does `LLM04:2026 Supply Chain` connect `Core Risks & Methodology` to `Supply Chain & Retrieval Poisoning`, `Output & Context Integrity`, `Framework Mappings`?**
+  _High betweenness centrality (0.061) - this node is a cross-community bridge._
+- **Why does `LLM03:2026 Excessive Agency` connect `Core Risks & Methodology` to `Supply Chain & Retrieval Poisoning`, `Output & Context Integrity`, `Framework Mappings`?**
+  _High betweenness centrality (0.057) - this node is a cross-community bridge._
+- **Are the 2 inferred relationships involving `LLM01:2026 Prompt Injection` (e.g. with `LLM04:2026 Supply Chain` and `LLM07: Misinformation`) actually correct?**
+  _`LLM01:2026 Prompt Injection` has 2 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 4 inferred relationships involving `LLM04:2026 Supply Chain` (e.g. with `LLM01:2026 Prompt Injection` and `LLM02:2026 Sensitive Information Disclosure`) actually correct?**
+  _`LLM04:2026 Supply Chain` has 4 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 3 inferred relationships involving `LLM03:2026 Excessive Agency` (e.g. with `LLM02:2026 Sensitive Information Disclosure` and `LLM04:2026 Supply Chain`) actually correct?**
+  _`LLM03:2026 Excessive Agency` has 3 INFERRED edges - model-reasoned connections that need verification._

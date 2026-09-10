@@ -1,36 +1,14 @@
 ---
-source_file: "AISVS/0x10-C01-Training-Data-Integrity-and-Traceability.md"
-type: "document"
-community: "Training Data & Model Lifecycle Provenance"
-tags:
-  - graphify/document
-  - graphify/EXTRACTED
-  - community/Training_Data__Model_Lifecycle_Provenance
----
-
-# MITRE ATLAS
-
-## Connections
-- [[Input Validation (C2)]] - `cites` [EXTRACTED]
-- [[Model Lifecycle Management & Change Control (C3)]] - `cites` [EXTRACTED]
-- [[Supply Chain Security for Models (C6)]] - `cites` [EXTRACTED]
-- [[Training Data Integrity & Traceability (C1)]] - `cites` [EXTRACTED]
-
-#graphify/document #graphify/EXTRACTED #community/Training_Data__Model_Lifecycle_Provenance
-
----
-
----
 source_file: "GenAI-LLM-Top10/Appendix_A_Related_Framework_Mappings.md"
 type: "document"
-community: "Output & Context Integrity"
+community: "Supply Chain & Retrieval Poisoning"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Output__Context_Integrity
+  - community/Supply_Chain__Retrieval_Poisoning
 ---
 
-# MITRE ATLAS
+# OWASP Top 10 for Agentic Applications (ASI) 2026
 
 ## Connections
 - [[Appendix A Related Framework Mappings]] - `references` [EXTRACTED]
@@ -45,4 +23,4 @@ tags:
 - [[LLM09 Vector and Embedding Weaknesses]] - `references` [EXTRACTED]
 - [[LLM10 Improper Output Handling]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Output__Context_Integrity
+#graphify/document #graphify/EXTRACTED #community/Supply_Chain__Retrieval_Poisoning

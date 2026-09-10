@@ -3,15 +3,18 @@ type: concept
 name: "AI RMF Profile"
 aliases: ["AI RMF Profiles"]
 description: "An implementation of the AI RMF functions and outcomes tailored to a specific use case, sector, technology (e.g. Generative AI), or organizational context."
-related_to: ["[[nist-ai-risk-management-framework]]", "[[ai-rmf-core-functions]]"]
+related_to: ["[[nist-ai-risk-management-framework]]", "[[ai-rmf-core-functions]]", "[[genai-top10-framework-mappings]]"]
 sources:
+  - url: "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10"
+    type: "github-repo"
+    synced_at: "2026-09-10"
   - url: "https://www.nist.gov/itl/ai-risk-management-framework"
     type: "remote-binary"
     synced_at: "2026-09-10"
 updated_at: "2026-09-10"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/engineering]
-graphify_node_ids: ["nist_ai_100_1_ai_rmf_profile"]
+graphify_node_ids: ["nist_ai_100_1_ai_rmf_profile", "genai_top10_nist_ai_600_1_ref"]
 confidence: "EXTRACTED"
 ---
 
@@ -23,7 +26,7 @@ confidence: "EXTRACTED"
 
 ## Description
 
-Profiles let organizations translate the generic [[ai-rmf-core-functions|AI RMF Core]] into concrete, contextualized guidance rather than applying the framework abstractly. NIST has published companion profiles as the framework matures (e.g., a Generative AI Profile and a Critical Infrastructure Profile concept note) — these are separate NIST publications, not part of the base AI RMF 1.0 text, and should be captured as their own entities if and when ingested directly.
+Profiles let organizations translate the generic [[ai-rmf-core-functions|AI RMF Core]] into concrete, contextualized guidance rather than applying the framework abstractly. NIST has published companion profiles as the framework matures — confirmed via the [[genai-top10-framework-mappings|OWASP GenAI LLM Top 10 (2026)]]'s framework citations: **NIST AI 600-1**, the Generative AI Profile, plus an earlier-noted Critical Infrastructure Profile concept note — these are separate NIST publications, not part of the base AI RMF 1.0 text, and should be captured as their own entities if and when ingested directly.
 
 ## Key Characteristics
 
