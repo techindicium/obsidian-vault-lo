@@ -875,3 +875,102 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.395) - this node is a cross-community bridge._
 - **What connects `Capers Jones`, `Continuous Testing`, `Parasoft` to the rest of the system?**
   _8 weakly-connected nodes found - possible documentation gaps or missing edges._
+
+---
+
+# Merge on 2026-09-10
+
+# Graph Report - bedrock-learn-nist-1789043300  (2026-09-10)
+
+## Corpus Check
+- Corpus is ~16,028 words - fits in a single context window. You may not need a graph.
+
+## Summary
+- 43 nodes · 98 edges · 6 communities
+- Extraction: 93% EXTRACTED · 6% INFERRED · 1% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.78)
+- Token cost: 0 input · 135,039 output
+
+## Community Hubs (Navigation)
+- Trustworthy AI Characteristics
+- AI Actor Roles & Stakeholders
+- AI RMF Core Functions
+- AI RMF Profiles & Risk Framing
+- AI Lifecycle Stages
+- Related NIST/Security Frameworks
+
+## God Nodes (most connected - your core abstractions)
+1. `NIST AI Risk Management Framework (AI RMF 1.0)` - 13 edges
+2. `AI Actor` - 13 edges
+3. `MAP Function` - 8 edges
+4. `Trustworthy AI` - 8 edges
+5. `Valid and Reliable` - 8 edges
+6. `GOVERN Function` - 7 edges
+7. `Secure and Resilient` - 7 edges
+8. `Accountable and Transparent` - 7 edges
+9. `AI Lifecycle Dimensions` - 7 edges
+10. `MEASURE Function` - 6 edges
+
+## Surprising Connections (you probably didn't know these)
+- `AI RMF Profile` --conceptually_related_to--> `AI Lifecycle Dimensions`  [AMBIGUOUS]
+  NIST.AI.100-1.md → NIST.AI.100-1.md  _Bridges community 3 → community 4_
+- `MEASURE Function` --conceptually_related_to--> `Risk Measurement`  [INFERRED]
+  NIST.AI.100-1.md → NIST.AI.100-1.md  _Bridges community 2 → community 3_
+- `Explainable and Interpretable` --semantically_similar_to--> `AI Risk Management and Human-AI Interaction`  [INFERRED] [semantically similar]
+  NIST.AI.100-1.md → NIST.AI.100-1.md  _Bridges community 0 → community 2_
+- `NIST AI Risk Management Framework (AI RMF 1.0)` --references--> `AI Actor`  [EXTRACTED]
+  NIST.AI.100-1.md → NIST.AI.100-1.md  _Bridges community 3 → community 1_
+- `NIST AI Risk Management Framework (AI RMF 1.0)` --references--> `How AI Risks Differ from Traditional Software Risks`  [EXTRACTED]
+  NIST.AI.100-1.md → NIST.AI.100-1.md  _Bridges community 3 → community 5_
+
+## Hyperedges (group relationships)
+- **AI RMF Core Operational Cycle** — nist_ai_100_1_govern, nist_ai_100_1_map, nist_ai_100_1_measure, nist_ai_100_1_manage [EXTRACTED 1.00]
+- **Trustworthy AI Characteristics** — nist_ai_100_1_valid_and_reliable, nist_ai_100_1_safe, nist_ai_100_1_secure_and_resilient, nist_ai_100_1_accountable_and_transparent, nist_ai_100_1_explainable_and_interpretable, nist_ai_100_1_privacy_enhanced, nist_ai_100_1_fair_with_harmful_bias_managed [EXTRACTED 1.00]
+- **AI Actor Task Categories** — nist_ai_100_1_ai_design, nist_ai_100_1_ai_development, nist_ai_100_1_ai_deployment, nist_ai_100_1_operation_and_monitoring, nist_ai_100_1_tevv, nist_ai_100_1_human_factors, nist_ai_100_1_domain_expert [EXTRACTED 1.00]
+
+## Communities (6 total, 0 thin omitted)
+
+### Community 0 - "Trustworthy AI Characteristics"
+Cohesion: 0.53
+Nodes (10): Accountable and Transparent, Explainable and Interpretable, Fair - with Harmful Bias Managed, ISO/IEC TS 5723:2022 (Trustworthiness Vocabulary), NIST SP 1270: Towards a Standard for Identifying and Managing Bias in Artificial Intelligence, Privacy-Enhanced, Safe, Secure and Resilient (+2 more)
+
+### Community 1 - "AI Actor Roles & Stakeholders"
+Cohesion: 0.29
+Nodes (8): Affected Individuals/Communities, AI Actor, Domain Expert (Actor Task Category), End Users, General Public, Human Factors (Actor Task Category), OECD Framework for the Classification of AI Systems, Third-Party Entities
+
+### Community 2 - "AI RMF Core Functions"
+Cohesion: 0.76
+Nodes (7): AI RMF Core, NIST AI RMF Playbook, GOVERN Function, AI Risk Management and Human-AI Interaction, MANAGE Function, MAP Function, MEASURE Function
+
+### Community 3 - "AI RMF Profiles & Risk Framing"
+Cohesion: 0.43
+Nodes (7): AI RMF Profile, Attributes of the AI RMF, NIST AI Risk Management Framework (AI RMF 1.0), ISO 31000:2018 (Risk Management), Risk Measurement, Risk Prioritization, Risk Tolerance
+
+### Community 4 - "AI Lifecycle Stages"
+Cohesion: 0.73
+Nodes (6): AI Deployment (Actor Task Category), AI Design (Actor Task Category), AI Development (Actor Task Category), AI Lifecycle Dimensions, Operation and Monitoring (Actor Task Category), Test, Evaluation, Verification, and Validation (TEVV)
+
+### Community 5 - "Related NIST/Security Frameworks"
+Cohesion: 0.40
+Nodes (5): How AI Risks Differ from Traditional Software Risks, NIST Cybersecurity Framework, NIST Privacy Framework, NIST Risk Management Framework, Secure Software Development Framework
+
+## Ambiguous Edges - Review These
+- `AI RMF Profile` → `AI Lifecycle Dimensions`  [AMBIGUOUS]
+  NIST.AI.100-1.md · relation: conceptually_related_to
+
+## Knowledge Gaps
+- **6 isolated node(s):** `Third-Party Entities`, `Affected Individuals/Communities`, `General Public`, `Secure Software Development Framework`, `NIST SP 1270: Towards a Standard for Identifying and Managing Bias in Artificial Intelligence` (+1 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 6 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+
+## Suggested Questions
+_Questions this graph is uniquely positioned to answer:_
+
+- **What is the exact relationship between `AI RMF Profile` and `AI Lifecycle Dimensions`?**
+  _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
+- **Why does `NIST AI Risk Management Framework (AI RMF 1.0)` connect `AI RMF Profiles & Risk Framing` to `Trustworthy AI Characteristics`, `AI Actor Roles & Stakeholders`, `AI RMF Core Functions`, `AI Lifecycle Stages`, `Related NIST/Security Frameworks`?**
+  _High betweenness centrality (0.629) - this node is a cross-community bridge._
+- **Why does `AI Actor` connect `AI Actor Roles & Stakeholders` to `AI RMF Profiles & Risk Framing`, `AI Lifecycle Stages`?**
+  _High betweenness centrality (0.378) - this node is a cross-community bridge._
+- **Why does `Trustworthy AI` connect `Trustworthy AI Characteristics` to `AI RMF Profiles & Risk Framing`?**
+  _High betweenness centrality (0.223) - this node is a cross-community bridge._
+- **What connects `Third-Party Entities`, `Affected Individuals/Communities`, `General Public` to the rest of the system?**
+  _6 weakly-connected nodes found - possible documentation gaps or missing edges._
