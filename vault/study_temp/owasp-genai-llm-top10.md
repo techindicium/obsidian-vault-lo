@@ -1,3 +1,13 @@
+---
+title: "OWASP GenAI LLM Top 10 (2026) — Guia de Estudo"
+type: study-guide
+language: pt-BR
+topic: "[[genai-top10-standard]]"
+related_guides: ["[[nist-ai-rmf]]", "[[owasp-aisvs]]"]
+created_at: "2026-09-10"
+tags: [study-guide, domain/engineering]
+---
+
 # OWASP Top 10 para Aplicações LLM e IA Generativa (2026) — Guia de Estudo
 
 > Uma "lista dos 10 problemas de segurança mais perigosos" quando uma empresa usa IA generativa (como chatbots, assistentes internos ou agentes automatizados). Pense nela como o equivalente, no mundo da IA, de uma lista "os 10 erros mais comuns que causam acidentes de carro" — não cobre tudo que pode dar errado, mas cobre o que mais dá errado, com mais frequência e mais gravidade.

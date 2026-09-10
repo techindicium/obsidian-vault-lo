@@ -1,3 +1,13 @@
+---
+title: "NIST AI RMF — Guia de Estudo"
+type: study-guide
+language: pt-BR
+topic: "[[nist-ai-risk-management-framework]]"
+related_guides: ["[[owasp-aisvs]]", "[[owasp-genai-llm-top10]]"]
+created_at: "2026-09-10"
+tags: [study-guide, domain/engineering]
+---
+
 # NIST AI RMF — Guia de Estudo (para quem não é técnico)
 
 O **NIST AI RMF** é um "manual de boas práticas" para organizações que usam Inteligência Artificial gerenciarem os riscos que ela traz — não é uma ferramenta técnica, é um **guia de governança**: como organizar processos, responsabilidades e decisões para que a IA seja usada de forma segura e confiável. Se você trabalha num banco que está adotando IA (como o C6), esse é o tipo de framework que orienta "o que perguntar" e "o que garantir" antes, durante e depois de colocar um sistema de IA no ar.

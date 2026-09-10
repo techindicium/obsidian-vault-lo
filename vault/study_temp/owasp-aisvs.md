@@ -1,3 +1,13 @@
+---
+title: "OWASP AISVS — Guia de Estudo"
+type: study-guide
+language: pt-BR
+topic: "[[aisvs-standard]]"
+related_guides: ["[[nist-ai-rmf]]", "[[owasp-genai-llm-top10]]"]
+created_at: "2026-09-10"
+tags: [study-guide, domain/engineering]
+---
+
 # OWASP AISVS — Guia de Estudo
 
 > Como saber se um sistema de IA é "seguro o suficiente"? O AISVS é, na prática, uma lista de verificação (um checklist) que dá uma resposta concreta e testável para essa pergunta — em vez de ficar só no discurso de "vamos ter cuidado com a IA".
