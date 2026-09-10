@@ -70,7 +70,7 @@ C6 has already purchased AI licenses directly from Anthropic (900 Kiro, 200 Clau
 | [[gabriel-bernardo]] | attendee, raised the DLP/transcription question |
 | [[gabriel-klock]] | attendee, role unconfirmed |
 | [[daniel-avancini]] | AITO / Consulting (20%), gave closing remarks |
-| [[lorena-santos]] | Esteira AI-nativa (FDE, engagement lead) |
+| [[lorena-santos]] | Esteira AI-nativa (Consultant Product) |
 
 ## Conclusions
 

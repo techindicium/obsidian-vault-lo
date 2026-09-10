@@ -152,7 +152,7 @@ SORT item.deadline ASC
 
 | Person | Role |
 |---|---|
-| [[lorena-santos]] | FDE, leading the engagement; Esteira AI-nativa squad |
+| [[lorena-santos]] | Consultant Product, Esteira AI-nativa squad |
 | [[leandro-ciscar]] | Delivery Manager |
 
 ## Team (Indicium side)
@@ -173,8 +173,8 @@ SORT item.deadline ASC
 | [[isadora-busch]] | Knowledge Works, Consultant Product |
 | [[gabriel-eckschmidt-buso]] | Knowledge Works, Consultant Process |
 | [[filipe-duarte]] | Esteira AI-nativa |
-| [[lorena-santos]] | Esteira AI-nativa |
-| [[aluizio-cidral-junior]] | Esteira AI-nativa |
+| [[lorena-santos]] | Esteira AI-nativa, Consultant Product |
+| [[aluizio-cidral-junior]] | Esteira AI-nativa, FDE SDLC Lead |
 | [[guilherme-zanotelli-dos-santos]] | Esteira AI-nativa |
 | [[fabio-gomes-de-oliveira]] | Commercial |
 | [[gabriel-bernardo]] | attendee, DLP question |
