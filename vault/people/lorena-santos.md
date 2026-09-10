@@ -13,9 +13,9 @@ sources:
   - url: "general_projects/c6/people_profile/perfil-paulo-pituba.md"
     type: "local-file"
     synced_at: "2026-09-01"
-updated_at: 2026-09-01
+updated_at: "2026-09-10"
 updated_by: "preserve@agent"
-tags: [type/person, domain/growth]
+tags: [type/person, domain/growth, domain/engineering]
 ---
 
 # Lorena Santos
@@ -29,3 +29,7 @@ No internal squad recorded in this vault.
 ## Projects
 
 - [[ai-transformation-project-c6-bank]] — leading this engagement as FDE
+
+## Active Topics
+
+- [[2026-09-compliance-advanced-sdlc-harness-course]] — working through the reading list for Daniel Avancini's Advanced SDLC & Harness course, ingesting each source into the vault
