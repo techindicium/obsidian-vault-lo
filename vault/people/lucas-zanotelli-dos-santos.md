@@ -2,7 +2,7 @@
 type: person
 name: "Lucas Zanotelli dos Santos"
 aliases: ["Lucas Zanotelli dos Santos", "Lucas Zanotelli"]
-role: "Platform lead — AI Transformation Project, C6 Bank"
+role: "Platform Engineer Lead — Plataforma, AI Transformation Project (C6 Bank)"
 team: ""
 focal_points: []
 email: ""
@@ -13,6 +13,9 @@ sources:
   - url: "c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md"
     type: "local-dir"
     synced_at: "2026-09-10"
+  - url: "c6/project_docs/kickoff-interno-transformacao-ai-set2026.md"
+    type: "local-dir"
+    synced_at: "2026-09-10"
 updated_at: "2026-09-10"
 updated_by: "preserve@agent"
 tags: [type/person, domain/growth]
@@ -20,7 +23,7 @@ tags: [type/person, domain/growth]
 
 # Lucas Zanotelli dos Santos
 
-> Platform lead on the [[ai-transformation-project-c6-bank]] engagement — co-owner of the [[2026-09-plataforma-c6-ai-hub]] workstream alongside [[rodrigo-freitas-encaua]].
+> Platform Engineer Lead on the [[ai-transformation-project-c6-bank]] engagement (listed as "Lucas Santos" in the official kickoff deck) — co-owner of the [[2026-09-plataforma-c6-ai-hub]] workstream alongside [[rodrigo-freitas-encaua]].
 
 ## Team
 

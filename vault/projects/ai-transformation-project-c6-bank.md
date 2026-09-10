@@ -163,19 +163,19 @@ SORT item.deadline ASC
 | [[alberto-tadashi-yamamoto]] | AITO / Consulting |
 | [[daniel-avancini]] | AITO / Consulting (20% allocated) |
 | [[igor-beninca]] | AITO / Consulting, Principal Consultant; owns [[2026-09-assessment-c6]] |
-| [[vagner-strapasson]] | Cloud Architect (AWS FSI) |
-| [[tabi-thuler-santos]] | Change Management |
-| [[lucas-zanotelli-dos-santos]] | Plataforma lead |
+| [[vagner-strapasson]] | Cloud Architect (AWS FSI) / Plat. Eng. AI SDLC |
+| [[tabi-thuler-santos]] | Consultant Change Management |
+| [[lucas-zanotelli-dos-santos]] | Platform Engineer Lead |
 | [[rodrigo-freitas-encaua]] | Plataforma / SecOps Security |
 | [[pedro-ferraresi]] | Enablement lead |
-| [[douglas-sgrott]] | Knowledge Works |
+| [[douglas-sgrott]] | Knowledge Works, AI Engineer |
 | [[rafael-ribeiro]] | Knowledge Works, FDE Knowledge Lead (from 2026-09-14) |
 | [[isadora-busch]] | Knowledge Works, Consultant Product |
 | [[gabriel-eckschmidt-buso]] | Knowledge Works, Consultant Process |
-| [[filipe-duarte]] | Esteira AI-nativa |
+| [[filipe-duarte]] | Esteira AI-nativa, AI Engineer |
 | [[lorena-santos]] | Esteira AI-nativa, Consultant Product |
 | [[aluizio-cidral-junior]] | Esteira AI-nativa, FDE SDLC Lead |
-| [[guilherme-zanotelli-dos-santos]] | Esteira AI-nativa |
+| [[guilherme-zanotelli-dos-santos]] | Esteira AI-nativa, Consultant Development |
 | [[fabio-gomes-de-oliveira]] | Commercial |
 | [[gabriel-bernardo]] | attendee, DLP question |
 | [[gabriel-klock]] | attendee, role unconfirmed |
@@ -187,8 +187,8 @@ SORT item.deadline ASC
 - [[gustavo-torres]] — CIO, C6 Bank
 - [[marcel]] — AI Head, C6 Bank; owns C6 Assistant
 - [[thiago-ribeiro]] — Senior IT Executive; co-sponsor of [[2026-09-esteira-ai-nativa-c6]]
-- [[cristiano-pisin]] — technical specialist, C6-side day-to-day PM
-- [[natalia-kauatoto]] — IT Business Partner, driving change management
+- [[cristiano-pisin]] — Senior Tech Engineer Specialist, C6-side day-to-day PM
+- [[natalia-kauatoto]] — IT People Business Partner, driving change management
 - [[eduardo-scarpellini]] — Platform Head, [[2026-09-plataforma-c6-ai-hub]]
 - [[marcos-wada]] — Architecture Specialist, [[2026-09-plataforma-c6-ai-hub]]
 - [[everson-tavares]] — Platform Specialist, [[2026-09-plataforma-c6-ai-hub]]

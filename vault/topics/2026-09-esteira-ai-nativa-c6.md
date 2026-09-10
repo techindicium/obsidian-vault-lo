@@ -35,11 +35,11 @@ A live technical debate at the kickoff pitted Kiro against Claude for this works
 |---|---|
 | [[paulo-pituba]] | sponsor (C6 CTO) |
 | [[thiago-ribeiro]] | co-sponsor (C6 Senior IT Executive) |
-| [[filipe-duarte]] | Indicium squad member |
-| [[lorena-santos]] | Indicium squad member |
-| [[aluizio-cidral-junior]] | Indicium squad member |
-| [[guilherme-zanotelli-dos-santos]] | Indicium squad member — retesting Kiro vs. Claude |
-| [[vagner-strapasson]] | Indicium squad member (Cloud Architect) |
+| [[filipe-duarte]] | AI Engineer |
+| [[lorena-santos]] | Consultant Product |
+| [[aluizio-cidral-junior]] | FDE SDLC Lead |
+| [[guilherme-zanotelli-dos-santos]] | Consultant Development — retesting Kiro vs. Claude |
+| [[vagner-strapasson]] | Plat. Eng. AI SDLC / Cloud Architect (AWS FSI) |
 
 ## History
 

@@ -55,17 +55,17 @@ C6 has already purchased AI licenses directly from Anthropic (900 Kiro, 200 Clau
 | [[leandro-ciscar]] | Delivery Manager, opened the meeting |
 | [[alberto-tadashi-yamamoto]] | AITO / Consulting |
 | [[igor-beninca]] | AITO / Consulting, Principal Consultant |
-| [[vagner-strapasson]] | Cloud Architect (AWS FSI) |
-| [[tabi-thuler-santos]] | Change Management |
-| [[lucas-zanotelli-dos-santos]] | Plataforma lead |
+| [[vagner-strapasson]] | Cloud Architect (AWS FSI) / Plat. Eng. AI SDLC |
+| [[tabi-thuler-santos]] | Consultant Change Management |
+| [[lucas-zanotelli-dos-santos]] | Platform Engineer Lead |
 | [[rodrigo-freitas-encaua]] | Plataforma / SecOps |
 | [[pedro-ferraresi]] | Enablement lead |
-| [[douglas-sgrott]] | Knowledge Works |
+| [[douglas-sgrott]] | Knowledge Works, AI Engineer |
 | [[isadora-busch]] | Knowledge Works, Consultant Product |
 | [[gabriel-eckschmidt-buso]] | Knowledge Works, Consultant Process |
-| [[filipe-duarte]] | Esteira AI-nativa |
-| [[aluizio-cidral-junior]] | Esteira AI-nativa |
-| [[guilherme-zanotelli-dos-santos]] | Esteira AI-nativa |
+| [[filipe-duarte]] | Esteira AI-nativa, AI Engineer |
+| [[aluizio-cidral-junior]] | Esteira AI-nativa, FDE SDLC Lead |
+| [[guilherme-zanotelli-dos-santos]] | Esteira AI-nativa, Consultant Development |
 | [[fabio-gomes-de-oliveira]] | Commercial |
 | [[gabriel-bernardo]] | attendee, raised the DLP/transcription question |
 | [[gabriel-klock]] | attendee, role unconfirmed |

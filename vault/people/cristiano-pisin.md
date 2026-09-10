@@ -1,8 +1,8 @@
 ---
 type: person
 name: "Cristiano Pisin"
-aliases: ["Cristiano Pisin", "Cris"]
-role: "Technical specialist / C6-side project PM, C6 Bank"
+aliases: ["Cristiano Pisin", "Cris", "Cristiano Piccin"]
+role: "Senior Tech Engineer Specialist, C6 Bank"
 team: ""
 focal_points: []
 email: ""
@@ -13,6 +13,9 @@ sources:
   - url: "c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md"
     type: "local-dir"
     synced_at: "2026-09-10"
+  - url: "c6/project_docs/kickoff-interno-transformacao-ai-set2026.md"
+    type: "local-dir"
+    synced_at: "2026-09-10"
 updated_at: "2026-09-10"
 updated_by: "preserve@agent"
 tags: [type/person, domain/growth]
@@ -20,7 +23,7 @@ tags: [type/person, domain/growth]
 
 # Cristiano Pisin
 
-> Technical specialist at C6 Bank, recently rehired specifically to run the [[ai-transformation-project-c6-bank]] engagement — the C6-side day-to-day point of contact, effectively acting as the client-side project manager.
+> Senior Tech Engineer Specialist at C6 Bank (per the official kickoff deck — spelled "Cristiano Piccin" there), recently rehired specifically to run the [[ai-transformation-project-c6-bank]] engagement — the C6-side day-to-day point of contact, effectively acting as the client-side project manager.
 
 ## Team
 

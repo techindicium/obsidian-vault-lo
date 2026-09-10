@@ -32,8 +32,8 @@ Sponsored by [[nelson-novaes-neto]]. Motivated by users already exceeding expect
 | Person | Role |
 |---|---|
 | [[nelson-novaes-neto]] | sponsor (C6, Corebank CTO) |
-| [[douglas-sgrott]] | Indicium squad member |
-| [[rafael-ribeiro]] | Indicium squad member — FDE Knowledge Lead, joining 2026-09-14 |
+| [[douglas-sgrott]] | AI Engineer |
+| [[rafael-ribeiro]] | FDE Knowledge Lead, joining 2026-09-14 |
 | [[isadora-busch]] | Indicium squad member — Consultant Product |
 | [[gabriel-eckschmidt-buso]] | Indicium squad member — Consultant Process |
 
