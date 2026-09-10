@@ -2,11 +2,14 @@
 type: project
 name: "AI Transformation Project — C6 Bank"
 aliases: ["C6 Bank AI Transformation", "AI Transformation C6"]
-description: "Client engagement to drive AI transformation at C6 Bank, including stakeholder mapping and relationship strategy with C6's technology leadership."
+description: "US$3.8M, 12-month engagement to transform people, processes, and products at C6 Bank with AI, structured into six workstreams (Assessment, Esteira AI-nativa, Knowledge Works, AITO, Plataforma, Enablement) across five squads."
 status: "active"
-deadline: ""
-progress: "Stakeholder research underway: profiles built for both key C6 Bank CTOs — Paulo Pituba and Nelson Novaes Neto (confirmed by Lorena as the two important stakeholders) — to prepare relationship strategy ahead of initial conversations."
-blockers: []
+deadline: "2027-09-03"
+progress: "Internal kickoff held 2026-09-08 (contract signed 2026-09-03): scope, team, and six workstreams confirmed. Stakeholder research completed for the two key C6 CTOs (Paulo Pituba, Nelson Novaes Neto); full team roster (Indicium + C6) now mapped. Delivery has not yet started — official kickoff with C6 still to be scheduled."
+blockers:
+  - "Internal sabotage risk: the bank's own team could resist the transformation out of feeling threatened by the change (flagged by Igor Benincá re: AITO) — Tabi Thuler Santos's change-management role exists specifically to mitigate this."
+  - "Kiro telemetry/log retention limited to ~30 days, complicating export to tools like Grafana — under re-test by Guilherme Zanotelli dos Santos for the Esteira AI-nativa workstream."
+  - "DLP policy requires all confidential C6 data and transcription tooling to stay inside C6's network environment — constrains tooling choices project-wide."
 action_items:
   - description: "Confirm Paulo Pituba's full name and exact role scope (which vertical, reporting line)"
     status: "todo"
@@ -32,8 +35,32 @@ action_items:
     status: "todo"
     deadline: ""
     owner: "[[lorena-santos]]"
-focal_points: ["[[lorena-santos]]"]
-related_topics: []
+  - description: "Retest Kiro vs. Claude on telemetry/log export limitations"
+    status: "todo"
+    deadline: ""
+    owner: "[[guilherme-zanotelli-dos-santos]]"
+  - description: "Research LightLLM as the candidate model-hub tool for the C6 AI Hub"
+    status: "todo"
+    deadline: ""
+    owner: "[[lucas-zanotelli-dos-santos]]"
+  - description: "Confirm the Kubernetes-based IaC tool C6 is migrating to (replacing Terraform)"
+    status: "todo"
+    deadline: ""
+    owner: "[[rodrigo-freitas-encaua]]"
+  - description: "Schedule the official kickoff with C6, after project equipment/security-image delivery"
+    status: "todo"
+    deadline: ""
+    owner: "[[leandro-ciscar]]"
+  - description: "Create a project Slack channel with the full Indicium + C6 team"
+    status: "todo"
+    deadline: ""
+    owner: "[[leandro-ciscar]]"
+  - description: "Run a form for the team to jointly choose a permanent team name (provisionally \"time C6\")"
+    status: "todo"
+    deadline: ""
+    owner: "[[leandro-ciscar]]"
+focal_points: ["[[lorena-santos]]", "[[leandro-ciscar]]"]
+related_topics: ["[[2026-09-esteira-ai-nativa-c6]]", "[[2026-09-knowledge-works-c6]]", "[[2026-09-plataforma-c6-ai-hub]]", "[[2026-09-enablement-c6]]", "[[2026-09-assessment-c6]]"]
 related_actors: []
 related_teams: []
 sources:
@@ -43,28 +70,45 @@ sources:
   - url: "general_projects/c6/people_profile/perfil-paulo-pituba.md"
     type: "local-file"
     synced_at: "2026-09-01"
-updated_at: 2026-09-01
+  - url: "c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md"
+    type: "local-dir"
+    synced_at: "2026-09-10"
+  - url: "c6/project_docs/kickoff-interno-transformacao-ai-set2026.md"
+    type: "local-dir"
+    synced_at: "2026-09-10"
+  - url: "c6/project_docs/manual-de-bordo-c6.md"
+    type: "local-dir"
+    synced_at: "2026-09-10"
+updated_at: "2026-09-10"
 updated_by: "preserve@agent"
 tags: [type/project, status/active, domain/growth]
 ---
 
+<!-- Zettelkasten role: index note -->
+
 # AI Transformation Project — C6 Bank
 
-> Client engagement to drive AI transformation at C6 Bank, including stakeholder mapping and relationship strategy with C6's technology leadership.
+> US$3.8M (~R$20M), 12-month engagement — Indicium's largest project in LatAm — to transform people, processes, and products at C6 Bank across six workstreams, impacting ~4,000 employees and 42M+ customers.
 
 ## Overview
 
-Lorena Santos (FDE) is leading relationship and stakeholder research ahead of the AI Transformation engagement at C6 Bank. Current focus: understanding the technology leadership landscape — who holds which CTO-level scope, and how to build rapport with each stakeholder given very different levels of public information available.
+The project originated from a hands-on Claude workshop in São Paulo that Anthropic ran directly with C6's CTO, becoming a commercial lead; C6 chose Indicium over competitor CIT specifically to avoid a conflict of interest (CIT already serves Itaú, C6's direct competitor) and stated it wants to be Indicium's largest client in Brazil (see [[2026-09-08-c6-ai-transformation-kickoff-interno]]). Contract signed 2026-09-03.
 
-The two CTOs bring different motivations: [[paulo-pituba]] is business/results-oriented and wants to reduce operational cost with consulting firms while generating more value with AI for the business areas; [[nelson-novaes-neto]] is more technical, focused on ensuring AI projects are secure, and views consulting engagements more as operational support. A value-measurement approach still needs to be defined — starting simple with an A/B test on one workstream.
+C6 has already purchased AI licenses directly from Anthropic (900 Kiro, 200 Claude, 100 Gemini). The engagement runs in 3-month cycles: month 3 = assessment and platform optimization; from month 9 = redesign of AI-native processes and products for new revenue. Five stated objectives: accelerate productivity (via existing licenses), increase efficiency (automate existing processes), build AI-native products (new revenue), guarantee governance via [[ai-transformation-office]], and scale sustainably.
+
+The two CTOs bring different motivations: [[paulo-pituba]] is business/results-oriented — confirmed at the kickoff to want to eliminate the ~R$10-15M/year C6 spends on third-party development consultancies via [[2026-09-esteira-ai-nativa-c6]] — while [[nelson-novaes-neto]] is more technical, focused on ensuring AI projects are secure, and sponsors [[2026-09-knowledge-works-c6]]. A value-measurement approach still needs to be defined — starting simple with an A/B test on one workstream.
+
+The project's internal playbook ("Manual de Bordo") sets three non-negotiables for the team: nothing about C6 leaves C6's environment; no AI use without formal client authorization; and when in doubt, escalate to the Delivery Manager. Conflict/impact communication with the client follows [[nonviolent-communication-cnv]]; early rapport uses [[never-split-the-difference-negotiation-tactics]].
+
+A sibling internal project, referred to only as "5x" (client not identified), is running in parallel and sharing learnings with this engagement — not enough is known about it to catalog as its own entity yet.
 
 ## Status
 
 | Field | Value |
 |---|---|
 | Status | active |
-| Deadline | — |
-| Progress | Stakeholder research underway: profiles built for both key C6 Bank CTOs — Paulo Pituba and Nelson Novaes Neto (confirmed by Lorena as the two important stakeholders) — to prepare relationship strategy ahead of initial conversations. |
+| Deadline | 2027-09-03 (estimated — 12 months from contract signing) |
+| Progress | Internal kickoff held 2026-09-08: scope, team, and six workstreams confirmed. Official kickoff with C6 still to be scheduled. |
 
 ## Action Items
 
@@ -76,30 +120,123 @@ The two CTOs bring different motivations: [[paulo-pituba]] is business/results-o
 | Map Nelson's relationship with other C6 C-levels | todo | — | [[lorena-santos]] |
 | Clarify how Paulo's and Nelson's CTO scopes relate | todo | — | [[lorena-santos]] |
 | Define how to measure generated value (start with an A/B test) | todo | — | [[lorena-santos]] |
+| Retest Kiro vs. Claude on telemetry/log export | todo | — | [[guilherme-zanotelli-dos-santos]] |
+| Research LightLLM for the C6 AI Hub | todo | — | [[lucas-zanotelli-dos-santos]] |
+| Confirm the IaC tool replacing Terraform | todo | — | [[rodrigo-freitas-encaua]] |
+| Schedule official kickoff with C6 | todo | — | [[leandro-ciscar]] |
+| Create project Slack channel | todo | — | [[leandro-ciscar]] |
+| Run team-naming form | todo | — | [[leandro-ciscar]] |
+
+> **Dataview query — pending items for this project:**
+
+```dataview
+TABLE WITHOUT ID
+  item.description AS "Item",
+  item.status AS "Status",
+  item.deadline AS "Deadline",
+  item.owner AS "Owner"
+FROM "projects"
+WHERE file.name = this.file.name
+FLATTEN action_items AS item
+WHERE item.status != "done"
+SORT item.deadline ASC
+```
+
+## Blockers
+
+- Internal sabotage risk — the bank's own team could resist the transformation out of feeling threatened by the change; [[tabi-thuler-santos]]'s change-management role exists specifically to mitigate this
+- Kiro telemetry/log retention limited to ~30 days, complicating export to tools like Grafana — under re-test by [[guilherme-zanotelli-dos-santos]] for [[2026-09-esteira-ai-nativa-c6]]
+- DLP policy requires all confidential C6 data and transcription tooling to stay inside C6's network environment — constrains tooling choices project-wide
 
 ## Focal Points
 
 | Person | Role |
 |---|---|
-| [[lorena-santos]] | FDE, leading the engagement |
+| [[lorena-santos]] | FDE, leading the engagement; Esteira AI-nativa squad |
+| [[leandro-ciscar]] | Delivery Manager |
+
+## Team (Indicium side)
+
+| Person | Role |
+|---|---|
+| [[leandro-ciscar]] | Delivery Manager |
+| [[alberto-tadashi-yamamoto]] | AITO / Consulting |
+| [[daniel-avancini]] | AITO / Consulting (20% allocated) |
+| [[igor-beninca]] | AITO / Consulting, Principal Consultant; owns [[2026-09-assessment-c6]] |
+| [[vagner-strapasson]] | Cloud Architect (AWS FSI) |
+| [[tabi-thuler-santos]] | Change Management |
+| [[lucas-zanotelli-dos-santos]] | Plataforma lead |
+| [[rodrigo-freitas-encaua]] | Plataforma / SecOps Security |
+| [[pedro-ferraresi]] | Enablement lead |
+| [[douglas-sgrott]] | Knowledge Works |
+| [[rafael-ribeiro]] | Knowledge Works, FDE Knowledge Lead (from 2026-09-14) |
+| [[isadora-busch]] | Knowledge Works, Consultant Product |
+| [[gabriel-eckschmidt-buso]] | Knowledge Works, Consultant Process |
+| [[filipe-duarte]] | Esteira AI-nativa |
+| [[lorena-santos]] | Esteira AI-nativa |
+| [[aluizio-cidral-junior]] | Esteira AI-nativa |
+| [[guilherme-zanotelli-dos-santos]] | Esteira AI-nativa |
+| [[fabio-gomes-de-oliveira]] | Commercial |
+| [[gabriel-bernardo]] | attendee, DLP question |
+| [[gabriel-klock]] | attendee, role unconfirmed |
 
 ## Stakeholders (client side)
 
-- [[nelson-novaes-neto]] — CTO & Partner, C6 Bank; founding member of the tech team since 2018; MIT-published co-author of [[secure-by-design-ai-framework]]. Confirmed by Lorena as a key stakeholder.
-- [[paulo-pituba]] — CTO at C6 Bank (exact vertical unconfirmed); background in payments/acquiring via Rede. Confirmed by Lorena as a key stakeholder alongside Nelson.
+- [[nelson-novaes-neto]] — CTO & Partner (Corebank), C6 Bank; founding member of the tech team since 2018; MIT-published co-author of [[secure-by-design-ai-framework]]; sponsor of [[2026-09-knowledge-works-c6]]
+- [[paulo-pituba]] — CTO at C6 Bank (transformation focus); background in payments/acquiring via Rede; sponsor of [[2026-09-esteira-ai-nativa-c6]]
+- [[gustavo-torres]] — CIO, C6 Bank
+- [[marcel]] — AI Head, C6 Bank; owns C6 Assistant
+- [[thiago-ribeiro]] — Senior IT Executive; co-sponsor of [[2026-09-esteira-ai-nativa-c6]]
+- [[cristiano-pisin]] — technical specialist, C6-side day-to-day PM
+- [[natalia-kauatoto]] — IT Business Partner, driving change management
+- [[eduardo-scarpellini]] — Platform Head, [[2026-09-plataforma-c6-ai-hub]]
+- [[marcos-wada]] — Architecture Specialist, [[2026-09-plataforma-c6-ai-hub]]
+- [[everson-tavares]] — Platform Specialist, [[2026-09-plataforma-c6-ai-hub]]
+- [[marcelo-arakaki]] — Platform Tech Lead, [[2026-09-plataforma-c6-ai-hub]]
 
 ### Stakeholders to map (not yet profiled)
 
-Named in Nelson's research as open questions about internal alliances/risks for the project — not yet researched or catalogued as people:
+Named as open questions about internal alliances/risks for the project — not yet researched or catalogued as people:
 
 - José Santana — CISO, C6 Bank (co-architect of C6's founding culture with Nelson)
 - Rene Goncalves — COO, C6 Bank
 - Alexandra Pain — CMO, C6 Bank
 - Rafael Brazão — CHRO, C6 Bank
 - Fernando Astolfi — Chief Risk Officer, C6 Bank
+- Marcelo Kalim — CEO, C6 Bank (cited as the executive mandate behind the AI scale-up; not yet directly engaged on this project)
+
+## Related Topics
+
+| Topic | Relation |
+|---|---|
+| [[2026-09-esteira-ai-nativa-c6]] | workstream — SDLC redesign |
+| [[2026-09-knowledge-works-c6]] | workstream — governed GenAI for business areas |
+| [[2026-09-plataforma-c6-ai-hub]] | workstream — platform/AI hub |
+| [[2026-09-enablement-c6]] | workstream — training/culture/adoption |
+| [[2026-09-assessment-c6]] | workstream — use-case prioritization |
+
+## Discussions
+
+- [[2026-09-08-c6-ai-transformation-kickoff-interno]] — internal kickoff: contract origin, scope, team, and operating rules
 
 ## Relevant frameworks and tactics
 
 - [[secure-by-design-ai-framework]] — Nelson's own AI security framework; any proposal should engage with it as shared vocabulary, not compete with it
 - [[aversive-stimulus-security-controls]] — behavioral lens (Nelson's own research) for framing AI governance without killing adoption
 - [[never-split-the-difference-negotiation-tactics]] — negotiation playbook guiding first conversations with both CTOs
+- [[nonviolent-communication-cnv]] — the client-facing conflict/impact communication method mandated in the project's Manual de Bordo
+- [[ai-transformation-office]] — the transversal governance layer (AITO) for the whole program
+- [[shadow-ai]] — the risk pattern [[2026-09-knowledge-works-c6]] exists to contain
+
+---
+
+## Expected Bidirectional Links
+
+> This section is a reference for agents and can be removed in real pages.
+
+| From | To | Field |
+|---|---|---|
+| Project → Topic | `[[2026-09-esteira-ai-nativa-c6]]` | `related_topics` in frontmatter |
+| Project → Person | `[[lorena-santos]]`, `[[leandro-ciscar]]` | `focal_points` in frontmatter |
+| Topic → Project | `[[ai-transformation-project-c6-bank]]` | "Related Projects" section in Topic |
+| Person → Project | `[[ai-transformation-project-c6-bank]]` | "Projects" section in Person |

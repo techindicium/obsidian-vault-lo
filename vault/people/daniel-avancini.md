@@ -22,6 +22,9 @@ sources:
   - url: "https://www.linkedin.com/in/daniel-avancini/"
     type: "manual"
     synced_at: "2026-09-10"
+  - url: "c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md"
+    type: "local-dir"
+    synced_at: "2026-09-10"
 updated_at: "2026-09-10"
 updated_by: "preserve@agent"
 tags: [type/person, domain/engineering, domain/growth]
@@ -44,3 +47,7 @@ Specializes in helping organizations build modern analytics stacks — data lake
 ## Active Topics
 
 - [[2026-09-compliance-advanced-sdlc-harness-course]] — creator and instructor of this course; Lorena is working through its reading list
+
+## Projects
+
+- [[ai-transformation-project-c6-bank]] — AITO/Consulting, 20% allocated. Gave the closing remarks at the internal kickoff (see [[2026-09-08-c6-ai-transformation-kickoff-interno]]): framed the team's operating model (former leaders acting as individual contributors, strong self-management expected), the success criterion (client independence within 3-12 months, not just code delivery), and flagged [[nelson-novaes-neto]]'s risk profile for the team's approach strategy.

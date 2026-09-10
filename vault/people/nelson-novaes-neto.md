@@ -16,7 +16,13 @@ sources:
   - url: "general_projects/c6/people_profile/perfil-nelson-novaes-neto.md"
     type: "local-file"
     synced_at: "2026-09-01"
-updated_at: 2026-09-01
+  - url: "c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md"
+    type: "local-dir"
+    synced_at: "2026-09-10"
+  - url: "c6/project_docs/manual-de-bordo-c6.md"
+    type: "local-dir"
+    synced_at: "2026-09-10"
+updated_at: 2026-09-10
 updated_by: "preserve@agent"
 tags: [type/person, domain/growth]
 ---
@@ -56,6 +62,12 @@ Internal notes (2026-09-01) confirm the pattern already visible in his public pr
 Apply the [[never-split-the-difference-negotiation-tactics]] playbook — especially: use his own academic framework as shared vocabulary instead of proposing a competing methodology, lead with calibrated questions about how the 10-question framework is used day-to-day, and use mountaineering/expedition analogies (he has climbed Elbrus, Kilimanjaro, Mont Blanc, Aconcágua, and Gran Paradiso) rather than sports/military metaphors.
 
 Vocabulary that resonates: "secure-by-design", "governance before innovation", "calculated risk", "trust and transparency with the customer". Avoid unsupported hype language ("revolutionary", "disruptive") — he responds better to rigor and evidence than to enthusiasm.
+
+## Kickoff Interno (2026-09-08) — scope and risk profile
+
+Internal team notes from the project kickoff (see [[2026-09-08-c6-ai-transformation-kickoff-interno]]) narrow his scope: referred to internally as "Nelson," he runs Corebank day-to-day technical operations — distinct from [[paulo-pituba]]'s transformation-program focus — and is the sponsor of the [[2026-09-knowledge-works-c6]] workstream (reducing Shadow AI / ungoverned generative-AI use in business areas).
+
+Daniel Avancini (Indicium, closing remarks of the kickoff) flagged Nelson as the stakeholder who is "most complex to deal with" — technically strong (owns his own GPU at home), a boxer/jiu-jitsu practitioner, and someone who should be told "no" carefully, preferably in a remote/async setting rather than face to face. Apply this alongside the existing [[never-split-the-difference-negotiation-tactics]] approach above.
 
 ## Open research items
 

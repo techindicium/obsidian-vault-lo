@@ -16,7 +16,10 @@ sources:
   - url: "general_projects/c6/people_profile/perfil-paulo-pituba.md"
     type: "local-file"
     synced_at: "2026-09-01"
-updated_at: 2026-09-01
+  - url: "c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md"
+    type: "local-dir"
+    synced_at: "2026-09-10"
+updated_at: 2026-09-10
 updated_by: "preserve@agent"
 tags: [type/person, domain/growth]
 ---
@@ -45,6 +48,13 @@ Internal notes (2026-09-01) indicate his primary interest is reducing operationa
 Sparse LinkedIn profile (no photo, no headline) suggests someone more discreet/operational than focused on personal branding — likely responds better to direct approaches than to "stage" language (talk/case-study style).
 
 Recommended opening tactic: apply the [[label-calibrated-question-rapport-tactic]] technique (label + calibrated question), using the real Rede → C6 career transition as the hook, while avoiding assumptions about unconfirmed personal interests.
+
+## Kickoff Interno (2026-09-08) — confirmed motivation and sponsorship
+
+Internal team notes from the project kickoff (see [[2026-09-08-c6-ai-transformation-kickoff-interno]]) **confirm the business-focus hypothesis above with a concrete number**: per Igor Benincá (Indicium), Paulo Pituba's real objective as sponsor of [[2026-09-esteira-ai-nativa-c6]] (SDLC redesign with Kiro, alongside Thiago Ribeiro) is eliminating the ~R$10-15M/year C6 currently spends on third-party development consultancies — this figure does not appear in the official deck or manual, only in the raw kickoff transcript.
+
+> [!note] Data-quality flag
+> The "Daniel" mentioned below (LinkedIn shared connection) is a different person from Daniel Avancini (Indicium co-founder/CDO, also present at the 2026-09-08 kickoff) — the graphify extraction flagged a low-confidence link between them that does not hold up against the source text. Treat as unrelated.
 
 ## Open research items
 

@@ -15,3 +15,22 @@ tags:
 - [[gtc-knowledge-hub-agent (sibling repo)]] - `conceptually_related_to` [AMBIGUOUS]
 
 #graphify/concept #graphify/AMBIGUOUS #community/Repo_Origin__Hackathon_Context
+
+---
+
+---
+source_file: "c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md"
+type: "concept"
+community: "Knowledge Workers Squad"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Knowledge_Workers_Squad
+---
+
+# Gabriel Bernardo
+
+## Connections
+- [[C6 KickOff Interno — Transcrição Comentada]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Knowledge_Workers_Squad

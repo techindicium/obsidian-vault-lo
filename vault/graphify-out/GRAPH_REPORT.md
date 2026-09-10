@@ -1195,3 +1195,123 @@ _Questions this graph is uniquely positioned to answer:_
   _`LLM04:2026 Supply Chain` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `LLM03:2026 Excessive Agency` (e.g. with `LLM02:2026 Sensitive Information Disclosure` and `LLM04:2026 Supply Chain`) actually correct?**
   _`LLM03:2026 Excessive Agency` has 3 INFERRED edges - model-reasoned connections that need verification._
+
+---
+
+# Merge on 2026-09-10
+
+# Graph Report - bedrock-learn-1789076127  (2026-09-10)
+
+## Corpus Check
+- Corpus is ~14,701 words - fits in a single context window. You may not need a graph.
+
+## Summary
+- 80 nodes · 212 edges · 9 communities
+- Extraction: 94% EXTRACTED · 5% INFERRED · 1% AMBIGUOUS · INFERRED: 10 edges (avg confidence: 0.82)
+- Token cost: 0 input · 179,868 output
+
+## Community Hubs (Navigation)
+- AI Vendors & Guardrails
+- AI-native SDLC Squad
+- Platform / AI Hub Team
+- Nelson Novaes Neto & Security Research
+- Knowledge Workers Squad
+- Assessment & Project 5x
+- Paulo Pituba Negotiation Profile
+- AITO Governance Office
+- Enablement Squad
+
+## God Nodes (most connected - your core abstractions)
+1. `[C6] KickOff Interno — Transcrição Comentada` - 55 edges
+2. `Jornada de Transformação AI — Kick-off Interno (deck)` - 49 edges
+3. `Nelson Novaes Neto` - 15 edges
+4. `Perfil Estratégico — Nelson Novaes Neto` - 14 edges
+5. `C6 Bank` - 13 edges
+6. `Plataforma / C6 AI Hub` - 12 edges
+7. `Projeto de Transformação AI C6` - 11 edges
+8. `Esteira AI-nativa (redesenho do SDLC)` - 11 edges
+9. `Notas Rápidas (Scratch) — C6` - 10 edges
+10. `Manual de Bordo - C6` - 10 edges
+
+## Surprising Connections (you probably didn't know these)
+- `Paulo Pituba` --conceptually_related_to--> `Daniel Avancini`  [AMBIGUOUS]
+  c6/people_profile/perfil-paulo-pituba.md → c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md
+- `Secure-by-Design AI (framework, 10 perguntas)` --semantically_similar_to--> `AITO (AI Transformation Office)`  [INFERRED] [semantically similar]
+  c6/people_profile/perfil-nelson-novaes-neto.md → c6/project_docs/kickoff-interno-transformacao-ai-set2026.md
+- `[C6] KickOff Interno — Transcrição Comentada` --references--> `C6 Assistant`  [EXTRACTED]
+  c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md → c6/project_docs/kickoff-interno-transformacao-ai-set2026.md
+- `[C6] KickOff Interno — Transcrição Comentada` --references--> `Eduardo Scarpellini (Platform Head, C6)`  [INFERRED]
+  c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md → c6/project_docs/kickoff-interno-transformacao-ai-set2026.md
+- `[C6] KickOff Interno — Transcrição Comentada` --references--> `Gustavo Torres ("GT", CIO C6)`  [EXTRACTED]
+  c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md → c6/project_docs/kickoff-interno-transformacao-ai-set2026.md
+
+## Hyperedges (group relationships)
+- **Seis Frentes / Cinco Squads do Projeto C6** — c6_project_docs_kickoff_interno_transformacao_ai_set2026_aito, c6_project_docs_kickoff_interno_transformacao_ai_set2026_esteira_ai_nativa, c6_project_docs_kickoff_interno_transformacao_ai_set2026_knowledge_workers, c6_project_docs_kickoff_interno_transformacao_ai_set2026_plataforma_c6_ai_hub, c6_project_docs_kickoff_interno_transformacao_ai_set2026_enablement, c6_project_docs_kickoff_interno_transformacao_ai_set2026_assessment [INFERRED 0.85]
+- **Estratégia de Negociação Tática para Stakeholders C6 (Never Split the Difference)** — c6_people_profile_perfil_nelson_novaes_neto_nelson_novaes_neto, c6_people_profile_perfil_paulo_pituba_paulo_pituba, c6_people_profile_perfil_nelson_novaes_neto_never_split_the_difference [INFERRED 0.80]
+- **Licenças de IA já Adquiridas pelo C6 (Kiro, Claude, Gemini)** — c6_project_docs_kickoff_interno_transformacao_ai_set2026_kiro, c6_project_docs_kickoff_interno_transformacao_ai_set2026_claude, c6_project_docs_kickoff_interno_transformacao_ai_set2026_gemini, c6_project_docs_kickoff_interno_transformacao_ai_set2026_c6_bank [INFERRED 0.75]
+
+## Communities (9 total, 0 thin omitted)
+
+### Community 0 - "AI Vendors & Guardrails"
+Cohesion: 0.21
+Nodes (16): Notas Rápidas (Scratch) — C6, Repositório Oficial Indicium dentro do C6 (meta), Anthropic, AWS, C6 Bank, Claude, Gemini, Google (+8 more)
+
+### Community 1 - "AI-native SDLC Squad"
+Cohesion: 0.22
+Nodes (13): Aluízio Cidral Júnior, Cristiano Pisin ("Cris"), Filipe Duarte, Guilherme Zanotelli dos Santos, Lorena Sales Santos, Natália Kauatoto, Thiago Ribeiro, Jornada de Transformação AI — Kick-off Interno (deck) (+5 more)
+
+### Community 2 - "Platform / AI Hub Team"
+Cohesion: 0.20
+Nodes (12): LightLLM / "Light" (hub de modelos inspirado no Nubank), Lucas Zanotelli dos Santos, Marco Zoada, Nubank, Rodrigo Freitas Encáua, Terraform (IaC sendo substituído), Vagner Strapasson, Eduardo Scarpellini (Platform Head, C6) (+4 more)
+
+### Community 3 - "Nelson Novaes Neto & Security Research"
+Cohesion: 0.36
+Nodes (12): Perfil LinkedIn — Nelson Novaes Neto (dados brutos), Perfil Estratégico — Nelson Novaes Neto, A Case Study of the Capital One Data Breach (2020), Cultura "Csixer" / Hexágono de valores C6, Cybersecurity Culture at C6 Bank (MIT CAMS case study, 2020), An Executive Guide to Secure-by-Design AI (2025, JISSEC), Developing a Global Data Breach Database and the Challenges Encountered (2021), Itaú Unibanco (+4 more)
+
+### Community 4 - "Knowledge Workers Squad"
+Cohesion: 0.25
+Nodes (11): [C6] KickOff Interno — Transcrição Comentada, CIT (consultoria concorrente), Douglas Sgrott, Fabio Gomes de Oliveira, Gabriel Bernardo, Gabriel Eckschmidt Buso, Gabriel Klock, Isadora Busch (+3 more)
+
+### Community 5 - "Assessment & Project 5x"
+Cohesion: 0.40
+Nodes (5): Igor Benincá, Leandro Ciscar, Projeto "5x" (projeto irmão interno), Assessment, Projeto de Transformação AI C6
+
+### Community 6 - "Paulo Pituba Negotiation Profile"
+Cohesion: 0.50
+Nodes (5): Never Split the Difference (Chris Voss, framework de negociação), Perfil Estratégico — Paulo Pituba, Paulo Pituba, Rede (adquirência, grupo Itaú), CNV (Comunicação Não-Violenta)
+
+### Community 7 - "AITO Governance Office"
+Cohesion: 0.67
+Nodes (3): Alberto Tadashi Yamamoto, Daniel Avancini, AITO (AI Transformation Office)
+
+### Community 8 - "Enablement Squad"
+Cohesion: 0.67
+Nodes (3): Pedro Ferraresi, Tabi Thuler Santos, Enablement
+
+## Ambiguous Edges - Review These
+- `Daniel Avancini` → `Paulo Pituba`  [AMBIGUOUS]
+  c6/people_profile/perfil-paulo-pituba.md · relation: conceptually_related_to
+- `Marco Zoada` → `Marcos Wada (Architecture Specialist, C6)`  [AMBIGUOUS]
+  c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md · relation: conceptually_related_to
+
+## Knowledge Gaps
+- **7 isolated node(s):** `Fabio Gomes de Oliveira`, `Gabriel Bernardo`, `Marcel (AI Head, C6)`, `Gabriel Klock`, `Matheus Dellagnelo` (+2 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 7 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+
+## Suggested Questions
+_Questions this graph is uniquely positioned to answer:_
+
+- **What is the exact relationship between `Daniel Avancini` and `Paulo Pituba`?**
+  _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
+- **What is the exact relationship between `Marco Zoada` and `Marcos Wada (Architecture Specialist, C6)`?**
+  _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
+- **Why does `[C6] KickOff Interno — Transcrição Comentada` connect `Knowledge Workers Squad` to `AI Vendors & Guardrails`, `AI-native SDLC Squad`, `Platform / AI Hub Team`, `Nelson Novaes Neto & Security Research`, `Assessment & Project 5x`, `Paulo Pituba Negotiation Profile`, `AITO Governance Office`, `Enablement Squad`?**
+  _High betweenness centrality (0.468) - this node is a cross-community bridge._
+- **Why does `Jornada de Transformação AI — Kick-off Interno (deck)` connect `AI-native SDLC Squad` to `AI Vendors & Guardrails`, `Platform / AI Hub Team`, `Nelson Novaes Neto & Security Research`, `Knowledge Workers Squad`, `Assessment & Project 5x`, `Paulo Pituba Negotiation Profile`, `AITO Governance Office`, `Enablement Squad`?**
+  _High betweenness centrality (0.336) - this node is a cross-community bridge._
+- **Why does `Nelson Novaes Neto` connect `Nelson Novaes Neto & Security Research` to `AI Vendors & Guardrails`, `AI-native SDLC Squad`, `Knowledge Workers Squad`, `Paulo Pituba Negotiation Profile`?**
+  _High betweenness centrality (0.170) - this node is a cross-community bridge._
+- **Are the 2 inferred relationships involving `Jornada de Transformação AI — Kick-off Interno (deck)` (e.g. with `Cristiano Pisin ("Cris")` and `Natália Kauatoto`) actually correct?**
+  _`Jornada de Transformação AI — Kick-off Interno (deck)` has 2 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `Fabio Gomes de Oliveira`, `Gabriel Bernardo`, `Marcel (AI Head, C6)` to the rest of the system?**
+  _7 weakly-connected nodes found - possible documentation gaps or missing edges._

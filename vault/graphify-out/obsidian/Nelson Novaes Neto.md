@@ -70,3 +70,36 @@ tags:
 - [[psyzone.org (Nelson's former personal site, ownership uncertain)]] - `references` [AMBIGUOUS]
 
 #graphify/concept #graphify/EXTRACTED #community/Public_Profile__Affiliations
+
+---
+
+---
+source_file: "c6/people_profile/perfil-nelson-novaes-neto.md"
+type: "concept"
+community: "Nelson Novaes Neto & Security Research"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Nelson_Novaes_Neto__Security_Research
+---
+
+# Nelson Novaes Neto
+
+## Connections
+- [[A Case Study of the Capital One Data Breach (2020)]] - `references` [EXTRACTED]
+- [[An Executive Guide to Secure-by-Design AI (2025, JISSEC)]] - `references` [EXTRACTED]
+- [[Cybersecurity Culture at C6 Bank (MIT CAMS case study, 2020)]] - `cites` [EXTRACTED]
+- [[Developing a Global Data Breach Database and the Challenges Encountered (2021)]] - `references` [EXTRACTED]
+- [[Itaú Unibanco]] - `conceptually_related_to` [EXTRACTED]
+- [[Jornada de Transformação AI — Kick-off Interno (deck)]] - `references` [EXTRACTED]
+- [[Knowledge Workers  Knowledge Works]] - `conceptually_related_to` [EXTRACTED]
+- [[MIT Sloan School of Management]] - `conceptually_related_to` [EXTRACTED]
+- [[Notas Rápidas (Scratch) — C6]] - `references` [EXTRACTED]
+- [[Perfil Estratégico — Nelson Novaes Neto]] - `references` [EXTRACTED]
+- [[Perfil Estratégico — Paulo Pituba]] - `references` [EXTRACTED]
+- [[Perfil LinkedIn — Nelson Novaes Neto (dados brutos)]] - `references` [EXTRACTED]
+- [[Secure-by-Design AI (framework, 10 perguntas)]] - `references` [EXTRACTED]
+- [[UOL  UOL DIVEO]] - `conceptually_related_to` [EXTRACTED]
+- [[C6 KickOff Interno — Transcrição Comentada]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Nelson_Novaes_Neto__Security_Research

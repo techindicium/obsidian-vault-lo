@@ -8,7 +8,10 @@ sources:
   - url: "https://docs.google.com/presentation/d/1TBAMg5BpdXgbZ2pfnHboCW9WP2IpAc5cpZfWw5IaNEs/edit"
     type: "gdoc"
     synced_at: "2026-09-03"
-updated_at: "2026-09-03"
+  - url: "c6/meeting_and_notes/2026-09-08-kickoff-interno-transcricao.md"
+    type: "local-dir"
+    synced_at: "2026-09-10"
+updated_at: "2026-09-10"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/growth]
 graphify_node_id: "claude_cowork_workshop_portobank_aito"
@@ -34,6 +37,7 @@ AITO is the structure that integrates an organization's three transformation axe
 ## Where it Applies
 
 - Presented as the organizing structure for enterprise AI transformation in Indicium's Claude Cowork enablement workshops (e.g., Portobank, Aug 2026), tying together adoption, engineering, and product innovation.
+- [[ai-transformation-project-c6-bank]] — instantiated as the transversal governance layer of the six-workstream program at C6 Bank: tracks all squads, ensures roadmap alignment, and governs portfolio and efficiency reporting; also carries the workstream's own risk that the bank's internal team could resist the change (see the project's Blockers).
 
 ## Related Concepts
 
