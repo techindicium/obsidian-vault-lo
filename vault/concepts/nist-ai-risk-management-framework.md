@@ -3,15 +3,18 @@ type: concept
 name: "NIST AI Risk Management Framework (AI RMF 1.0)"
 aliases: ["NIST AI RMF", "AI RMF 1.0", "NIST AI 100-1"]
 description: "A voluntary, non-prescriptive, rights-preserving US framework (NIST AI 100-1, Jan 2023) that helps organizations manage risks and build trustworthy AI systems through four core functions applied across the AI lifecycle."
-related_to: ["[[ai-rmf-core-functions]]", "[[trustworthy-ai-characteristics]]", "[[ai-rmf-profile]]", "[[ai-actor-taxonomy]]", "[[ai-lifecycle-dimensions]]", "[[ai-rmf-risk-framing-challenges]]", "[[ai-risks-vs-traditional-software-risks]]", "[[human-ai-interaction-risk]]", "[[related-risk-governance-frameworks]]"]
+related_to: ["[[ai-rmf-core-functions]]", "[[trustworthy-ai-characteristics]]", "[[ai-rmf-profile]]", "[[ai-actor-taxonomy]]", "[[ai-lifecycle-dimensions]]", "[[ai-rmf-risk-framing-challenges]]", "[[ai-risks-vs-traditional-software-risks]]", "[[human-ai-interaction-risk]]", "[[related-risk-governance-frameworks]]", "[[aisvs-standard]]"]
 sources:
+  - url: "https://github.com/OWASP/AISVS"
+    type: "github-repo"
+    synced_at: "2026-09-10"
   - url: "https://www.nist.gov/itl/ai-risk-management-framework"
     type: "remote-binary"
     synced_at: "2026-09-10"
 updated_at: "2026-09-10"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/engineering]
-graphify_node_ids: ["nist_ai_100_1_document", "nist_ai_100_1_attributes_of_ai_rmf"]
+graphify_node_ids: ["nist_ai_100_1_document", "nist_ai_100_1_attributes_of_ai_rmf", "aisvs_nist_ai_rmf"]
 confidence: "EXTRACTED"
 ---
 
@@ -51,3 +54,4 @@ The framework is deliberately designed to be:
 
 - [[ai-rmf-profile]] — tailored implementations of the framework for specific contexts
 - [[ai-rmf-risk-framing-challenges]] — the foundational risk-framing challenges (tolerance, prioritization, measurement) the framework responds to
+- [[aisvs-standard]] — the OWASP AI Security Verification Standard cites the AI RMF as a related governance framework its testable security requirements complement

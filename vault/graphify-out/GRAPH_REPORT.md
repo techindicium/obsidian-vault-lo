@@ -974,3 +974,130 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.223) - this node is a cross-community bridge._
 - **What connects `Third-Party Entities`, `Affected Individuals/Communities`, `General Public` to the rest of the system?**
   _6 weakly-connected nodes found - possible documentation gaps or missing edges._
+
+---
+
+# Merge on 2026-09-10
+
+# Graph Report - bedrock-learn-aisvs-1789044700  (2026-09-10)
+
+## Corpus Check
+- Corpus is ~23,013 words - fits in a single context window. You may not need a graph.
+
+## Summary
+- 43 nodes · 131 edges · 9 communities (6 shown, 3 thin omitted)
+- Extraction: 60% EXTRACTED · 34% INFERRED · 6% AMBIGUOUS · INFERRED: 45 edges (avg confidence: 0.79)
+- Token cost: 0 input · 258,484 output
+
+## Community Hubs (Navigation)
+- AI Code-Generation Supply Chain Security
+- Agentic AI Runtime Security
+- AISVS Framework Scope & Alignment
+- Model Attack Glossary Terms
+- Training Data & Model Lifecycle Provenance
+- Infrastructure & Access Control
+- Guardrails & Jailbreak
+- Hallucination & RAG
+- MCP & Trust Boundary
+
+## God Nodes (most connected - your core abstractions)
+1. `Input Validation (C2)` - 17 edges
+2. `OWASP AI Security Verification Standard (AISVS)` - 13 edges
+3. `Supply Chain Security for Models (C6)` - 13 edges
+4. `AISVS Glossary` - 13 edges
+5. `Model Lifecycle Management & Change Control (C3)` - 12 edges
+6. `Orchestration & Agentic Security` - 12 edges
+7. `AI Security Controls Inventory` - 12 edges
+8. `Adversarial Robustness` - 11 edges
+9. `Model Behavior, Output Control & Safety Assurance` - 10 edges
+10. `Training Data Integrity & Traceability (C1)` - 9 edges
+
+## Surprising Connections (you probably didn't know these)
+- `Training Data Integrity & Traceability (C1)` --semantically_similar_to--> `Supply Chain Security for Models (C6)`  [INFERRED] [semantically similar]
+  AISVS/0x10-C01-Training-Data-Integrity-and-Traceability.md → AISVS/0x10-C06-Supply-Chain.md
+- `Input Validation (C2)` --semantically_similar_to--> `Access Control & Identity for AI Components & Users (C5)`  [INFERRED] [semantically similar]
+  AISVS/0x10-C02-Input-Validation.md → AISVS/0x10-C05-Access-Control-and-Identity.md
+- `Input Validation (C2)` --references--> `Adversarial Robustness`  [AMBIGUOUS]
+  AISVS/0x10-C02-Input-Validation.md → AISVS/0x10-C11-Adversarial-Robustness.md
+- `Input Validation (C2)` --references--> `Model Context Protocol (MCP) Security`  [AMBIGUOUS]
+  AISVS/0x10-C02-Input-Validation.md → AISVS/0x10-C10-MCP-Security.md
+- `Input Validation (C2)` --references--> `Model Behavior, Output Control & Safety Assurance`  [AMBIGUOUS]
+  AISVS/0x10-C02-Input-Validation.md → AISVS/0x10-C07-Model-Behavior.md
+
+## Hyperedges (group relationships)
+- **AISVS Core Control Categories (C1-C6)** — aisvs_training_data_integrity_and_traceability, aisvs_input_validation, aisvs_model_lifecycle_management, aisvs_infrastructure, aisvs_access_control_and_identity, aisvs_supply_chain [EXTRACTED 1.00]
+- **Model Artifact Trust Chain** — aisvs_model_lifecycle_management, aisvs_infrastructure, aisvs_supply_chain [INFERRED 0.85]
+- **AI Isolation & Access Boundary Controls** — aisvs_access_control_and_identity, aisvs_infrastructure, aisvs_model_lifecycle_management [INFERRED 0.75]
+- **Agentic AI Control Stack** — aisvs_orchestration_and_agentic_action, aisvs_mcp_security, aisvs_model_behavior [INFERRED 0.85]
+- **Data Poisoning Defense Lifecycle** — aisvs_memory_embeddings_and_vector_database, aisvs_adversarial_robustness, aisvs_monitoring_and_logging [INFERRED 0.75]
+- **Hallucination Detection Lifecycle** — aisvs_model_behavior, aisvs_memory_embeddings_and_vector_database, aisvs_monitoring_and_logging [INFERRED 0.75]
+- **Prompt Injection & Safety Bypass Pattern** — aisvs_prompt_injection, aisvs_indirect_prompt_injection, aisvs_jailbreak, aisvs_guardrails [INFERRED 0.75]
+- **Agentic Autonomy Risk Pattern** — aisvs_agentic_ai, aisvs_excessive_agency, aisvs_mcp [INFERRED 0.75]
+- **AI for Code Generation Guidance Structure** — aisvs_ai_for_code_generation, aisvs_ai_code_review_bot_hardening, aisvs_cicd_hardening_ai_augmentation, aisvs_adversarial_ai_inbound_contributions, aisvs_ai_artifact_provenance [EXTRACTED 1.00]
+
+## Communities (9 total, 3 thin omitted)
+
+### Community 0 - "AI Code-Generation Supply Chain Security"
+Cohesion: 0.39
+Nodes (9): Adversarial AI Detection in Inbound Contributions, AI Artifact Origin Validation & Audit Trail, AI for Code Generation (Security Guidance), CI/CD Pipeline Hardening for AI Augmentation, Indirect Prompt Injection, Input Validation (C2), OWASP GenAI Security Project / LLM Top 10, Prompt Injection (+1 more)
+
+### Community 1 - "Agentic AI Runtime Security"
+Cohesion: 0.69
+Nodes (9): Adversarial Robustness, AI Code-Review & Assistant Bot Hardening, AI Security Controls Inventory, Model Context Protocol (MCP) Security, Memory, Embeddings & Vector Database Security, Model Behavior, Output Control & Safety Assurance, Model Context Protocol (MCP), Monitoring, Logging & Anomaly Detection (+1 more)
+
+### Community 2 - "AISVS Framework Scope & Alignment"
+Cohesion: 0.53
+Nodes (6): Appendix B: AI Security Controls Inventory, OWASP Application Security Verification Standard (ASVS), Alignment of AISVS Levels with ASVS Levels, OWASP AI Security Verification Standard (AISVS), ISO/IEC 42001:2023 AI Management System, Scope of AISVS (AI-specific narrow scope)
+
+### Community 3 - "Model Attack Glossary Terms"
+Cohesion: 0.50
+Nodes (5): Adversarial Example, Agent / Agentic AI, Excessive Agency, AISVS Glossary, Model Extraction
+
+### Community 4 - "Training Data & Model Lifecycle Provenance"
+Cohesion: 0.60
+Nodes (5): Data Poisoning, MITRE ATLAS, Model Lifecycle Management & Change Control (C3), NIST AI Risk Management Framework, Training Data Integrity & Traceability (C1)
+
+### Community 5 - "Infrastructure & Access Control"
+Cohesion: 1.00
+Nodes (3): Access Control & Identity for AI Components & Users (C5), Infrastructure, Configuration & Deployment Security (C4), AISVS Verification Levels (L1/L2/L3)
+
+## Ambiguous Edges - Review These
+- `Input Validation (C2)` → `Adversarial Robustness`  [AMBIGUOUS]
+  AISVS/0x03-Using-AISVS.md · relation: references
+- `Input Validation (C2)` → `Model Context Protocol (MCP) Security`  [AMBIGUOUS]
+  AISVS/0x03-Using-AISVS.md · relation: references
+- `Input Validation (C2)` → `Model Behavior, Output Control & Safety Assurance`  [AMBIGUOUS]
+  AISVS/0x03-Using-AISVS.md · relation: references
+- `Input Validation (C2)` → `Model Lifecycle Management & Change Control (C3)`  [AMBIGUOUS]
+  AISVS/0x10-C03-Model-Lifecycle-Management.md · relation: conceptually_related_to
+- `Input Validation (C2)` → `Monitoring, Logging & Anomaly Detection`  [AMBIGUOUS]
+  AISVS/0x03-Using-AISVS.md · relation: references
+- `Input Validation (C2)` → `Orchestration & Agentic Security`  [AMBIGUOUS]
+  AISVS/0x03-Using-AISVS.md · relation: references
+- `Memory, Embeddings & Vector Database Security` → `Model Context Protocol (MCP) Security`  [AMBIGUOUS]
+  AISVS/0x10-C08-Memory-Embeddings-and-Vector-Database.md · relation: conceptually_related_to
+- `Model Context Protocol (MCP) Security` → `Adversarial Robustness`  [AMBIGUOUS]
+  AISVS/0x10-C11-Adversarial-Robustness.md · relation: conceptually_related_to
+
+## Knowledge Gaps
+- **1 isolated node(s):** `Appendix B: AI Security Controls Inventory`
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+
+## Suggested Questions
+_Questions this graph is uniquely positioned to answer:_
+
+- **What is the exact relationship between `Input Validation (C2)` and `Adversarial Robustness`?**
+  _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
+- **What is the exact relationship between `Input Validation (C2)` and `Model Context Protocol (MCP) Security`?**
+  _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
+- **What is the exact relationship between `Input Validation (C2)` and `Model Behavior, Output Control & Safety Assurance`?**
+  _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
+- **What is the exact relationship between `Input Validation (C2)` and `Model Lifecycle Management & Change Control (C3)`?**
+  _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
+- **What is the exact relationship between `Input Validation (C2)` and `Monitoring, Logging & Anomaly Detection`?**
+  _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
+- **What is the exact relationship between `Input Validation (C2)` and `Orchestration & Agentic Security`?**
+  _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
+- **What is the exact relationship between `Memory, Embeddings & Vector Database Security` and `Model Context Protocol (MCP) Security`?**
+  _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
