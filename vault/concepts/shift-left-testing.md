@@ -3,8 +3,11 @@ type: concept
 name: "Shift-Left Testing"
 aliases: ["Shift Left Testing", "Shift-Left Approach"]
 description: "Moving testing and defect-prevention activities earlier in the software development lifecycle, so defects are found and fixed while they are cheapest to remediate."
-related_to: ["[[static-code-analysis]]", "[[unit-testing]]", "[[software-testing-pyramid]]", "[[coding-standards]]", "[[service-virtualization]]", "[[capers-jones-cost-of-defect-graph]]", "[[devops]]"]
+related_to: ["[[static-code-analysis]]", "[[unit-testing]]", "[[software-testing-pyramid]]", "[[coding-standards]]", "[[service-virtualization]]", "[[capers-jones-cost-of-defect-graph]]", "[[devops]]", "[[samm-standard]]"]
 sources:
+  - url: "https://owaspsamm.org/"
+    type: "remote-binary"
+    synced_at: "2026-09-10"
   - url: "https://www.stickyminds.com/article/shift-left-approach-software-testing"
     type: "remote-binary"
     synced_at: "2026-09-10"
@@ -49,3 +52,4 @@ The [[capers-jones-cost-of-defect-graph|Capers Jones cost-of-defect model]] show
 - [[software-testing-pyramid]] — the test-mix model shift-left testing relies on
 - [[coding-standards]] — engineering standards that reduce bug volume and enable security-by-design
 - [[continuous-testing]] — continuous execution of the test suite, enabled by service virtualization
+- [[samm-standard]] — OWASP SAMM operationalizes shift-left into a measurable maturity model, most directly in its Implementation and Verification business functions

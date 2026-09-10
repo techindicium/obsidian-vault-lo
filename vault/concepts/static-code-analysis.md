@@ -3,8 +3,11 @@ type: concept
 name: "Static Code Analysis"
 aliases: ["Static Analysis", "SAST"]
 description: "Analyzing source code without executing it to detect bugs, insecure patterns, and coding-standard violations during the coding phase itself."
-related_to: ["[[shift-left-testing]]", "[[coding-standards]]", "[[unit-testing]]"]
+related_to: ["[[shift-left-testing]]", "[[coding-standards]]", "[[unit-testing]]", "[[samm-implementation]]"]
 sources:
+  - url: "https://owaspsamm.org/model/implementation/secure-build/"
+    type: "remote-binary"
+    synced_at: "2026-09-10"
   - url: "https://www.stickyminds.com/article/shift-left-approach-software-testing"
     type: "remote-binary"
     synced_at: "2026-09-10"
@@ -40,3 +43,4 @@ Static code analysis is the practice that lets teams find defects at the cheapes
 
 - [[unit-testing]] — the other foundational, developer-owned testing practice
 - [[coding-standards]] — engineering rules enforced through static analysis
+- [[samm-implementation]] — its Secure Build practice formalizes automated static-analysis checks as a maturity-leveled pipeline requirement

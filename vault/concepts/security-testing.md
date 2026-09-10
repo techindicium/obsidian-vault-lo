@@ -3,8 +3,11 @@ type: concept
 name: "Security Testing"
 aliases: ["Security Test"]
 description: "Testing aimed at finding vulnerabilities and exploit paths, pushed earlier and deeper via service virtualization simulating attacker behavior."
-related_to: ["[[service-virtualization]]", "[[coding-standards]]", "[[performance-testing]]"]
+related_to: ["[[service-virtualization]]", "[[coding-standards]]", "[[performance-testing]]", "[[samm-verification]]"]
 sources:
+  - url: "https://owaspsamm.org/model/verification/security-testing/"
+    type: "remote-binary"
+    synced_at: "2026-09-10"
   - url: "https://www.stickyminds.com/article/shift-left-approach-software-testing"
     type: "remote-binary"
     synced_at: "2026-09-10"
@@ -39,3 +42,4 @@ Security testing benefits doubly from a shift-left strategy: [[coding-standards|
 ## Related Concepts
 
 - [[performance-testing]] — sibling practice enabled by the same service-virtualization mechanism
+- [[samm-verification]] — OWASP SAMM's "Security Testing" practice formalizes this concept into a maturity-leveled process (scalable automated baseline + deep manual understanding streams)

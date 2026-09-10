@@ -3,8 +3,11 @@ type: concept
 name: "Coding Standards"
 aliases: ["Engineering Standards", "Code Standards"]
 description: "Engineering rules and conventions, enforced through static code analysis, that reduce the volume of bugs introduced and let teams build secure-by-design software instead of testing security in afterward."
-related_to: ["[[static-code-analysis]]", "[[gdpr]]", "[[security-testing]]", "[[shift-left-testing]]"]
+related_to: ["[[static-code-analysis]]", "[[gdpr]]", "[[security-testing]]", "[[shift-left-testing]]", "[[samm-governance]]", "[[samm-design]]"]
 sources:
+  - url: "https://owaspsamm.org/model/governance/policy-and-compliance/"
+    type: "remote-binary"
+    synced_at: "2026-09-10"
   - url: "https://www.stickyminds.com/article/shift-left-approach-software-testing"
     type: "remote-binary"
     synced_at: "2026-09-10"
@@ -41,3 +44,4 @@ Coding standards are key to getting the most value out of a [[shift-left-testing
 
 - [[static-code-analysis]]
 - [[shift-left-testing]] — coding standards are one of the two main levers of shifting left
+- [[samm-governance]] — its Policy & Compliance practice is the org-wide, maturity-leveled formalization of establishing a coding-standards baseline
