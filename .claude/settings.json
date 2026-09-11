@@ -1,0 +1,13 @@
+{
+  "enabledPlugins": {
+    "bedrock@claude-bedrock": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-bedrock": {
+      "source": {
+        "source": "github",
+        "repo": "iurykrieger/claude-bedrock"
+      }
+    }
+  }
+}
