@@ -18,3 +18,23 @@ tags:
 - [[C6 KickOff Interno — Transcrição Comentada]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/AI_Vendors__Guardrails
+
+---
+
+---
+source_file: "kickoff-interno-transcricao-raw.md"
+type: "concept"
+community: "Esteira AI-Nativa & Coding Agents"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Esteira_AI-Nativa__Coding_Agents
+---
+
+# Claude
+
+## Connections
+- [[Guilherme Zanotelli dos Santos]] - `references` [EXTRACTED]
+- [[Kiro]] - `semantically_similar_to` [INFERRED]
+
+#graphify/concept #graphify/EXTRACTED #community/Esteira_AI-Nativa__Coding_Agents

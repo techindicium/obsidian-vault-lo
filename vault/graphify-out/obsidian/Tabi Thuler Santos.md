@@ -16,3 +16,23 @@ tags:
 - [[C6 KickOff Interno — Transcrição Comentada]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Enablement_Squad
+
+---
+
+---
+source_file: "kickoff-interno-transcricao-raw.md"
+type: "concept"
+community: "AITO/Enablement & DLP Governance"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/AITO/Enablement__DLP_Governance
+---
+
+# Tabi Thuler Santos
+
+## Connections
+- [[Frente AITO (AI Transformation Office)]] - `implements` [EXTRACTED]
+- [[Frente Enablement]] - `implements` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/AITO/Enablement__DLP_Governance

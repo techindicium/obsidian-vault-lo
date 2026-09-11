@@ -1315,3 +1315,231 @@ _Questions this graph is uniquely positioned to answer:_
   _`Jornada de Transformação AI — Kick-off Interno (deck)` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Fabio Gomes de Oliveira`, `Gabriel Bernardo`, `Marcel (AI Head, C6)` to the rest of the system?**
   _7 weakly-connected nodes found - possible documentation gaps or missing edges._
+
+---
+
+# Merge on 2026-09-11
+
+# Graph Report - bedrock-learn-deck-16493  (2026-09-11)
+
+## Corpus Check
+- Corpus is ~2,395 words - fits in a single context window. You may not need a graph.
+
+## Summary
+- 63 nodes · 110 edges · 8 communities
+- Extraction: 89% EXTRACTED · 10% INFERRED · 1% AMBIGUOUS · INFERRED: 11 edges (avg confidence: 0.8)
+- Token cost: 0 input · 95,361 output
+
+## Community Hubs (Navigation)
+- AITO Governance & Cross-Workstream
+- Project Objectives & Key Results
+- Esteira AI-Nativa Squad
+- C6 Bank History & Leadership
+- Plataforma / C6 AI Hub Team
+- Indicium Team & Contract Origin
+- Contract & Manual de Bordo
+- Knowledge Workers & AI Licenses
+
+## God Nodes (most connected - your core abstractions)
+1. `C6 Bank` - 20 edges
+2. `Indicium` - 17 edges
+3. `Plataforma (frente)` - 16 edges
+4. `Esteira AI-nativa` - 14 edges
+5. `Jornada de Transformação AI (C6/Indicium)` - 11 edges
+6. `AITO (governança e portfólio)` - 11 edges
+7. `Knowledge Workers (frente)` - 9 edges
+8. `Objetivos do Projeto` - 6 edges
+9. `Assessment (frente)` - 5 edges
+10. `Enablement (frente)` - 4 edges
+
+## Surprising Connections (you probably didn't know these)
+- `Acelerar a Produtividade (Pessoas)` --conceptually_related_to--> `Esteira AI-nativa`  [INFERRED]
+  kickoff-interno-transformacao-ai-set2026.md → kickoff-interno-transformacao-ai-set2026.md  _Bridges community 2 → community 1_
+- `Acelerar a Produtividade (Pessoas)` --conceptually_related_to--> `Knowledge Workers (frente)`  [INFERRED]
+  kickoff-interno-transformacao-ai-set2026.md → kickoff-interno-transformacao-ai-set2026.md  _Bridges community 7 → community 1_
+- `Escalar com Sustentabilidade` --conceptually_related_to--> `Plataforma (frente)`  [INFERRED]
+  kickoff-interno-transformacao-ai-set2026.md → kickoff-interno-transformacao-ai-set2026.md  _Bridges community 4 → community 1_
+- `Produtos AI-Native (Produtos)` --conceptually_related_to--> `Valor em Produtos (KR)`  [INFERRED]
+  kickoff-interno-transformacao-ai-set2026.md → kickoff-interno-transformacao-ai-set2026.md  _Bridges community 0 → community 1_
+- `Jornada de Transformação AI (C6/Indicium)` --conceptually_related_to--> `AITO (governança e portfólio)`  [EXTRACTED]
+  kickoff-interno-transformacao-ai-set2026.md → kickoff-interno-transformacao-ai-set2026.md  _Bridges community 6 → community 0_
+
+## Hyperedges (group relationships)
+- **Frentes de Atuação do Projeto** — kickoff_interno_transformacao_ai_set2026_assessment, kickoff_interno_transformacao_ai_set2026_esteira_ai_nativa, kickoff_interno_transformacao_ai_set2026_knowledge_workers, kickoff_interno_transformacao_ai_set2026_aito, kickoff_interno_transformacao_ai_set2026_plataforma, kickoff_interno_transformacao_ai_set2026_enablement [EXTRACTED 1.00]
+- **Cadência de Governança com o C6** — kickoff_interno_transformacao_ai_set2026_aito, kickoff_interno_transformacao_ai_set2026_plataforma, kickoff_interno_transformacao_ai_set2026_enablement, kickoff_interno_transformacao_ai_set2026_assessment [EXTRACTED 1.00]
+- **Squad Plat. Eng. AI SDLC V2** — kickoff_interno_transformacao_ai_set2026_vagner_strapasson, kickoff_interno_transformacao_ai_set2026_alberto_tadashi, kickoff_interno_transformacao_ai_set2026_daniel_avancini, kickoff_interno_transformacao_ai_set2026_leandro_ciscar, kickoff_interno_transformacao_ai_set2026_igor_beninca [EXTRACTED 1.00]
+
+## Communities (8 total, 0 thin omitted)
+
+### Community 0 - "AITO Governance & Cross-Workstream"
+Cohesion: 0.27
+Nodes (10): AITO (governança e portfólio), Assessment (frente), C6 Assistant, Enablement (frente), Governança e Cadência de Rituais com o C6, Governança e Cadência de Rituais - Interno, Gustavo Torres (GT) (AI Head), Marcel (+2 more)
+
+### Community 1 - "Project Objectives & Key Results"
+Cohesion: 0.25
+Nodes (9): Acelerar a Produtividade (Pessoas), Aumentar Eficiência (Processos), Escalar com Sustentabilidade, Garantir Governança (AITO), Objetivos do Projeto, Produtividade Imediata (KR), Redução de Custo Operacional (KR), Resultados-Chave Estratégicos (+1 more)
+
+### Community 2 - "Esteira AI-Nativa Squad"
+Cohesion: 0.25
+Nodes (8): Alberto Tadashi (Plat. Eng. AI SDLC V2), Daniel Avancini (Plat. Eng. AI SDLC V2), Esteira AI-nativa, Guilherme Zanotelli (Consultant Development), Igor Benincá (Plat. Eng. AI SDLC V2), Leandro Ciscar (Plat. Eng. AI SDLC V2), Lorena Sales (Consultant Product), Vagner Strapasson (Plat. Eng. AI SDLC V2)
+
+### Community 3 - "C6 Bank History & Leadership"
+Cohesion: 0.25
+Nodes (8): BTG Pactual, C6 Bank, C6 Graphene, JPMorgan, Marcelo Kalim (CEO C6), Natalia Kawatoko, Paulo Pituba (PP), Thiago Ribeiro
+
+### Community 4 - "Plataforma / C6 AI Hub Team"
+Cohesion: 0.25
+Nodes (8): C6 AI Hub, Cristiano Piccin, Eduardo Scarpellini (Platform Tech Lead), Everson Tavares (Platform Specialist), Marcelo Arakaki, Marcos Wada (Architecture Specialist), Nelson Neto, Plataforma (frente)
+
+### Community 5 - "Indicium Team & Contract Origin"
+Cohesion: 0.29
+Nodes (7): Aluizio Júnior (FDE SDLC Lead), Filipe Duarte (AI Engineer), Indicium, Lucas Santos (Platform Engineer Lead), Matheus Dellagnelo, Rodrigo Encáua (SecOps Security), Tabi Santos (Consultant Change Mgt.)
+
+### Community 6 - "Contract & Manual de Bordo"
+Cohesion: 0.29
+Nodes (7): Contrato C6-Indicium, Jornada de Transformação AI (C6/Indicium), Manual de Bordo - C6, Onboarding e Infraestrutura, Os 3 Não Negociáveis, Próximos Passos (Ações Internas), Workshop Claude Code (São Paulo)
+
+### Community 7 - "Knowledge Workers & AI Licenses"
+Cohesion: 0.33
+Nodes (6): Douglas Sgrott (AI Engineer), Gabriel Buso (Consultant Processes), Isadora Busch (Consultant Product), Knowledge Workers (frente), Licenças de IA (900 Kiro, 200 Claude, 100 Gemini), Rafael Ribeiro (FDE Knowledge Lead)
+
+## Ambiguous Edges - Review These
+- `AITO (governança e portfólio)` → `Marcel`  [AMBIGUOUS]
+  kickoff-interno-transformacao-ai-set2026.md · relation: references
+
+## Knowledge Gaps
+- **12 isolated node(s):** `Workshop Claude Code (São Paulo)`, `Matheus Dellagnelo`, `Marcelo Kalim (CEO C6)`, `JPMorgan`, `BTG Pactual` (+7 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 13 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+
+## Suggested Questions
+_Questions this graph is uniquely positioned to answer:_
+
+- **What is the exact relationship between `AITO (governança e portfólio)` and `Marcel`?**
+  _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
+- **Why does `C6 Bank` connect `C6 Bank History & Leadership` to `AITO Governance & Cross-Workstream`, `Plataforma / C6 AI Hub Team`, `Indicium Team & Contract Origin`, `Contract & Manual de Bordo`, `Knowledge Workers & AI Licenses`?**
+  _High betweenness centrality (0.283) - this node is a cross-community bridge._
+- **Why does `Jornada de Transformação AI (C6/Indicium)` connect `Contract & Manual de Bordo` to `AITO Governance & Cross-Workstream`, `Project Objectives & Key Results`, `Esteira AI-Nativa Squad`, `Plataforma / C6 AI Hub Team`, `Knowledge Workers & AI Licenses`?**
+  _High betweenness centrality (0.277) - this node is a cross-community bridge._
+- **Why does `Esteira AI-nativa` connect `Esteira AI-Nativa Squad` to `AITO Governance & Cross-Workstream`, `Project Objectives & Key Results`, `Indicium Team & Contract Origin`, `Contract & Manual de Bordo`, `Knowledge Workers & AI Licenses`?**
+  _High betweenness centrality (0.229) - this node is a cross-community bridge._
+- **Are the 2 inferred relationships involving `Jornada de Transformação AI (C6/Indicium)` (e.g. with `Onboarding e Infraestrutura` and `Próximos Passos (Ações Internas)`) actually correct?**
+  _`Jornada de Transformação AI (C6/Indicium)` has 2 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `Workshop Claude Code (São Paulo)`, `Matheus Dellagnelo`, `Marcelo Kalim (CEO C6)` to the rest of the system?**
+  _12 weakly-connected nodes found - possible documentation gaps or missing edges._
+
+---
+
+# Merge on 2026-09-11
+
+# Graph Report - bedrock-learn-transcript-1  (2026-09-11)
+
+## Corpus Check
+- Corpus is ~17,379 words - fits in a single context window. You may not need a graph.
+
+## Summary
+- 84 nodes · 112 edges · 8 communities
+- Extraction: 85% EXTRACTED · 12% INFERRED · 3% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.74)
+- Token cost: 0 input · 141,360 output
+
+## Community Hubs (Navigation)
+- Contract Origin & Commercial Choice
+- Plataforma & Model Hub Tooling
+- AITO/Enablement & DLP Governance
+- Esteira AI-Nativa & Coding Agents
+- Internal Next Steps & Action Items
+- Assessment Cases & AI Assistants
+- Knowledge Works & Sabotage Risk
+- C6 Bank Leadership & Core Banking
+
+## God Nodes (most connected - your core abstractions)
+1. `C6 AI Transformation Project` - 17 edges
+2. `C6 Bank` - 10 edges
+3. `Frente Esteira AI-Nativa (SDLC)` - 9 edges
+4. `Leandro Ciscar` - 8 edges
+5. `Kiro` - 8 edges
+6. `Indicium` - 7 edges
+7. `Alberto Tadashi Yamamoto` - 6 edges
+8. `Daniel Avancini` - 6 edges
+9. `Frente Knowledge Works` - 6 edges
+10. `Frente AITO (AI Transformation Office)` - 6 edges
+
+## Surprising Connections (you probably didn't know these)
+- `Frente Assessment` --shares_data_with--> `Frente Esteira AI-Nativa (SDLC)`  [INFERRED]
+  kickoff-interno-transcricao-raw.md → kickoff-interno-transcricao-raw.md  _Bridges community 5 → community 3_
+- `Frente Esteira AI-Nativa (SDLC)` --semantically_similar_to--> `Why C6 Needs Infra Migration Urgency`  [INFERRED] [semantically similar]
+  kickoff-interno-transcricao-raw.md → kickoff-interno-transcricao-raw.md  _Bridges community 3 → community 0_
+- `Synthetic Workers Concept` --conceptually_related_to--> `Frente Esteira AI-Nativa (SDLC)`  [INFERRED]
+  kickoff-interno-transcricao-raw.md → kickoff-interno-transcricao-raw.md  _Bridges community 3 → community 2_
+- `Frente Plataforma` --shares_data_with--> `Frente AITO (AI Transformation Office)`  [INFERRED]
+  kickoff-interno-transcricao-raw.md → kickoff-interno-transcricao-raw.md  _Bridges community 2 → community 1_
+- `Telemetria Project (Gemini/GCP)` --shares_data_with--> `C6 AI Hub`  [INFERRED]
+  kickoff-interno-transcricao-raw.md → kickoff-interno-transcricao-raw.md  _Bridges community 1 → community 5_
+
+## Hyperedges (group relationships)
+- **Six Workstreams of C6 AI Transformation** — kickoff_interno_transcricao_raw_frente_assessment, kickoff_interno_transcricao_raw_frente_esteira_ai_nativa, kickoff_interno_transcricao_raw_frente_knowledge_works, kickoff_interno_transcricao_raw_frente_aito, kickoff_interno_transcricao_raw_frente_plataforma, kickoff_interno_transcricao_raw_frente_enablement, kickoff_interno_transcricao_raw_c6_ai_transformation_project [EXTRACTED 1.00]
+- **Kiro vs Claude Security/Telemetry Debate** — kickoff_interno_transcricao_raw_kiro, kickoff_interno_transcricao_raw_claude_tool, kickoff_interno_transcricao_raw_rodrigo_freitas_encaua, kickoff_interno_transcricao_raw_igor_beninca, kickoff_interno_transcricao_raw_guilherme_zanotelli_dos_santos [EXTRACTED 1.00]
+- **DLP Data Sovereignty Discussion** — kickoff_interno_transcricao_raw_rationale_dlp_data_restriction_rule, kickoff_interno_transcricao_raw_gabriel_bernardo, kickoff_interno_transcricao_raw_alberto_tadashi_yamamoto, kickoff_interno_transcricao_raw_c6_bank, kickoff_interno_transcricao_raw_rationale_vm_access_discarded [EXTRACTED 1.00]
+
+## Communities (8 total, 0 thin omitted)
+
+### Community 0 - "Contract Origin & Commercial Choice"
+Cohesion: 0.17
+Nodes (16): Anthropic, C6 AI Transformation Project, CIT, Cristiano Pisin (Cris), Daniel Avancini, Fabio Gomes de Oliveira, 5x Project (Parallel Indicium Project), Gabriel Klock (+8 more)
+
+### Community 1 - "Plataforma & Model Hub Tooling"
+Cohesion: 0.17
+Nodes (13): Action: Research LightLLM, C6 AI Hub, Eduardo (Platform Tech Lead), Frente Plataforma, Grafana, Kubernetes, LightLLM, Lucas Zanotelli dos Santos (+5 more)
+
+### Community 2 - "AITO/Enablement & DLP Governance"
+Cohesion: 0.20
+Nodes (12): Action: Ship Physical Equipment to C6, Alberto Tadashi Yamamoto, Frente AITO (AI Transformation Office), Frente Enablement, Gabriel Bernardo, JP Morgan, Manual de Bordo (Code of Conduct), Pedro Guilherme Volpato Ferraresi (+4 more)
+
+### Community 3 - "Esteira AI-Nativa & Coding Agents"
+Cohesion: 0.21
+Nodes (12): Action: Re-test Kiro vs Claude, Aluizio Cidral Júnior, AWS, Claude, Filipe Duarte da Rocha Paço, Frente Esteira AI-Nativa (SDLC), Guilherme Zanotelli dos Santos, Igor Benincá (+4 more)
+
+### Community 4 - "Internal Next Steps & Action Items"
+Cohesion: 0.25
+Nodes (8): Action: Contact Natália Kauatoto on Change Management, Action: Create Slack Channel for C6 Team, Action: Define Team Name, Action: Schedule Biweekly Squad Meetings, Action: Share Conduct Manual, Leandro Ciscar, Natália Kauatoto, Slack
+
+### Community 5 - "Assessment Cases & AI Assistants"
+Cohesion: 0.25
+Nodes (8): C6 Assistant, Contestação de Despesas Use Case, Frente Assessment, GCP, Gemini, Marcelo (Head de IA, C6 Assistant), Revisão de Documentos Jurídicos Use Case, Telemetria Project (Gemini/GCP)
+
+### Community 6 - "Knowledge Works & Sabotage Risk"
+Cohesion: 0.29
+Nodes (8): Douglas Sgrott, Frente Knowledge Works, Gabriel Eckschmidt Buso, Isadora Busch, Nelson, Rafael Ribeiro, Internal Sabotage / Resistance Risk, Shadow AI Risk
+
+### Community 7 - "C6 Bank Leadership & Core Banking"
+Cohesion: 0.29
+Nodes (7): BTG Pactual, C6 Bank, Docket, GT (CIO, C6), Marcelo Calim, Matera, Paulo Pituba (PP)
+
+## Ambiguous Edges - Review These
+- `Gabriel Klock` → `C6 AI Transformation Project`  [AMBIGUOUS]
+  kickoff-interno-transcricao-raw.md · relation: conceptually_related_to
+- `Nelson` → `Internal Sabotage / Resistance Risk`  [AMBIGUOUS]
+  kickoff-interno-transcricao-raw.md · relation: conceptually_related_to
+- `LightLLM` → `Unnamed Terraform Replacement Tool (C6 IaC)`  [AMBIGUOUS]
+  kickoff-interno-transcricao-raw.md · relation: shares_data_with
+
+## Knowledge Gaps
+- **37 isolated node(s):** `Fabio Gomes de Oliveira`, `Vagner Strapasson`, `Douglas Sgrott`, `Rafael Ribeiro`, `Isadora Busch` (+32 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 37 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+
+## Suggested Questions
+_Questions this graph is uniquely positioned to answer:_
+
+- **What is the exact relationship between `Gabriel Klock` and `C6 AI Transformation Project`?**
+  _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
+- **What is the exact relationship between `Nelson` and `Internal Sabotage / Resistance Risk`?**
+  _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
+- **What is the exact relationship between `LightLLM` and `Unnamed Terraform Replacement Tool (C6 IaC)`?**
+  _Edge tagged AMBIGUOUS (relation: shares_data_with) - confidence is low._
+- **Why does `C6 AI Transformation Project` connect `Contract Origin & Commercial Choice` to `AITO/Enablement & DLP Governance`, `Esteira AI-Nativa & Coding Agents`, `Internal Next Steps & Action Items`, `C6 Bank Leadership & Core Banking`?**
+  _High betweenness centrality (0.393) - this node is a cross-community bridge._
+- **Why does `Frente AITO (AI Transformation Office)` connect `AITO/Enablement & DLP Governance` to `Plataforma & Model Hub Tooling`, `Internal Next Steps & Action Items`, `Knowledge Works & Sabotage Risk`?**
+  _High betweenness centrality (0.240) - this node is a cross-community bridge._
+- **Why does `C6 Bank` connect `C6 Bank Leadership & Core Banking` to `Contract Origin & Commercial Choice`, `AITO/Enablement & DLP Governance`, `Assessment Cases & AI Assistants`, `Knowledge Works & Sabotage Risk`?**
+  _High betweenness centrality (0.237) - this node is a cross-community bridge._
+- **Are the 3 inferred relationships involving `Frente Esteira AI-Nativa (SDLC)` (e.g. with `Frente Assessment` and `Why C6 Needs Infra Migration Urgency`) actually correct?**
+  _`Frente Esteira AI-Nativa (SDLC)` has 3 INFERRED edges - model-reasoned connections that need verification._

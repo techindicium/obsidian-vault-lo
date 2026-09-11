@@ -82,3 +82,69 @@ tags:
 - [[C6 KickOff Interno — Transcrição Comentada]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/AI_Vendors__Guardrails
+
+---
+
+---
+source_file: "kickoff-interno-transformacao-ai-set2026.md"
+type: "concept"
+community: "C6 Bank History & Leadership"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/C6_Bank_History__Leadership
+---
+
+# C6 Bank
+
+## Connections
+- [[BTG Pactual]] - `conceptually_related_to` [EXTRACTED]
+- [[C6 Assistant]] - `references` [EXTRACTED]
+- [[C6 Graphene]] - `references` [EXTRACTED]
+- [[Contrato C6-Indicium]] - `references` [EXTRACTED]
+- [[Cristiano Piccin]] - `references` [EXTRACTED]
+- [[Eduardo Scarpellini (Platform Tech Lead)]] - `references` [EXTRACTED]
+- [[Everson Tavares (Platform Specialist)]] - `references` [EXTRACTED]
+- [[Gustavo Torres (GT) (AI Head)]] - `references` [EXTRACTED]
+- [[Indicium]] - `conceptually_related_to` [EXTRACTED]
+- [[JPMorgan]] - `conceptually_related_to` [EXTRACTED]
+- [[Licenças de IA (900 Kiro, 200 Claude, 100 Gemini)]] - `references` [EXTRACTED]
+- [[Marcel]] - `references` [EXTRACTED]
+- [[Marcelo Arakaki]] - `references` [EXTRACTED]
+- [[Marcelo Kalim (CEO C6)]] - `conceptually_related_to` [EXTRACTED]
+- [[Marcos Wada (Architecture Specialist)]] - `references` [EXTRACTED]
+- [[Natalia Kawatoko]] - `references` [EXTRACTED]
+- [[Nelson Neto]] - `references` [EXTRACTED]
+- [[Onboarding e Infraestrutura]] - `references` [EXTRACTED]
+- [[Paulo Pituba (PP)]] - `references` [EXTRACTED]
+- [[Thiago Ribeiro]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/C6_Bank_History__Leadership
+
+---
+
+---
+source_file: "kickoff-interno-transcricao-raw.md"
+type: "concept"
+community: "C6 Bank Leadership & Core Banking"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/C6_Bank_Leadership__Core_Banking
+---
+
+# C6 Bank
+
+## Connections
+- [[BTG Pactual]] - `references` [EXTRACTED]
+- [[C6 AI Transformation Project]] - `references` [EXTRACTED]
+- [[C6 Assistant]] - `references` [EXTRACTED]
+- [[Docket]] - `references` [EXTRACTED]
+- [[GT (CIO, C6)]] - `conceptually_related_to` [EXTRACTED]
+- [[JP Morgan]] - `references` [EXTRACTED]
+- [[Marcelo Calim]] - `conceptually_related_to` [EXTRACTED]
+- [[Matera]] - `references` [EXTRACTED]
+- [[Nelson]] - `conceptually_related_to` [EXTRACTED]
+- [[Paulo Pituba (PP)]] - `conceptually_related_to` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/C6_Bank_Leadership__Core_Banking

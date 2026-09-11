@@ -64,6 +64,12 @@ related_topics: ["[[2026-09-esteira-ai-nativa-c6]]", "[[2026-09-knowledge-works-
 related_actors: []
 related_teams: []
 sources:
+  - url: "https://docs.google.com/document/d/1Fo-4N6U46H-fmslNRm9R6yBZKEhA_dseO0W7irHO2PE/edit"
+    type: "gdoc"
+    synced_at: "2026-09-11"
+  - url: "https://docs.google.com/presentation/d/1X5J3edLcAK9rNlnhhF2VLPW_qDLYvyp736uXlRJd6wI/edit"
+    type: "gdoc"
+    synced_at: "2026-09-11"
   - url: "general_projects/c6/meetings-and-notes.md"
     type: "local-file"
     synced_at: "2026-09-01"
@@ -79,7 +85,7 @@ sources:
   - url: "c6/project_docs/manual-de-bordo-c6.md"
     type: "local-dir"
     synced_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 updated_by: "preserve@agent"
 tags: [type/project, status/active, domain/growth]
 ---

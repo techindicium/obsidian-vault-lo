@@ -34,3 +34,23 @@ tags:
 - [[C6 KickOff Interno — Transcrição Comentada]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Knowledge_Workers_Squad
+
+---
+
+---
+source_file: "kickoff-interno-transcricao-raw.md"
+type: "concept"
+community: "AITO/Enablement & DLP Governance"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/AITO/Enablement__DLP_Governance
+---
+
+# Gabriel Bernardo
+
+## Connections
+- [[DLP Data Restriction Rule]] - `references` [EXTRACTED]
+- [[Frente AITO (AI Transformation Office)]] - `implements` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/AITO/Enablement__DLP_Governance

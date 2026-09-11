@@ -14,3 +14,22 @@ tags:
 - [[Jornada de Transformação AI — Kick-off Interno (deck)]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/AI-native_SDLC_Squad
+
+---
+
+---
+source_file: "kickoff-interno-transformacao-ai-set2026.md"
+type: "concept"
+community: "Indicium Team & Contract Origin"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Indicium_Team__Contract_Origin
+---
+
+# Matheus Dellagnelo
+
+## Connections
+- [[Indicium]] - `cites` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Indicium_Team__Contract_Origin

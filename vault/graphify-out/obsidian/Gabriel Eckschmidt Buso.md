@@ -16,3 +16,22 @@ tags:
 - [[C6 KickOff Interno — Transcrição Comentada]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Knowledge_Workers_Squad
+
+---
+
+---
+source_file: "kickoff-interno-transcricao-raw.md"
+type: "concept"
+community: "Knowledge Works & Sabotage Risk"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Knowledge_Works__Sabotage_Risk
+---
+
+# Gabriel Eckschmidt Buso
+
+## Connections
+- [[Frente Knowledge Works]] - `implements` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Knowledge_Works__Sabotage_Risk
