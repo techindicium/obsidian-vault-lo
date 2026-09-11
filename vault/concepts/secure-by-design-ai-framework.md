@@ -5,10 +5,7 @@ aliases: ["Secure-by-Design AI", "10 Strategic Questions for AI Security"]
 description: "An academic framework co-authored by Nelson Novaes Neto and Keri Pearlson (MIT Sloan) that condenses AI system security into 10 strategic questions for executives, spanning strategic alignment, risk management, controls, governance, and stakeholder engagement."
 related_to: ["[[nelson-novaes-neto]]", "[[ai-transformation-project-c6-bank]]"]
 sources:
-  - url: "general_projects/c6/people_profile/perfil-nelson-novaes-neto.md"
-    type: "local-file"
-    synced_at: "2026-09-01"
-updated_at: 2026-09-01
+updated_at: "2026-09-11"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/growth]
 ---

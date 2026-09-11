@@ -5,10 +5,7 @@ aliases: ["Label + Calibrated Question", "Rótulo + Pergunta Calibrada"]
 description: "A rapport-building technique from Chris Voss's 'Never Split the Difference': open a relationship by naming an observed fact about the other person (the label) and following it with an open, calibrated question, instead of presuming shared interests or mirroring unknown language."
 related_to: ["[[paulo-pituba]]", "[[never-split-the-difference-negotiation-tactics]]"]
 sources:
-  - url: "general_projects/c6/people_profile/perfil-paulo-pituba.md"
-    type: "local-file"
-    synced_at: "2026-09-01"
-updated_at: 2026-09-01
+updated_at: "2026-09-11"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/growth]
 ---

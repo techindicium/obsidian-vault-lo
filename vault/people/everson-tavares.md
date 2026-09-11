@@ -10,10 +10,10 @@ github: ""
 slack: ""
 jira: ""
 sources:
-  - url: "c6/project_docs/kickoff-interno-transformacao-ai-set2026.md"
-    type: "local-dir"
-    synced_at: "2026-09-10"
-updated_at: "2026-09-10"
+  - url: "https://docs.google.com/presentation/d/1X5J3edLcAK9rNlnhhF2VLPW_qDLYvyp736uXlRJd6wI/edit"
+    type: "gdoc"
+    synced_at: "2026-09-11"
+updated_at: "2026-09-11"
 updated_by: "preserve@agent"
 tags: [type/person, domain/growth]
 ---

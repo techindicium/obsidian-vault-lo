@@ -5,10 +5,7 @@ aliases: ["Never Split the Difference", "Voss Negotiation Playbook", "Chris Voss
 description: "A set of tactical-empathy negotiation techniques from Chris Voss's 'Never Split the Difference', used to build trust and surface real leverage in early relationship-building conversations: labeling, calibrated questions, accusation audits, the black swan, and the 'that's right' confirmation."
 related_to: ["[[paulo-pituba]]", "[[nelson-novaes-neto]]", "[[label-calibrated-question-rapport-tactic]]"]
 sources:
-  - url: "general_projects/c6/people_profile/perfil-nelson-novaes-neto.md"
-    type: "local-file"
-    synced_at: "2026-09-01"
-updated_at: 2026-09-01
+updated_at: "2026-09-11"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/growth]
 ---

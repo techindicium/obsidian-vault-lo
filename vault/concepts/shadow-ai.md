@@ -5,10 +5,7 @@ aliases: ["Shadow AI", "Unauthorized AI Use"]
 description: "The use of unapproved AI tools, extensions, or APIs by employees, which removes IT's visibility over corporate data and creates uncontrolled data-leakage and prompt-injection exposure."
 related_to: ["[[ai-transformation-office]]", "[[2026-09-knowledge-works-c6]]"]
 sources:
-  - url: "c6/project_docs/manual-de-bordo-c6.md"
-    type: "local-dir"
-    synced_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/engineering]
 ---

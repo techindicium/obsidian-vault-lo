@@ -5,10 +5,7 @@ aliases: ["Security Controls as Aversive Stimulus", "Shadow AI (governance frict
 description: "A behaviorist model (grounded in experimental psychology) describing how a security or governance control functions as an aversive stimulus within a behavioral contingency, reducing the likelihood of desired user behavior and often producing side effects like shadow AI — unofficial, uncontrolled tool usage that bypasses the control entirely."
 related_to: ["[[nelson-novaes-neto]]", "[[ai-transformation-project-c6-bank]]"]
 sources:
-  - url: "general_projects/c6/people_profile/perfil-nelson-novaes-neto.md"
-    type: "local-file"
-    synced_at: "2026-09-01"
-updated_at: 2026-09-01
+updated_at: "2026-09-11"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/growth]
 ---

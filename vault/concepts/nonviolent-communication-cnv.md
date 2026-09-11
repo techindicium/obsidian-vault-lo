@@ -5,10 +5,7 @@ aliases: ["CNV", "Comunicação Não-Violenta", "Nonviolent Communication"]
 description: "A four-pillar communication framework — Observation, Feeling/Impact, Need, Request — used to raise conflict or disagreement without escalation, especially with a client."
 related_to: ["[[never-split-the-difference-negotiation-tactics]]", "[[ai-transformation-project-c6-bank]]"]
 sources:
-  - url: "c6/project_docs/manual-de-bordo-c6.md"
-    type: "local-dir"
-    synced_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 updated_by: "preserve@agent"
 tags: [type/concept, domain/growth]
 ---
