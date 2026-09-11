@@ -1,7 +1,7 @@
 ---
 type: person
-name: "Natália Kauatoto"
-aliases: ["Natália Kauatoto", "Natalia Kauatoto", "Natalia Kawatoko"]
+name: "Natalia Silveira Kawatoko"
+aliases: ["Natalia Silveira Kawatoko", "Natália Kauatoto", "Natalia Kauatoto", "Natalia Kawatoko"]
 role: "IT People Business Partner, C6 Bank"
 team: ""
 focal_points: []
@@ -17,13 +17,13 @@ sources:
     type: "gdoc"
     synced_at: "2026-09-11"
 updated_at: "2026-09-11"
-updated_by: "preserve@agent"
+updated_by: "manual"
 tags: [type/person, domain/growth]
 ---
 
-# Natália Kauatoto
+# Natalia Silveira Kawatoko
 
-> IT People Business Partner at C6 Bank (per the official kickoff deck — spelled "Natalia Kawatoko" there) — driving change management on the client side of the [[ai-transformation-project-c6-bank]] engagement.
+> IT People Business Partner at C6 Bank — driving change management on the client side of the [[ai-transformation-project-c6-bank]] engagement.
 
 ## Team
 

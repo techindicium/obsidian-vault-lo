@@ -48,17 +48,11 @@ C6 already runs generative AI in production with AWS on at least two use cases: 
 
 Internal notes (2026-09-01) confirm the pattern already visible in his public profile: he is more technical, a cybersecurity reference, focused on how to guarantee AI projects are secure — and tends to view consulting engagements more as operational support, in contrast with [[paulo-pituba]]'s business/results-oriented focus.
 
-## Rapport approach
-
-Apply the [[never-split-the-difference-negotiation-tactics]] playbook — especially: use his own academic framework as shared vocabulary instead of proposing a competing methodology, lead with calibrated questions about how the 10-question framework is used day-to-day, and use mountaineering/expedition analogies (he has climbed Elbrus, Kilimanjaro, Mont Blanc, Aconcágua, and Gran Paradiso) rather than sports/military metaphors.
-
-Vocabulary that resonates: "secure-by-design", "governance before innovation", "calculated risk", "trust and transparency with the customer". Avoid unsupported hype language ("revolutionary", "disruptive") — he responds better to rigor and evidence than to enthusiasm.
-
 ## Kickoff Interno (2026-09-08) — scope and risk profile
 
 Internal team notes from the project kickoff (see [[2026-09-08-c6-ai-transformation-kickoff-interno]]) narrow his scope: referred to internally as "Nelson," he runs Corebank day-to-day technical operations — distinct from [[paulo-pituba]]'s transformation-program focus — and is the sponsor of the [[2026-09-knowledge-works-c6]] workstream (reducing Shadow AI / ungoverned generative-AI use in business areas).
 
-Daniel Avancini (Indicium, closing remarks of the kickoff) flagged Nelson as the stakeholder who is "most complex to deal with" — technically strong (owns his own GPU at home), a boxer/jiu-jitsu practitioner, and someone who should be told "no" carefully, preferably in a remote/async setting rather than face to face. Apply this alongside the existing [[never-split-the-difference-negotiation-tactics]] approach above.
+Daniel Avancini (Indicium, closing remarks of the kickoff) flagged Nelson as the stakeholder who is "most complex to deal with" — technically strong (owns his own GPU at home), a boxer/jiu-jitsu practitioner, and someone who should be told "no" carefully, preferably in a remote/async setting rather than face to face.
 
 ## Open research items
 

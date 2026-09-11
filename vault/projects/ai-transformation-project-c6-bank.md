@@ -71,7 +71,7 @@ sources:
     type: "gdoc"
     synced_at: "2026-09-11"
 updated_at: "2026-09-11"
-updated_by: "preserve@agent"
+updated_by: "manual"
 tags: [type/project, status/active, domain/growth]
 ---
 
@@ -178,8 +178,8 @@ SORT item.deadline ASC
 - [[gustavo-torres]] — CIO, C6 Bank
 - [[marcel]] — AI Head, C6 Bank; owns C6 Assistant
 - [[thiago-ribeiro]] — Senior IT Executive; co-sponsor of [[2026-09-esteira-ai-nativa-c6]]
-- [[cristiano-pisin]] — Senior Tech Engineer Specialist, C6-side day-to-day PM
-- [[natalia-kauatoto]] — IT People Business Partner, driving change management
+- [[cristiano-piccin]] — Senior Tech Engineer Specialist, C6-side day-to-day PM
+- [[natalia-silveira-kawatoko]] — IT People Business Partner, driving change management
 - [[eduardo-scarpellini]] — Platform Head, [[2026-09-plataforma-c6-ai-hub]]
 - [[marcos-wada]] — Architecture Specialist, [[2026-09-plataforma-c6-ai-hub]]
 - [[everson-tavares]] — Platform Specialist, [[2026-09-plataforma-c6-ai-hub]]

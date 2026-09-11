@@ -37,12 +37,6 @@ No internal team — Paulo Pituba is an external stakeholder at C6 Bank, client 
 
 Internal notes (2026-09-01) indicate his primary interest is reducing operational cost with consulting firms, and he wants help generating more value from AI together with the business areas — a business/results-oriented profile, in contrast with [[nelson-novaes-neto]]'s more technical, security-first lens.
 
-## Rapport approach
-
-Sparse LinkedIn profile (no photo, no headline) suggests someone more discreet/operational than focused on personal branding — likely responds better to direct approaches than to "stage" language (talk/case-study style).
-
-Recommended opening tactic: apply the [[label-calibrated-question-rapport-tactic]] technique (label + calibrated question), using the real Rede → C6 career transition as the hook, while avoiding assumptions about unconfirmed personal interests.
-
 ## Kickoff Interno (2026-09-08) — confirmed motivation and sponsorship
 
 Internal team notes from the project kickoff (see [[2026-09-08-c6-ai-transformation-kickoff-interno]]) **confirm the business-focus hypothesis above with a concrete number**: per Igor Benincá (Indicium), Paulo Pituba's real objective as sponsor of [[2026-09-esteira-ai-nativa-c6]] (SDLC redesign with Kiro, alongside Thiago Ribeiro) is eliminating the ~R$10-15M/year C6 currently spends on third-party development consultancies — this figure does not appear in the official deck or manual, only in the raw kickoff transcript.

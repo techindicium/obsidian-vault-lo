@@ -14,7 +14,7 @@ sources:
     type: "gdoc"
     synced_at: "2026-09-11"
 updated_at: "2026-09-11"
-updated_by: "preserve@agent"
+updated_by: "manual"
 tags: [type/person, domain/growth]
 ---
 
@@ -32,4 +32,4 @@ Joined Indicium about 1.5 months before the project kickoff (2026-09-08), coming
 
 ## Projects
 
-- [[ai-transformation-project-c6-bank]] — Delivery Manager; opened and ran the internal kickoff (see [[2026-09-08-c6-ai-transformation-kickoff-interno]]), is coordinating C6's vendor onboarding (logins, access) with [[cristiano-pisin]]
+- [[ai-transformation-project-c6-bank]] — Delivery Manager; opened and ran the internal kickoff (see [[2026-09-08-c6-ai-transformation-kickoff-interno]]), is coordinating C6's vendor onboarding (logins, access) with [[cristiano-piccin]]
