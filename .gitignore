@@ -4,5 +4,5 @@ vault/study_temp/my-notes
 vault/.claude/scheduled_tasks.lock
 
 # Obsidian: ignore per-user app state everywhere, keep the shared graph view config
-.obsidian/*
-!.obsidian/graph.json
+**/.obsidian/*
+!**/.obsidian/graph.json
